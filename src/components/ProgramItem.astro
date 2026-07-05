@@ -40,6 +40,7 @@ const venueSlug = getVenueSlug(event.lugar);
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
 const imagePath = `../assets/events_images/${event.imagenUrl}`;
 const imageSrc = images[imagePath] ? images[imagePath]() : null;
+import { getRelativeLocaleUrl } from '../i18n/utils';
 ---
 
 <article class="event-card-horizontal" id={event.id}>
@@ -69,7 +70,7 @@ const imageSrc = images[imagePath] ? images[imagePath]() : null;
   <!-- Columna 3: Información -->
   <div class="card-info">
     {venueSlug ? (
-      <a href={`/${currentLang}/escenarios#${venueSlug}`} class="event-venue-link">
+      <a href={`${getRelativeLocaleUrl(currentLang, '/escenarios')}#${venueSlug}`} class="event-venue-link">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
           <circle cx="12" cy="10" r="3"/>

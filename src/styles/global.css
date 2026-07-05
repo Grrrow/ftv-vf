@@ -40,6 +40,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Compensa la altura del Header fijo */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -82,4 +87,23 @@ a:hover {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Scroll Reveal Animations */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-hidden.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific delays or transition adjustments */
+.hero-content.reveal-hidden,
+.program-hero-container.reveal-hidden {
+  transform: translateY(30px);
 }

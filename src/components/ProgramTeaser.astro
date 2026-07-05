@@ -32,6 +32,7 @@ const events = programacionData.slice(0, 3).map(event => {
     ctaText: pageData?.events?.buy_tickets || 'Reserva de plaza'
   };
 });
+import { getRelativeLocaleUrl } from '../i18n/utils';
 ---
 
 <section id="program" class="program-section" aria-labelledby="program-title">
@@ -50,7 +51,7 @@ const events = programacionData.slice(0, 3).map(event => {
     </div>
 
     <div class="program-footer">
-      <a href={`/${currentLang}/programacion`} class="link-subtle" aria-label={t('program_teaser', 'cta')}>
+      <a href={getRelativeLocaleUrl(currentLang, '/programacion')} class="link-subtle" aria-label={t('program_teaser', 'cta')}>
         {t('program_teaser', 'cta')}
       </a>
     </div>

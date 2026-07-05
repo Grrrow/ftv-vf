@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations, defaultLang } from "../../i18n/utils";
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from "../../i18n/utils";
 import { getEntry, getCollection } from "astro:content";
 import Header from "../../components/Header.astro";
 import SkipLink from "../../components/SkipLink.astro";
@@ -10,7 +10,9 @@ import venuesHeroBg from "../../assets/venues-hero-bg.jpeg";
 import MapSection from "../../components/MapSection.astro";
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+  return Object.keys(languages).map((lang) => ({
+    params: { lang: lang === defaultLang ? undefined : lang }
+  }));
 }
 
 const { lang } = Astro.params;
@@ -385,7 +387,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                             </div>
                             <div class="event-info">
                               <a
-                                href={`/${currentLang}/programacion#${event.id}`}
+                                href={`${getRelativeLocaleUrl(currentLang, '/programacion')}#${event.id}`}
                                 class="event-title-link"
                               >
                                 {eventT.titulo}

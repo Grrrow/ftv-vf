@@ -14,7 +14,7 @@ export interface Props {
   ctaText: string;
 }
 
-const { fecha, lugar, imagenUrl, taylorTicketsUrl, titulo, interpretes, sinopsisCorta, ctaText } = Astro.props;
+const { id, fecha, slug, lugar, imagenUrl, taylorTicketsUrl, titulo, interpretes, sinopsisCorta, ctaText } = Astro.props;
 
 // Vite glob for dynamic image resolution
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
@@ -57,15 +57,18 @@ const timeString = formatterTime.format(dateObj) + 'h';
       </svg>
       {lugar}
     </div>
-    
-    <h3 class="card-title">{titulo}</h3>
+    <h3 class="card-title">
+      <a href={`/${Astro.currentLocale || 'es'}/evento/${slug}`} class="event-link" title={`Ver detalles de ${titulo}`} aria-label={`Ver detalles de ${titulo}`}>
+        {titulo}
+      </a>
+    </h3>
     <p class="card-performer">{interpretes}</p>
     
     <p class="card-synopsis">{sinopsisCorta}</p>
   </div>
   
   <div class="card-footer">
-    <a href={taylorTicketsUrl} class="card-cta" target="_blank" rel="noopener noreferrer">
+    <a href={taylorTicketsUrl} class="card-cta" target="_blank" rel="noopener noreferrer" title={`Reservar plaza para ${titulo}`} aria-label={`Reservar plaza para ${titulo}`}>
       {ctaText}
     </a>
   </div>
@@ -192,6 +195,17 @@ const timeString = formatterTime.format(dateObj) + 'h';
 
   .card-footer {
     padding: 0 var(--space-xl) var(--space-xl);
+    margin-top: auto;
+  }
+
+  .event-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .event-link:hover {
+    color: var(--color-gold);
   }
 
   .card-cta {

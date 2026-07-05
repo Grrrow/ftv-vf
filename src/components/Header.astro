@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from '../i18n/utils';
 
 // Extraemos el idioma dinámicamente preservando la compatibilidad
 const [, langParam] = Astro.url.pathname.split('/');
@@ -12,14 +12,14 @@ const getPathForLang = (l: string) => {
   let path = Astro.url.pathname;
   path = path.replace(/^\/(es|en|de)/, '');
   if (!path.startsWith('/')) path = '/' + path;
-  return `/${l}${path}`;
+  return getRelativeLocaleUrl(l, path);
 };
 ---
 
 <header class="site-header" role="banner">
   <div class="header-container">
     <!-- Logo -->
-    <a href={`/${currentLang}`} class="logo-link" aria-label={t('nav', 'home')}>
+    <a href={getRelativeLocaleUrl(currentLang)} class="logo-link" aria-label={t('nav', 'home')}>
       <span class="logo-text">Música en Villafranca</span>
     </a>
 
@@ -34,10 +34,10 @@ const getPathForLang = (l: string) => {
     <div id="main-nav" class="nav-overlay">
       <nav class="nav-content" aria-label="Navegación principal">
         <ul class="nav-list">
-          <li><a href={`/${currentLang}`}>{t('nav', 'home')}</a></li>
-          <li><a href={`/${currentLang}/manifiesto`}>{t('nav', 'about')}</a></li>
-          <li><a href={`/${currentLang}/programacion`}>{t('nav', 'program')}</a></li>
-          <li><a href={`/${currentLang}/escenarios`}>{t('nav', 'venue')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang)} title={t('nav', 'home')}>{t('nav', 'home')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, '/manifiesto')} title={t('nav', 'about')}>{t('nav', 'about')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, '/programacion')} title={t('nav', 'program')}>{t('nav', 'program')}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLang, '/escenarios')} title={t('nav', 'venue')}>{t('nav', 'venue')}</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -61,7 +61,7 @@ const getPathForLang = (l: string) => {
           </div>
 
           <!-- Botón CTA Entradas -->
-          <a href={`/${currentLang}#tickets`} class="btn-tickets" aria-label={t('nav', 'tickets')}>
+          <a href={getRelativeLocaleUrl(currentLang, '/programacion')} class="btn-tickets" aria-label={t('nav', 'tickets')} title={t('nav', 'tickets')}>
             {t('nav', 'tickets')}
           </a>
         </div>
@@ -366,7 +366,7 @@ const getPathForLang = (l: string) => {
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const navOverlay = document.getElementById('main-nav');
     const langSelector = document.querySelector('.lang-selector');

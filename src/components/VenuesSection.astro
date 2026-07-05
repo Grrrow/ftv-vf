@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from '../i18n/utils';
 import { getEntry } from 'astro:content';
 import VenueCard from './VenueCard.astro';
 
@@ -39,7 +39,7 @@ const locations = venuesEntries.map(entry => entry.data);
     </div>
 
     <div class="venues-footer">
-      <a href={`/${currentLang}/escenarios`} class="btn-outline">
+      <a href={getRelativeLocaleUrl(currentLang, '/escenarios')} class="btn-outline">
         {venueData?.cta_section || 'Ver todos los escenarios'}
       </a>
     </div>

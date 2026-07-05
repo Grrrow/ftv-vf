@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations } from '../../i18n/utils';
+import { languages, useTranslations, defaultLang } from '../../i18n/utils';
 import SEO from '../../components/SEO.astro';
 import SkipLink from '../../components/SkipLink.astro';
 import '../../styles/global.css';
@@ -12,11 +12,14 @@ import VenuesSection from '../../components/VenuesSection.astro';
 import MapSection from '../../components/MapSection.astro';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+  return Object.keys(languages).map((lang) => ({
+    params: { lang: lang === defaultLang ? undefined : lang }
+  }));
 }
 
 const { lang } = Astro.params;
-const t = await useTranslations(lang as keyof typeof languages);
+const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
 ---
 <!DOCTYPE html>
 <html lang={lang}>

@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from '../i18n/utils';
 // Utilizamos Astro Image para optimización nativa y mejor rendimiento
 import { Image } from 'astro:assets';
 import heroBg from '../assets/hero-bg.jpg';
@@ -26,7 +26,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   <div class="hero-content">
     <h1 class="hero-title">{t('hero', 'title')}</h1>
     <span class="hero-date">{t('hero', 'date')}</span>
-    <a href={`/${currentLang}#tickets`} class="hero-cta-btn">{t('hero', 'cta')}</a>
+    <a href={`${getRelativeLocaleUrl(currentLang)}#tickets`} class="hero-cta-btn">{t('hero', 'cta')}</a>
   </div>
 </section>
 

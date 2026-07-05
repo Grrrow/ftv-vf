@@ -1,13 +1,25 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+
 interface Props {
   title: string;
   description: string;
   lang: string;
+  image?: string;
+  type?: string;
 }
 
-const { title, description, lang } = Astro.props;
-const siteUrl = Astro.site ? Astro.site.href : 'https://musicaenvillafranca.com';
-const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const { 
+  title, 
+  description, 
+  lang,
+  image = '/favicon.png',
+  type = 'website'
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.href.replace(/\/$/, '') : 'https://musicaenvillafranca.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const imageUrl = new URL(image, siteUrl).href;
 
 // Logic to clean the current pathname and swap the language prefix
 const getAltUrl = (targetLang: string) => {
@@ -20,9 +32,25 @@ const getAltUrl = (targetLang: string) => {
 ---
 
 <!-- SEO Global -->
+<ClientRouter fallback="swap" />
 <title>{title}</title>
 <meta name="description" content={description} />
+<link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
 
 <!-- i18n Alternates -->
 <link rel="alternate" hreflang="es" href={getAltUrl('es')} />
@@ -47,3 +75,40 @@ const getAltUrl = (targetLang: string) => {
     }
   }
 })} />
+
+<script>
+  // Add scroll reveal animations using Intersection Observer
+  // Works with Astro View Transitions
+  document.addEventListener('astro:page-load', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // Optionally unobserve after revealing to animate only once:
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { 
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    // Select elements that should animate on scroll
+    const hiddenElements = document.querySelectorAll(`
+      .animate-on-scroll, 
+      section h2.section-title, 
+      .event-card-horizontal, 
+      .venue-card, 
+      .manifesto-text p,
+      .program-header,
+      .hero-content,
+      .program-hero-container
+    `);
+    
+    hiddenElements.forEach((el) => {
+      // Add the hidden class to set initial CSS state
+      el.classList.add('reveal-hidden');
+      observer.observe(el);
+    });
+  });
+</script>

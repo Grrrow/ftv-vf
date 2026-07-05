@@ -1,5 +1,5 @@
 ---
-import { languages, useTranslations, defaultLang } from '../../i18n/utils';
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from '../../i18n/utils';
 import { getEntry } from 'astro:content';
 import Header from '../../components/Header.astro';
 import SkipLink from '../../components/SkipLink.astro';
@@ -10,7 +10,9 @@ import venuesHeroBg from '../../assets/venues-hero-bg.jpeg';
 import programacionData from '../../data/programacion-2026.json';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+  return Object.keys(languages).map((lang) => ({
+    params: { lang: lang === defaultLang ? undefined : lang }
+  }));
 }
 
 const { lang } = Astro.params;
@@ -371,7 +373,7 @@ const getVenueSlug = (lugarName: string) => {
           format="webp"
         />
         <div class="program-hero-gradient"></div>
-        <div class="program-hero-container">
+        <div class="program-hero-container reveal-hidden">
           <h1 class="program-hero-title">{pageData?.title}</h1>
         </div>
       </section>
@@ -415,7 +417,7 @@ const getVenueSlug = (lugarName: string) => {
                 <!-- Columna 3: Información -->
                 <div class="card-info">
                   {venueSlug ? (
-                    <a href={`/${currentLang}/escenarios#${venueSlug}`} class="event-venue-link">
+                    <a href={`${getRelativeLocaleUrl(currentLang, '/escenarios')}#${venueSlug}`} class="event-venue-link">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                         <circle cx="12" cy="10" r="3"/>

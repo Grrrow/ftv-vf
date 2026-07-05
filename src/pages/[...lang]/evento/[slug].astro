@@ -1,0 +1,102 @@
+---
+import { languages, useTranslations, defaultLang, getRelativeLocaleUrl } from '../../../i18n/utils';
+import Header from '../../../components/Header.astro';
+import SkipLink from '../../../components/SkipLink.astro';
+import SEO from '../../../components/SEO.astro';
+import '../../../styles/global.css';
+import programacionData from '../../../data/programacion-2026.json';
+import EventCard from '../../../components/EventCard.astro';
+
+export function getStaticPaths() {
+  const paths: any[] = [];
+  Object.keys(languages).forEach((lang) => {
+    programacionData.forEach((event) => {
+      paths.push({
+        params: { 
+          lang: lang === defaultLang ? undefined : lang,
+          slug: event.slug 
+        },
+        props: { event }
+      });
+    });
+  });
+  return paths;
+}
+
+const { lang } = Astro.params;
+const { event } = Astro.props;
+const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+
+const translation = event.traducciones[currentLang as keyof typeof event.traducciones] || event.traducciones['es'];
+
+// Glob import to get the correct asset URL for production
+const images = import.meta.glob<{ default: ImageMetadata }>('../../../assets/events_images/*.{jpeg,jpg,png,gif,webp}', { eager: true });
+const imagePath = `../../../assets/events_images/${event.imagenUrl}`;
+const resolvedImage = images[imagePath] ? images[imagePath].default.src : '/favicon.png';
+
+// Clean HTML tags from sinopsisCorta to use in meta description
+const plainDescription = translation.sinopsisCorta.replace(/<[^>]*>?/gm, ' ').replace(/\s+/g, ' ').trim();
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO 
+      title={`${translation.titulo} | ${event.lugar} | ${t('seo', 'title')}`}
+      description={`${event.lugar} - ${translation.interpretes}. ${plainDescription.substring(0, 150)}...`}
+      lang={lang as string}
+      image={resolvedImage}
+      type="article"
+    />
+    <style>
+      .event-page-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--space-xl) var(--space-md);
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: var(--space-lg);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--color-midnight);
+        border-bottom: 2px solid var(--color-gold);
+        padding-bottom: 4px;
+        transition: color 0.3s ease;
+      }
+      .back-link:hover {
+        color: var(--color-gold);
+      }
+    </style>
+  </head>
+  <body>
+    <SkipLink />
+    <Header />
+    
+    <main id="main-content" role="main">
+      <div class="event-page-container">
+        <a href={getRelativeLocaleUrl(currentLang as string, '/programacion')} class="back-link" title="Volver a la agenda completa" aria-label="Volver a la agenda">
+          &larr; Volver a la Agenda
+        </a>
+        <div style="height: 600px;">
+          <EventCard 
+            id={event.id}
+            fecha={event.fecha}
+            slug={event.slug}
+            lugar={event.lugar}
+            imagenUrl={event.imagenUrl}
+            taylorTicketsUrl={event.taylorTicketsUrl}
+            titulo={translation.titulo}
+            interpretes={translation.interpretes}
+            sinopsisCorta={translation.sinopsisCorta}
+            ctaText="Reservar plaza"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

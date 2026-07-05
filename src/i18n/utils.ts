@@ -28,3 +28,11 @@ export async function useTranslations(lang: keyof typeof languages) {
     return String(obj);
   }
 }
+
+export function getRelativeLocaleUrl(lang: string, path: string = '') {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (lang === defaultLang) {
+    return cleanPath === '/' ? '/' : cleanPath;
+  }
+  return `/${lang}${cleanPath === '/' ? '' : cleanPath}`;
+}
