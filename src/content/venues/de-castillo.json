@@ -1,7 +1,7 @@
 {
   "name": "Schlosshof von Villafranca",
   "description": "Nachtkonzerte bei Kerzenschein in einem unvergleichlichen historischen Ambiente.",
-  "image": "piano-church.jpg",
+  "image": "castillo.jpg",
   "imageAlt": "Schlosshof bei Kerzenschein",
   "slug": "de-castillo",
   "id": "de-castillo",
@@ -12,5 +12,5 @@
   "capacity": 300,
   "acoustic_type": "Freiluft",
   "address": "Calle del Castillo, s/n, 24500 Villafranca del Bierzo (León)",
-  "address_url": "https://www.google.com/maps/search/?api=1&query=Castillo-Palacio+de+los+Marqueses+de+Villafranca,+Castillo,+Pl.+Prim,+12,+24500+Villafranca+del+Bierzo,+León"
+  "address_url": "https://villafrancadelbierzo.org/turismo/castillo.jpg"
 }

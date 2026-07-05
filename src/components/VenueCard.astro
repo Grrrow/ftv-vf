@@ -12,8 +12,8 @@ export interface Props {
 const { name, description, image, imageAlt, slug } = Astro.props;
 
 // Vite glob for dynamic image resolution
-const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
-const imagePath = `../assets/events_images/${image}`;
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/venue_images/*.{jpeg,jpg,JPG,JPEG,png,gif,webp}');
+const imagePath = `../assets/venue_images/${image}`;
 const imageSrc = images[imagePath] ? images[imagePath]() : null;
 ---
 
@@ -50,23 +50,22 @@ const imageSrc = images[imagePath] ? images[imagePath]() : null;
 
   .venue-media {
     width: 100%;
-    aspect-ratio: 4/3;
     overflow: hidden;
     background-color: var(--color-midnight, #0B132B);
     margin-bottom: var(--space-md);
+    border-radius: var(--border-radius, 8px);
   }
 
   .venue-img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 50vh;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1.1);
-    transition: filter 0.5s ease, transform 0.6s ease;
+    transition: transform 0.6s ease;
   }
 
   .venue-card:hover .venue-img {
-    filter: grayscale(40%) contrast(1.1);
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
   .venue-img-placeholder {

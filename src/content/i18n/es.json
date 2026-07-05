@@ -59,15 +59,21 @@
       "view_venue": "Ver Sede"
     }
   },
-  "manifesto_page": {
-    "title": "El Manifiesto",
-    "subtitle": "Nuestra declaración de intenciones.",
-    "quote": "Donde la piedra escucha y el tiempo se rinde a la música.",
-    "section1_title": "El Silencio",
-    "section1_text": "Antes de la primera nota, existe un silencio profundo, labrado por siglos de historia. En Villafranca del Bierzo, el silencio no es la ausencia de sonido, sino el lienzo perfecto sobre el que se proyecta la excelencia clásica.",
-    "section2_title": "La Acústica",
-    "section2_text": "No construimos auditorios; revelamos los que ya existían. Las naves góticas y las bóvedas de sillería de nuestros monumentos poseen una resonancia natural que ningún teatro moderno puede replicar. Aquí, la música se escucha tal y como los grandes maestros la imaginaron.",
-    "section3_title": "El Tiempo",
-    "section3_text": "En una era de inmediatez, proponemos una pausa. El Festival es un retiro espiritual y artístico donde el intérprete y el oyente convergen en un instante eterno, aislados del ruido del mundo."
+  "manifesto": {
+    "hero_title": "EL FESTIVAL",
+    "hero_subtitle": "El Origen de un Sueño Musical y Místico",
+    "hero_intro": "Enclavada en el corazón del Camino de Santiago, Villafranca del Bierzo trasciende su condición de joya monumental para convertirse en un inmenso escenario vivo. Aquí, entre la piedra centenaria y el silencio sobrecogedor de los valles, la música clásica encuentra su resonancia más pura y transformadora.",
+    "memory_title": "Vídeos de Ediciones Anteriores",
+    "memory_intro": "Revive la magia, la emoción y la atmósfera inmersiva de los conciertos celebrados en años pasados.",
+    "why_title": "El Porqué",
+    "why_p1": "Existe un arraigo vital, íntimo e inquebrantable que une a la familia Halffter con la villa del Burbia. Lugar de nacimiento de la insigne pianista Marita Caro y refugio estival familiar durante décadas, Villafranca es el origen de esta pasión.",
+    "why_p2": "Bajo la dirección artística de Pedro Halffter Caro, el festival nace de una convicción absoluta: \"La escenografía monumental ya la pone Villafranca, nuestro cometido es llenarla de música de altísima calidad\".",
+    "mission_title": "Nuestra Misión",
+    "mission_1_title": "Simbiosis con el Patrimonio",
+    "mission_1_text": "Fusionar la excelencia musical internacional con la acústica sacra e histórica de enclaves inigualables como la Iglesia de San Nicolás o el solemne Patio del Castillo.",
+    "mission_2_title": "Vínculo con el Peregrinaje",
+    "mission_2_text": "Articular una programación artística que dialogue íntimamente con la mística, la búsqueda interior y las vivencias del caminante a su paso por la milenaria Puerta del Perdón.",
+    "mission_3_title": "Cultura Sin Barreras",
+    "mission_3_text": "Romper protocolos rígidos. A través de puestas en escena circulares que abrazan al intérprete y cálidos comentarios pedagógicos, transformamos al espectador en un auténtico \"caminante musical\"."
   }
 }

@@ -59,15 +59,21 @@
       "view_venue": "View Venue"
     }
   },
-  "manifesto_page": {
-    "title": "The Manifesto",
-    "subtitle": "Our declaration of intent.",
-    "quote": "Where stone listens and time surrenders to music.",
-    "section1_title": "The Silence",
-    "section1_text": "Before the first note, there is a profound silence, carved by centuries of history. In Villafranca del Bierzo, silence is not the absence of sound, but the perfect canvas upon which classical excellence is projected.",
-    "section2_title": "The Acoustics",
-    "section2_text": "We do not build auditoriums; we reveal those that already existed. The Gothic naves and ashlar vaults of our monuments possess a natural resonance that no modern theater can replicate. Here, music is heard exactly as the great masters imagined it.",
-    "section3_title": "The Time",
-    "section3_text": "In an era of immediacy, we propose a pause. The Festival is a spiritual and artistic retreat where performer and listener converge in an eternal instant, isolated from the noise of the world."
+  "manifesto": {
+    "hero_title": "THE FESTIVAL",
+    "hero_subtitle": "The Origin of a Musical and Mystical Dream",
+    "hero_intro": "Nestled in the heart of the Camino de Santiago, Villafranca del Bierzo transcends its condition as a monumental jewel to become an immense living stage. Here, amid centuries-old stone and the overwhelming silence of the valleys, classical music finds its purest and most transformative resonance.",
+    "memory_title": "Videos from Past Editions",
+    "memory_intro": "Relive the magic, emotion, and immersive atmosphere of concerts held in past years.",
+    "why_title": "The Reason Why",
+    "why_p1": "There is a vital, intimate, and unbreakable bond that unites the Halffter family with the town of the Burbia river. The birthplace of the distinguished pianist Marita Caro and a family summer refuge for decades, Villafranca is the origin of this passion.",
+    "why_p2": "Under the artistic direction of Pedro Halffter Caro, the festival is born from an absolute conviction: \"Villafranca already provides the monumental scenography; our task is to fill it with music of the highest quality\".",
+    "mission_title": "Our Mission",
+    "mission_1_title": "Symbiosis with Heritage",
+    "mission_1_text": "To fuse international musical excellence with the sacred and historical acoustics of unparalleled venues such as the Church of San Nicolás or the solemn Castle Courtyard.",
+    "mission_2_title": "Link with the Pilgrimage",
+    "mission_2_text": "To articulate an artistic program that dialogues intimately with the mysticism, inner search, and experiences of the pilgrim passing through the ancient Door of Forgiveness.",
+    "mission_3_title": "Culture Without Barriers",
+    "mission_3_text": "To break rigid protocols. Through circular staging that embraces the performer and warm pedagogical commentary, we transform the spectator into an authentic \"musical pilgrim\"."
   }
 }

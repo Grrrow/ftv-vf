@@ -59,15 +59,21 @@
       "view_venue": "Veranstaltungsort ansehen"
     }
   },
-  "manifesto_page": {
-    "title": "Das Manifest",
-    "subtitle": "Unsere Absichtserklärung.",
-    "quote": "Wo Stein lauscht und sich die Zeit der Musik ergibt.",
-    "section1_title": "Die Stille",
-    "section1_text": "Vor dem ersten Ton herrscht eine tiefe Stille, geprägt von jahrhundertelanger Geschichte. In Villafranca del Bierzo ist Stille nicht die Abwesenheit von Klang, sondern die perfekte Leinwand, auf die sich klassische Exzellenz projiziert.",
-    "section2_title": "Die Akustik",
-    "section2_text": "Wir bauen keine Konzertsäle; wir offenbaren die bereits vorhandenen. Die gotischen Schiffe und Quadergewölbe unserer Denkmäler besitzen eine natürliche Resonanz, die kein modernes Theater nachbilden kann. Hier wird Musik genau so gehört, wie es sich die großen Meister vorgestellt haben.",
-    "section3_title": "Die Zeit",
-    "section3_text": "In einer Zeit der Unmittelbarkeit schlagen wir eine Pause vor. Das Festival ist ein spiritueller und künstlerischer Rückzugsort, an dem Interpret und Zuhörer in einem ewigen Augenblick verschmelzen, isoliert vom Lärm der Welt."
+  "manifesto": {
+    "hero_title": "DAS FESTIVAL",
+    "hero_subtitle": "Der Ursprung eines musikalischen und mystischen Traums",
+    "hero_intro": "Eingebettet im Herzen des Jakobswegs, überschreitet Villafranca del Bierzo seinen Status als monumentales Juwel, um zu einer riesigen lebendigen Bühne zu werden. Hier, inmitten jahrhundertealter Steine und der überwältigenden Stille der Täler, findet die klassische Musik ihre reinste und transformierendste Resonanz.",
+    "memory_title": "Videos vergangener Ausgaben",
+    "memory_intro": "Erleben Sie die Magie, Emotion und die immersive Atmosphäre der Konzerte vergangener Jahre wieder.",
+    "why_title": "Das Warum",
+    "why_p1": "Es gibt eine vitale, intime und unzerbrechliche Verbindung, die die Familie Halffter mit der Stadt am Fluss Burbia vereint. Als Geburtsort der angesehenen Pianistin Marita Caro und jahrzehntelanger sommerlicher Zufluchtsort der Familie ist Villafranca der Ursprung dieser Leidenschaft.",
+    "why_p2": "Unter der künstlerischen Leitung von Pedro Halffter Caro entsteht das Festival aus einer absoluten Überzeugung: <em>\"Villafranca bietet bereits die monumentale Szenerie; unsere Aufgabe ist es, sie mit Musik von höchster Qualität zu füllen\"</em>.",
+    "mission_title": "Unsere Mission",
+    "mission_1_title": "Symbiose mit dem Erbe",
+    "mission_1_text": "Internationale musikalische Exzellenz mit der sakralen und historischen Akustik unvergleichlicher Orte wie der Kirche San Nicolás oder dem feierlichen Schlosshof zu verschmelzen.",
+    "mission_2_title": "Verbindung mit der Pilgerreise",
+    "mission_2_text": "Ein künstlerisches Programm zu artikulieren, das in einem intimen Dialog mit der Mystik, der inneren Suche und den Erfahrungen des Pilgers steht, der das alte Tor der Vergebung passiert.",
+    "mission_3_title": "Kultur ohne Barrieren",
+    "mission_3_text": "Starre Protokolle zu durchbrechen. Durch eine kreisförmige Inszenierung, die den Interpreten umarmt, und warme pädagogische Kommentare, verwandeln wir den Zuschauer in einen echten \"musikalischen Pilger\"."
   }
 }

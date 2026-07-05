@@ -35,10 +35,10 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <section class="festival-hero" aria-labelledby="hero-title">
         <div class="hero-bg"></div>
         <div class="hero-content">
-          <h1 id="hero-title" class="hero-title">EL FESTIVAL</h1>
-          <p class="hero-subtitle">El Origen de un Sueño Musical y Místico</p>
+          <h1 id="hero-title" class="hero-title">{t('manifesto', 'hero_title')}</h1>
+          <p class="hero-subtitle">{t('manifesto', 'hero_subtitle')}</p>
           <p class="hero-intro">
-            Enclavada en el corazón del Camino de Santiago, Villafranca del Bierzo trasciende su condición de joya monumental para convertirse en un inmenso escenario vivo. Aquí, entre la piedra centenaria y el silencio sobrecogedor de los valles, la música clásica encuentra su resonancia más pura y transformadora.
+            {t('manifesto', 'hero_intro')}
           </p>
         </div>
       </section>
@@ -47,8 +47,8 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <section class="festival-memory" aria-labelledby="memory-title">
         <div class="memory-container">
           <div class="memory-header">
-            <h2 id="memory-title" class="section-title">Vídeos de Ediciones Anteriores</h2>
-            <p class="memory-intro">Revive la magia, la emoción y la atmósfera inmersiva de los conciertos celebrados en años pasados.</p>
+            <h2 id="memory-title" class="section-title">{t('manifesto', 'memory_title')}</h2>
+            <p class="memory-intro">{t('manifesto', 'memory_intro')}</p>
           </div>
           <div class="memory-grid">
             <div class="video-card">
@@ -83,16 +83,12 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <section class="festival-why" aria-labelledby="why-title">
         <div class="why-container">
           <div class="why-left">
-            <h2 id="why-title" class="section-title">El Porqué</h2>
+            <h2 id="why-title" class="section-title">{t('manifesto', 'why_title')}</h2>
             <div class="accent-line"></div>
           </div>
           <div class="why-right">
-            <p>
-              Existe un arraigo vital, íntimo e inquebrantable que une a la familia Halffter con la villa del Burbia. Lugar de nacimiento de la insigne pianista Marita Caro y refugio estival familiar durante décadas, Villafranca es el origen de esta pasión.
-            </p>
-            <p>
-              Bajo la dirección artística de Pedro Halffter Caro, el festival nace de una convicción absoluta: <em>"La escenografía monumental ya la pone Villafranca, nuestro cometido es llenarla de música de altísima calidad"</em>.
-            </p>
+            <p>{t('manifesto', 'why_p1')}</p>
+            <p set:html={t('manifesto', 'why_p2')} />
           </div>
         </div>
       </section>
@@ -100,25 +96,19 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <!-- 3. BLOQUE: NUESTRA MISIÓN -->
       <section class="festival-mission" aria-labelledby="mission-title">
         <div class="mission-container">
-          <h2 id="mission-title" class="sr-only">Nuestra Misión</h2>
+          <h2 id="mission-title" class="sr-only">{t('manifesto', 'mission_title')}</h2>
           <div class="mission-grid">
             <article class="mission-card">
-              <h3 class="mission-card-title">Simbiosis con el Patrimonio</h3>
-              <p class="mission-card-text">
-                Fusionar la excelencia musical internacional con la acústica sacra e histórica de enclaves inigualables como la Iglesia de San Nicolás o el solemne Patio del Castillo.
-              </p>
+              <h3 class="mission-card-title">{t('manifesto', 'mission_1_title')}</h3>
+              <p class="mission-card-text">{t('manifesto', 'mission_1_text')}</p>
             </article>
             <article class="mission-card">
-              <h3 class="mission-card-title">Vínculo con el Peregrinaje</h3>
-              <p class="mission-card-text">
-                Articular una programación artística que dialogue íntimamente con la mística, la búsqueda interior y las vivencias del caminante a su paso por la milenaria Puerta del Perdón.
-              </p>
+              <h3 class="mission-card-title">{t('manifesto', 'mission_2_title')}</h3>
+              <p class="mission-card-text">{t('manifesto', 'mission_2_text')}</p>
             </article>
             <article class="mission-card">
-              <h3 class="mission-card-title">Cultura Sin Barreras</h3>
-              <p class="mission-card-text">
-                Romper protocolos rígidos. A través de puestas en escena circulares que abrazan al intérprete y cálidos comentarios pedagógicos, transformamos al espectador en un auténtico "caminante musical".
-              </p>
+              <h3 class="mission-card-title">{t('manifesto', 'mission_3_title')}</h3>
+              <p class="mission-card-text">{t('manifesto', 'mission_3_text')}</p>
             </article>
           </div>
         </div>
