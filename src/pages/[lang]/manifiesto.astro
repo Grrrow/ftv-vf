@@ -69,6 +69,12 @@ const t = await useTranslations(currentLang as keyof typeof languages);
             <div class="video-card">
               <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/hhtVvEj7GYM" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/LrrQgQpVCLo" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/Osp_un1xQco" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -118,39 +124,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
         </div>
       </section>
 
-      <!-- 4. SECCIÓN: HISTORIA Y LEGADO -->
-      <section class="festival-legacy" aria-labelledby="legacy-title">
-        <div class="legacy-container">
-          <div class="legacy-header">
-            <h2 id="legacy-title" class="section-title">Historia y Legado</h2>
-            <p class="legacy-intro">
-              Un festival cimentado sobre una dilatada tradición. Respaldada por el impacto histórico de las más de treinta ediciones del Curso Internacional de Composición, Villafranca respira vanguardia y memoria musical.
-            </p>
-          </div>
-          <div class="legacy-grid">
-            <div class="legacy-item">
-              <span class="legacy-name">Cristóbal Halffter</span>
-              <span class="legacy-role">Alma intelectual del festival y figura cumbre de la creación musical del siglo XX.</span>
-            </div>
-            <div class="legacy-item">
-              <span class="legacy-name">Marita Caro</span>
-              <span class="legacy-role">Pianista de prestigio internacional y corazón vital del proyecto.</span>
-            </div>
-            <div class="legacy-item">
-              <span class="legacy-name">Pedro Halffter Caro</span>
-              <span class="legacy-role">Director artístico, compositor y director de orquesta.</span>
-            </div>
-            <div class="legacy-item">
-              <span class="legacy-name">Óscar Martín</span>
-              <span class="legacy-role">Pianista concertista y catedrático del Conservatorio Superior de Sevilla.</span>
-            </div>
-            <div class="legacy-item full-width">
-              <span class="legacy-name">Grandes Maestros e Instituciones</span>
-              <span class="legacy-role">Joaquín Achúcarro, Ignacio Yepes, Luis de Pablo, Antón García Abril, Tomás Marco, la Orquesta Sinfónica de Castilla y León (OSCYL) y la Orquesta de Colonia.</span>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
 
     </main>
@@ -350,67 +324,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     margin: 0;
   }
 
-  /* 4. LEGACY */
-  .festival-legacy {
-    padding: var(--space-xxl) var(--space-md);
-    background-color: var(--color-surface);
-  }
 
-  .legacy-container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .legacy-header {
-    text-align: center;
-    margin-bottom: var(--space-xl);
-  }
-
-  .legacy-intro {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--color-midnight);
-    opacity: 0.9;
-  }
-
-  .legacy-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-
-  @media (min-width: 768px) {
-    .legacy-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  .legacy-item {
-    padding: var(--space-md);
-    border-left: 1px solid var(--color-gold);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .legacy-item.full-width {
-    grid-column: 1 / -1;
-  }
-
-  .legacy-name {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--color-midnight);
-    margin-bottom: var(--space-xs);
-  }
-
-  .legacy-role {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--color-midnight);
-    opacity: 0.75;
-  }
 
   /* 5. VISUAL MEMORY */
   .festival-memory {
