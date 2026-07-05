@@ -1,0 +1,16 @@
+{
+  "name": "Iglesia de San Nicolás",
+  "description": "El corazón jesuita del siglo XVII. Madera y piedra que envuelven la música de cámara.",
+  "image": "piano-church.jpg",
+  "imageAlt": "Nave central de la Iglesia de San Nicolás",
+  "slug": "es-iglesia-san-nicolas",
+  "id": "es-iglesia-san-nicolas",
+  "long_description": [
+    "La Iglesia de San Nicolás de Bari es un monumental conjunto del siglo XVII que constituye uno de los ejemplos más imponentes de la arquitectura barroca de influencia herreriana en El Bierzo. Vinculado históricamente al antiguo Colegio de los Jesuitas, este emblemático templo destaca por su fachada sobria y su imponente presencia en el corazón del casco histórico de la villa, abriendo sus puertas para ofrecer un rincón de enorme riqueza patrimonial que invita a la contemplación y al disfrute de las artes.",
+    "Para este espacio, los conciertos tendrán un carácter vespertino a las 20:30 h y se desarrollarán aprovechando las magníficas condiciones acústicas naturales de su arquitectura sacra, con un aforo limitado estrictamente a 200 plazas. Al no ser asientos numerados, estos se ocuparán por estricto orden de llegada el día del evento, haciendo que la solemnidad del templo y la experiencia musical se fusionen de manera inolvidable."
+  ],
+  "capacity": 200,
+  "acoustic_type": "Cámara",
+  "address": "Plaza de San Nicolás, s/n, 24500 Villafranca del Bierzo (León)",
+  "address_url": "https://www.google.com/maps/search/?api=1&query=Plaza+de+San+Nicolás,+s/n,+24500+Villafranca+del+Bierzo+(León)"
+}

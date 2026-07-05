@@ -1,0 +1,85 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Brand Colors (Herencia Nocturna) */
+  --color-midnight: #0B132B;
+  --color-gold: #C5A059;
+  --color-brass: #D4AF37;
+  --color-offwhite: #F8F9FA;
+  
+  /* Semantic Variables */
+  --color-bg: var(--color-offwhite);
+  --color-text: var(--color-midnight);
+  --color-primary: var(--color-midnight);
+  --color-accent: var(--color-gold);
+  --color-accent-hover: var(--color-brass);
+  --color-border: rgba(11, 19, 43, 0.1);
+  --color-surface: #ffffff;
+  
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Montserrat', sans-serif;
+  
+  /* Spacing (8px scale) */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1.0rem;   /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 2.0rem;   /* 32px */
+  --space-xl: 3.0rem;   /* 48px */
+  --space-xxl: 4.0rem;  /* 64px */
+  
+  /* Layout Details */
+  --border-radius: 4px;
+  --box-shadow: 0 10px 30px rgba(11, 19, 43, 0.05);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reset CSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Focus styles for keyboard accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

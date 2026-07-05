@@ -1,0 +1,49 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: string;
+}
+
+const { title, description, lang } = Astro.props;
+const siteUrl = Astro.site ? Astro.site.href : 'https://musicaenvillafranca.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+
+// Logic to clean the current pathname and swap the language prefix
+const getAltUrl = (targetLang: string) => {
+  let path = Astro.url.pathname;
+  // Remove existing lang prefix if it exists
+  path = path.replace(/^\/(es|en|de)/, '');
+  if (!path.startsWith('/')) path = '/' + path;
+  return new URL(`/${targetLang}${path}`, siteUrl).href;
+};
+---
+
+<!-- SEO Global -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- i18n Alternates -->
+<link rel="alternate" hreflang="es" href={getAltUrl('es')} />
+<link rel="alternate" hreflang="en" href={getAltUrl('en')} />
+<link rel="alternate" hreflang="de" href={getAltUrl('de')} />
+<link rel="alternate" hreflang="x-default" href={getAltUrl('es')} />
+
+<!-- Schema.org / JSON-LD para Eventos -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Festival",
+  "name": "Música en Villafranca",
+  "url": siteUrl,
+  "location": {
+    "@type": "Place",
+    "name": "Villafranca del Bierzo",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villafranca del Bierzo",
+      "addressRegion": "León",
+      "addressCountry": "ES"
+    }
+  }
+})} />

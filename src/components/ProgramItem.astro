@@ -1,0 +1,325 @@
+---
+import { Image } from 'astro:assets';
+
+export interface Props {
+  event: any;
+  currentLang: string;
+  ctaText: string;
+}
+
+const { event, currentLang, ctaText } = Astro.props;
+
+// Formatting functions
+const formatDate = (dateStr: string, locale: string) => {
+  const d = new Date(dateStr);
+  const day = d.getDate().toString().padStart(2, '0');
+  const month = d.toLocaleDateString(locale, { month: 'short' }).toUpperCase().replace('.', '');
+  return { day, month };
+};
+
+const formatTime = (dateStr: string) => {
+  const d = new Date(dateStr);
+  const hours = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  return `${hours}:${minutes}h`;
+};
+
+const getVenueSlug = (venueName: string) => {
+  if (venueName.includes('Castillo')) return 'castillo-villafranca';
+  if (venueName.includes('San Nicolás')) return 'iglesia-san-nicolas';
+  if (venueName.includes('San Francisco')) return 'iglesia-san-francisco';
+  if (venueName.includes('Teatro')) return 'teatro-villafranquino';
+  return '';
+};
+
+const translation = event.traducciones[currentLang as keyof typeof event.traducciones] || event.traducciones['es'];
+const { day, month } = formatDate(event.fecha, currentLang);
+const time = formatTime(event.fecha);
+const venueSlug = getVenueSlug(event.lugar);
+
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
+const imagePath = `../assets/events_images/${event.imagenUrl}`;
+const imageSrc = images[imagePath] ? images[imagePath]() : null;
+---
+
+<article class="event-card-horizontal" id={event.id}>
+  <!-- Columna 1: Fecha/Hora -->
+  <div class="card-datetime">
+    <div>
+      <span class="date-day">{day}</span>
+      <span class="date-month">{month}</span>
+    </div>
+    <span class="time-label">{time}</span>
+  </div>
+
+  <!-- Columna 2: Imagen -->
+  <div class="card-media">
+    {imageSrc ? (
+      <Image 
+        src={imageSrc} 
+        alt={translation.titulo} 
+        class="event-img"
+        format="webp"
+      />
+    ) : (
+      <div style="width:100%; height:100%; background:var(--color-midnight);"></div>
+    )}
+  </div>
+
+  <!-- Columna 3: Información -->
+  <div class="card-info">
+    {venueSlug ? (
+      <a href={`/${currentLang}/escenarios#${venueSlug}`} class="event-venue-link">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        {event.lugar}
+      </a>
+    ) : (
+      <span class="event-venue-link" style="pointer-events: none;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        {event.lugar}
+      </span>
+    )}
+    <h2 class="event-title">{translation.titulo}</h2>
+    <div class="event-performers" set:html={translation.interpretes}></div>
+    <div class="event-synopsis" set:html={translation.sinopsisCorta}></div>
+  </div>
+
+  <!-- Columna 4: Acciones -->
+  <div class="card-actions">
+    <a 
+      href={event.taylorTicketsUrl} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="btn-buy"
+      aria-label={`${ctaText} para ${translation.titulo}`}
+    >
+      {ctaText}
+    </a>
+  </div>
+</article>
+
+<style>
+  /* Horizontal Card Layout */
+  .event-card-horizontal {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2.5rem;
+  }
+  
+  .event-card-horizontal:last-child {
+    margin-bottom: 0;
+  }
+
+  .event-card-horizontal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(11, 19, 43, 0.08);
+    border-color: rgba(197, 160, 89, 0.3); /* Soft Gold border on hover */
+  }
+
+  @media (min-width: 900px) {
+    .event-card-horizontal {
+      display: grid;
+      grid-template-columns: 140px 250px 1fr 200px;
+      align-items: stretch;
+    }
+  }
+
+  /* Column 1: Date & Time */
+  .card-datetime {
+    background: #ffffff;
+    color: var(--color-midnight);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    min-width: 140px;
+    text-align: center;
+  }
+
+  @media (min-width: 900px) {
+    .card-datetime {
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--color-border);
+    }
+  }
+
+  .date-day {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-gold);
+    display: block;
+  }
+
+  .date-month {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+    color: var(--color-midnight);
+    opacity: 0.9;
+  }
+
+  .time-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-midnight);
+    background: rgba(197, 160, 89, 0.15); /* Soft gold background */
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 900px) {
+    .time-label {
+      margin-top: var(--space-md);
+      display: inline-block;
+    }
+  }
+
+  /* Column 2: Image */
+  .card-media {
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 900px) {
+    .card-media {
+      width: 250px;
+      min-height: auto;
+      flex-shrink: 0;
+    }
+  }
+
+  .event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .event-card-horizontal:hover .event-img {
+    transform: scale(1.03);
+  }
+
+  /* Column 3: Info Content */
+  .card-info {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .event-venue-link {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: var(--space-xs);
+    width: fit-content;
+  }
+
+  .event-venue-link:hover {
+    text-decoration: underline;
+  }
+
+  .event-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    color: var(--color-midnight);
+    margin: 0 0 6px 0;
+    line-height: 1.25;
+  }
+
+  .event-performers {
+    font-weight: 500;
+    color: var(--color-midnight);
+    opacity: 0.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .event-synopsis {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-midnight);
+    opacity: 0.85;
+    margin: 0;
+  }
+  
+  .event-synopsis :global(.repertoire-list) {
+    margin-top: 6px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0.8;
+  }
+
+  /* Column 4: Actions */
+  .card-actions {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--color-border);
+    background-color: transparent;
+  }
+
+  @media (min-width: 900px) {
+    .card-actions {
+      border-top: none;
+      border-left: 1px solid var(--color-border);
+      width: 200px;
+      flex-shrink: 0;
+    }
+  }
+
+  .btn-buy {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-midnight);
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--color-gold);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .btn-buy:hover,
+  .btn-buy:focus-visible {
+    background-color: var(--color-gold);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+  }
+</style>

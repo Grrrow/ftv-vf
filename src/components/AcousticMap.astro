@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import { getEntry } from 'astro:content';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+const i18nEntry = await getEntry('i18n', currentLang);
+const venuesPageData = i18nEntry?.data?.venues_page;
+
+const venuesEntries = await getCollection('venues', ({ id }) => id.startsWith(`${currentLang}-`));
+const venues = venuesEntries.map(entry => entry.data);
+---
+
+<section class="acoustic-map-section" aria-labelledby="map-title">
+  <div class="map-container">
+    <div class="map-header">
+      <h3 id="map-title">{venuesPageData?.map_title || 'Mapa de Acústicas'}</h3>
+      <div class="accent-line-subtle"></div>
+    </div>
+    
+    <div class="map-grid">
+      {venues.map((venue) => (
+        <div class="map-card">
+          <div class="map-card-header">
+            <span class="map-label-top">MONUMENTO</span>
+            <h4 class="map-venue-name">{venue.name}</h4>
+            <p class="map-venue-desc">{venue.description}</p>
+          </div>
+          <div class="map-card-footer">
+            <div class="map-stat">
+              <span class="map-label">{venuesPageData?.map_capacity || 'AFORO'}</span>
+              <span class="map-value">{venue.capacity || '--'} pax</span>
+            </div>
+            <div class="map-stat text-right">
+              <span class="map-label">{venuesPageData?.map_type || 'TIPO'}</span>
+              <span class="map-value">{venue.acoustic_type || '--'}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .acoustic-map-section {
+    padding: var(--space-xl) var(--space-md) var(--space-xxl);
+    background-color: var(--color-offwhite, #F8F9FA);
+  }
+  
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .map-header {
+    margin-bottom: var(--space-xl);
+  }
+  
+  #map-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-midnight, #0B132B);
+    margin: 0 0 var(--space-sm) 0;
+  }
+  
+  .accent-line-subtle {
+    width: 40px;
+    height: 1px;
+    background-color: var(--color-gold, #D4AF37);
+  }
+  
+  .map-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  @media (min-width: 768px) {
+    .map-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .map-card {
+    background-color: transparent;
+    border: 1px solid rgba(11, 19, 43, 0.1);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .map-label-top {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold, #D4AF37);
+    margin-bottom: var(--space-xs);
+  }
+  
+  .map-venue-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-midnight, #0B132B);
+    margin: 0 0 var(--space-sm) 0;
+  }
+  
+  .map-venue-desc {
+    font-size: 0.9rem;
+    color: var(--color-midnight, #0B132B);
+    opacity: 0.7;
+    margin: 0 0 var(--space-lg) 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .map-card-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(11, 19, 43, 0.1);
+    padding-top: var(--space-md);
+    margin-top: auto;
+  }
+  
+  .map-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .map-label {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-midnight, #0B132B);
+    opacity: 0.5;
+    margin-bottom: 4px;
+  }
+  
+  .map-value {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-midnight, #0B132B);
+  }
+</style>

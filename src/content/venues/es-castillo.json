@@ -1,0 +1,16 @@
+{
+  "name": "Patio del Castillo de Villafranca",
+  "description": "Conciertos nocturnos celebrados a la luz de las velas en un entorno histórico inigualable.",
+  "image": "piano-church.jpg",
+  "imageAlt": "Patio del Castillo a la luz de las velas",
+  "slug": "es-castillo",
+  "id": "es-castillo",
+  "long_description": [
+    "El Castillo-Palacio de los Marqueses de Villafranca es una imponente fortaleza del siglo XVI coronada por los icónicos chapiteles de pizarra típicos de la arquitectura berciana. Este monumento vivo, que a lo largo de la historia fue hogar e inspiración del célebre maestro Cristóbal Halffter, abre las puertas de su patio señorial de forma exclusiva para esta ocasión, ofreciendo un rincón cargado de misticismo y siglos de historia que rara vez se puede disfrutar en la intimidad.",
+    "Para este espacio, los conciertos tendrán un carácter nocturno a las 21:30 h y se desarrollarán bajo la sugerente atmósfera de la luz de las velas. El parpadeo de cientos de llamas iluminará los muros de piedra del patio central, envolviendo al público en una experiencia íntima con un aforo limitado estrictamente a 300 plazas. Al no ser asientos numerados, estos se ocuparán por estricto orden de llegada el día del evento, haciendo que la acústica y el entorno histórico se fusionen de manera inolvidable."
+  ],
+  "capacity": 300,
+  "acoustic_type": "Al aire libre",
+  "address": "Calle del Castillo, s/n, 24500 Villafranca del Bierzo (León)",
+  "address_url": "https://www.google.com/maps/search/?api=1&query=Castillo-Palacio+de+los+Marqueses+de+Villafranca,+Castillo,+Pl.+Prim,+12,+24500+Villafranca+del+Bierzo,+León"
+}

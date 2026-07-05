@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "El Festival",
+    "program": "Agenda 2026",
+    "venue": "Sedes",
+    "tickets": "Reservas"
+  },
+  "hero": {
+    "title": "Música en Villafranca",
+    "subtitle": "Un encuentro con la excelencia clásica en el corazón de El Bierzo histórico.",
+    "date": "Julio y Agosto 2026",
+    "cta": "Reservar Plaza"
+  },
+  "about": {
+    "title": "Nuestra Esencia",
+    "quote": "DONDE LA MÚSICA SE TRANSFORMA EN PEREGRINAJE.",
+    "p1": "Inspirado en la magia de los grandes festivales estivales europeos, Música en Villafranca nace para fundar una simbiosis perfecta entre el riquísimo patrimonio monumental de la villa y la excelencia artística internacional. Un encuentro donde las piedras del Castillo y la acústica sacra de San Nicolás cobran vida a través de las grandes obras de la historia.",
+    "p2": "Aquí eliminamos de raíz las barreras tradicionales entre el escenario y la audiencia. A través de una puesta en escena circular y una complicidad absoluta, invitamos a cada espectador a despojarse de ideas preconcebidas, olvidar el ruido del mundo y transformarse en un auténtico caminante musical."
+  },
+  "program_teaser": {
+    "title": "Próximos Conciertos",
+    "description": "",
+    "cta": "Ver Programa Completo"
+  },
+  "venue": {
+    "title": "Escenarios con Historia",
+    "description": "Monumentos donde la música encuentra su acústica perfecta.",
+    "cta_section": "Ver todos los escenarios"
+  },
+  "tickets": {
+    "title": "Tu Asiento Reservado",
+    "description": "Asegura tu lugar en uno de los eventos culturales más exclusivos de la región. Reservas de plaza disponibles para todos los escenarios.",
+    "cta": "Reservar Plaza"
+  },
+  "footer": {
+    "copyright": "© 2026 Festival Música en Villafranca. Todos los derechos reservados.",
+    "legal": "Aviso Legal y Privacidad"
+  },
+  "seo": {
+    "title": "Música en Villafranca | Festival Internacional de Música Clásica",
+    "description": "Descubre el festival de música clásica más prestigioso de Villafranca del Bierzo. Disfruta de conciertos únicos con artistas internacionales en un entorno histórico."
+  },
+  "venues_page": {
+    "title": "Escenarios Monumentales",
+    "subtitle": "La resonancia de la piedra histórica. Acústicas excepcionales en altares de patrimonio monumental y fortalezas de El Bierzo se funden con la experiencia musical creando una cita espiritual y artística inigualable.",
+    "cta": "Ver programación en esta sede ➔",
+    "map_title": "Mapa de Acústicas",
+    "map_capacity": "AFORO",
+    "map_type": "TIPO"
+  },
+  "programacion_page": {
+    "title": "Agenda del Festival 2026",
+    "subtitle": "Un viaje sensorial a través de la música en escenarios milenarios de El Bierzo.",
+    "events": {
+      "view_program": "Ver Programa Completo",
+      "buy_tickets": "Reserva de plaza",
+      "no_events": "No se encontraron conciertos programados.",
+      "view_venue": "Ver Sede"
+    }
+  },
+  "manifesto_page": {
+    "title": "El Manifiesto",
+    "subtitle": "Nuestra declaración de intenciones.",
+    "quote": "Donde la piedra escucha y el tiempo se rinde a la música.",
+    "section1_title": "El Silencio",
+    "section1_text": "Antes de la primera nota, existe un silencio profundo, labrado por siglos de historia. En Villafranca del Bierzo, el silencio no es la ausencia de sonido, sino el lienzo perfecto sobre el que se proyecta la excelencia clásica.",
+    "section2_title": "La Acústica",
+    "section2_text": "No construimos auditorios; revelamos los que ya existían. Las naves góticas y las bóvedas de sillería de nuestros monumentos poseen una resonancia natural que ningún teatro moderno puede replicar. Aquí, la música se escucha tal y como los grandes maestros la imaginaron.",
+    "section3_title": "El Tiempo",
+    "section3_text": "En una era de inmediatez, proponemos una pausa. El Festival es un retiro espiritual y artístico donde el intérprete y el oyente convergen en un instante eterno, aislados del ruido del mundo."
+  }
+}

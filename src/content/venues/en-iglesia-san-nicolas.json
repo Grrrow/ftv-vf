@@ -1,0 +1,16 @@
+{
+  "name": "Church of San Nicolás",
+  "description": "The 17th-century Jesuit heart. Wood and stone enveloping chamber music.",
+  "image": "piano-church.jpg",
+  "imageAlt": "Central nave of the Church of San Nicolás",
+  "slug": "en-iglesia-san-nicolas",
+  "id": "en-iglesia-san-nicolas",
+  "long_description": [
+    "The Church of San Nicolás de Bari is a monumental 17th-century complex that constitutes one of the most imposing examples of Herrerian-influenced Baroque architecture in El Bierzo. Historically linked to the former Jesuit College, this emblematic temple stands out for its sober facade and its imposing presence in the heart of the town's historic center, opening its doors to offer a corner of enormous heritage wealth that invites contemplation and the enjoyment of the arts.",
+    "For this space, the concerts will have an evening character at 20:30 h and will take place taking advantage of the magnificent natural acoustic conditions of its sacred architecture, with a capacity strictly limited to 200 seats. As the seats are not numbered, they will be occupied strictly on a first-come, first-served basis on the day of the event, ensuring that the solemnity of the temple and the musical experience merge in an unforgettable way."
+  ],
+  "capacity": 200,
+  "acoustic_type": "Chamber",
+  "address": "Plaza de San Nicolás, s/n, 24500 Villafranca del Bierzo (León)",
+  "address_url": "https://www.google.com/maps/search/?api=1&query=Plaza+de+San+Nicolás,+s/n,+24500+Villafranca+del+Bierzo+(León)"
+}

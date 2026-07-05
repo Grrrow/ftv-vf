@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "The Festival",
+    "program": "2026 Agenda",
+    "venue": "Venues",
+    "tickets": "Reservations"
+  },
+  "hero": {
+    "title": "Music in Villafranca",
+    "subtitle": "An encounter with classical excellence in the historic heart of El Bierzo.",
+    "date": "July & August 2026",
+    "cta": "Reserve Seat"
+  },
+  "about": {
+    "title": "Our Essence",
+    "quote": "WHERE MUSIC TRANSFORMS INTO PILGRIMAGE.",
+    "p1": "Inspired by the magic of the great European summer festivals, Música en Villafranca was born to create a perfect symbiosis between the town's rich monumental heritage and international artistic excellence. A gathering where the stones of the Castle and the sacred acoustics of San Nicolás come alive through the greatest works of history.",
+    "p2": "Here, we completely eliminate the traditional barriers between the stage and the audience. Through a circular stage setup and absolute complicity, we invite each spectator to shed preconceived ideas, forget the noise of the world, and transform into a true musical pilgrim."
+  },
+  "program_teaser": {
+    "title": "Upcoming Concerts",
+    "description": "",
+    "cta": "View Full Program"
+  },
+  "venue": {
+    "title": "Historic Venues",
+    "description": "Monuments where music finds its perfect acoustics.",
+    "cta_section": "View all venues"
+  },
+  "tickets": {
+    "title": "Reserve Your Seat",
+    "description": "Secure your place at one of the region's most exclusive cultural events. Seat reservations available for all venues.",
+    "cta": "Reserve Seat"
+  },
+  "footer": {
+    "copyright": "© 2026 Music in Villafranca Festival. All rights reserved.",
+    "legal": "Legal Notice & Privacy"
+  },
+  "seo": {
+    "title": "Music in Villafranca | International Classical Music Festival",
+    "description": "Discover the most prestigious classical music festival in Villafranca del Bierzo. Enjoy unique concerts with international artists in a historical setting."
+  },
+  "venues_page": {
+    "title": "Monumental Venues",
+    "subtitle": "The resonance of historic stone. Exceptional acoustics in monumental heritage altars and fortresses of El Bierzo merge with the musical experience to create an unparalleled spiritual and artistic appointment.",
+    "cta": "View program at this venue ➔",
+    "map_title": "Acoustics Map",
+    "map_capacity": "CAPACITY",
+    "map_type": "TYPE"
+  },
+  "programacion_page": {
+    "title": "2026 Festival Agenda",
+    "subtitle": "A sensory journey through music in the millennial stages of El Bierzo.",
+    "events": {
+      "view_program": "View Full Program",
+      "buy_tickets": "Seat Reservation",
+      "no_events": "No scheduled concerts found.",
+      "view_venue": "View Venue"
+    }
+  },
+  "manifesto_page": {
+    "title": "The Manifesto",
+    "subtitle": "Our declaration of intent.",
+    "quote": "Where stone listens and time surrenders to music.",
+    "section1_title": "The Silence",
+    "section1_text": "Before the first note, there is a profound silence, carved by centuries of history. In Villafranca del Bierzo, silence is not the absence of sound, but the perfect canvas upon which classical excellence is projected.",
+    "section2_title": "The Acoustics",
+    "section2_text": "We do not build auditoriums; we reveal those that already existed. The Gothic naves and ashlar vaults of our monuments possess a natural resonance that no modern theater can replicate. Here, music is heard exactly as the great masters imagined it.",
+    "section3_title": "The Time",
+    "section3_text": "In an era of immediacy, we propose a pause. The Festival is a spiritual and artistic retreat where performer and listener converge in an eternal instant, isolated from the noise of the world."
+  }
+}

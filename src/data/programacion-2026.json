@@ -1,0 +1,127 @@
+[
+  {
+    "id": "pablo-sainz-villegas-2026",
+    "fecha": "2026-07-25T21:30:00",
+    "slug": "pablo-sainz-villegas",
+    "lugar": "Patio del Castillo de Villafranca",
+    "imagenUrl": "Pablo Sainz - Villegas.webp",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/pablo-sainz-villegas-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "PABLO SAINZ-VILLEGAS - Concierto a la Luz de las Velas",
+        "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>A. Vivaldi: Concerto para Guitarra (Arreglo para cuarteto de cuerda)</li><li>L. Boccherini: Quinteto para Guitarra</li><li>Anónimo: Romance Anónimo para cuarteto y guitarra</li><li>W.A. Mozart: Obras seleccionadas</li></ul>"
+      },
+      "en": {
+        "titulo": "PABLO SAINZ-VILLEGAS - Candlelight Concert",
+        "interpretes": "String Quartet",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Guitar Concerto (Arrangement for string quartet)</li><li>L. Boccherini: Guitar Quintet</li><li>Anonymous: Romance Anónimo for quartet and guitar</li><li>W.A. Mozart: Selected works</li></ul>"
+      },
+      "de": {
+        "titulo": "PABLO SAINZ-VILLEGAS - Kerzenscheinkonzert",
+        "interpretes": "Streichquartett",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Gitarrenkonzert (Bearbeitung für Streichquartett)</li><li>L. Boccherini: Gitarrenquintett</li><li>Anonymus: Romance Anónimo für Quartett und Gitarre</li><li>W.A. Mozart: Ausgewählte Werke</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "niklas-liepe-2026",
+    "fecha": "2026-07-26T21:30:00",
+    "slug": "niklas-liepe",
+    "lugar": "Patio del Castillo de Villafranca",
+    "imagenUrl": "niklas liepe.webp",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/niklas-liepe-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn bajo la Luz de las Velas",
+        "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul>"
+      },
+      "en": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Candlelight Concert",
+        "interpretes": "String Quartet",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul>"
+      },
+      "de": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Kerzenscheinkonzert",
+        "interpretes": "Streichquartett",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "mirei-suji-2026",
+    "fecha": "2026-08-01T20:30:00",
+    "slug": "mirei-suji",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "Mirei Tsuji.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/mirei-suji-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Recital de Piano",
+        "interpretes": "<b>MIREI SUJI (Piano Solo)</b>",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata no.30 op.109</li><li>F. Chopin: Nocturne en si bemol mayor, op. 9 no. 2</li><li>F. Chopin: Nocturne en si mayor, op. 62 no. 1</li><li>F. Chopin: Waltz en do sostenido menor, op. 64 no. 2</li><li>F. Chopin: Ballad No. 1 en sol menor, op. 23</li><li>F. Chopin: Barcarolle en fa sostenido mayor, op. 60</li></ul>"
+      },
+      "en": {
+        "titulo": "Piano Recital",
+        "interpretes": "<b>MIREI SUJI (Piano Solo)</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata no.30 op.109</li><li>F. Chopin: Nocturne in B flat major, op. 9 no. 2</li><li>F. Chopin: Nocturne in B major, op. 62 no. 1</li><li>F. Chopin: Waltz in C sharp minor, op. 64 no. 2</li><li>F. Chopin: Ballad No. 1 in G minor, op. 23</li><li>F. Chopin: Barcarolle in F sharp major, op. 60</li></ul>"
+      },
+      "de": {
+        "titulo": "Klavierabend",
+        "interpretes": "<b>MIREI SUJI (Klaviersolo)</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonate Nr.30 op.109</li><li>F. Chopin: Nocturne in B-Dur, op. 9 Nr. 2</li><li>F. Chopin: Nocturne in H-Dur, op. 62 Nr. 1</li><li>F. Chopin: Walzer in cis-Moll, op. 64 Nr. 2</li><li>F. Chopin: Ballade Nr. 1 in g-Moll, op. 23</li><li>F. Chopin: Barcarolle in Fis-Dur, op. 60</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "camerata-oboe-2026",
+    "fecha": "2026-08-02T20:30:00",
+    "slug": "camerata-oboe",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/camerata-oboe-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Oboe y Cuerdas",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - oboe / Daniel Bombín - violín / Iván Braña - viola / Laura Núñez - cello)",
+        "sinopsisCorta": "<strong>Repertorio:</strong> Obras de W.A. Mozart, J.C. Bach, F. Schubert y G. Druschetzky"
+      },
+      "en": {
+        "titulo": "Oboe and Strings",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong> Works by W.A. Mozart, J.C. Bach, F. Schubert, and G. Druschetzky"
+      },
+      "de": {
+        "titulo": "Oboe und Streicher",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong> Werke von W.A. Mozart, J.C. Bach, F. Schubert und G. Druschetzky"
+      }
+    }
+  },
+  {
+    "id": "camerata-camara-2026",
+    "fecha": "2026-08-14T20:30:00",
+    "slug": "camerata-camara",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/camerata-camara-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Concierto de Cámara",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Director Artístico: Daniel Bombín Val / Violín solista: Manuel Pérez Morodo)",
+        "sinopsisCorta": "<strong>Repertorio:</strong> Obras de G.P. Telemann y F. Mendelssohn"
+      },
+      "en": {
+        "titulo": "Chamber Concert",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong> Works by G.P. Telemann and F. Mendelssohn"
+      },
+      "de": {
+        "titulo": "Kammerkonzert",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong> Werke von G.P. Telemann und F. Mendelssohn"
+      }
+    }
+  }
+]

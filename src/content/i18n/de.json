@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Das Festival",
+    "program": "Agenda 2026",
+    "venue": "Schauplätze",
+    "tickets": "Reservierungen"
+  },
+  "hero": {
+    "title": "Musik in Villafranca",
+    "subtitle": "Eine Begegnung mit klassischer Exzellenz im historischen Herzen von El Bierzo.",
+    "date": "Juli & August 2026",
+    "cta": "Platz reservieren"
+  },
+  "about": {
+    "title": "Unsere Essenz",
+    "quote": "WO SICH MUSIK IN PILGERSCHAFT VERWANDELT.",
+    "p1": "Inspiriert von der Magie der großen europäischen Sommerfestivals wurde Música en Villafranca ins Leben gerufen, um eine perfekte Symbiose zwischen dem reichen monumentalen Erbe der Stadt und internationaler künstlerischer Exzellenz zu schaffen. Eine Begegnung, bei der die Steine der Burg und die sakrale Akustik von San Nicolás durch die großen Meisterwerke der Geschichte zum Leben erweckt werden.",
+    "p2": "Hier bauen wir die traditionellen Barrieren zwischen Bühne und Publikum von Grund auf ab. Durch ein kreisförmiges Bühnenbild und absolute Komplizenschaft laden wir jeden Zuschauer ein, vorgefasste Meinungen abzulegen, den Lärm der Welt zu vergessen und sich in einen echten Musikwanderer zu verwandeln."
+  },
+  "program_teaser": {
+    "title": "Kommende Konzerte",
+    "description": "",
+    "cta": "Gesamtes Programm ansehen"
+  },
+  "venue": {
+    "title": "Historische Spielorte",
+    "description": "Monumente, in denen die Musik ihre perfekte Akustik findet.",
+    "cta_section": "Alle Veranstaltungsorte"
+  },
+  "tickets": {
+    "title": "Ihr Platz",
+    "description": "Sichern Sie sich Ihren Platz bei einem der exklusivsten Kulturereignisse der Region. Platzreservierungen für alle Spielorte verfügbar.",
+    "cta": "Platz reservieren"
+  },
+  "footer": {
+    "copyright": "© 2026 Musik in Villafranca Festival. Alle Rechte vorbehalten.",
+    "legal": "Impressum & Datenschutz"
+  },
+  "seo": {
+    "title": "Musik in Villafranca | Internationales Klassikfestival",
+    "description": "Entdecken Sie das prestigeträchtigste Klassikfestival in Villafranca del Bierzo. Genießen Sie einzigartige Konzerte mit internationalen Künstlern in historischem Ambiente."
+  },
+  "venues_page": {
+    "title": "Monumentale Schauplätze",
+    "subtitle": "Die Resonanz historischen Steins. Außergewöhnliche Akustik in monumentalen Kulturerbe-Altären und Festungen von El Bierzo verschmelzen mit dem musikalischen Erlebnis.",
+    "cta": "Programm an diesem Ort ansehen ➔",
+    "map_title": "Raumakustik-Karte",
+    "map_capacity": "KAPAZITÄT",
+    "map_type": "TYP"
+  },
+  "programacion_page": {
+    "title": "Festivalprogramm 2026",
+    "subtitle": "Eine sinnliche Reise durch die Musik an den jahrtausendealten Orten von El Bierzo.",
+    "events": {
+      "view_program": "Vollständiges Programm ansehen",
+      "buy_tickets": "Platzreservierung",
+      "no_events": "Keine geplanten Konzerte gefunden.",
+      "view_venue": "Veranstaltungsort ansehen"
+    }
+  },
+  "manifesto_page": {
+    "title": "Das Manifest",
+    "subtitle": "Unsere Absichtserklärung.",
+    "quote": "Wo Stein lauscht und sich die Zeit der Musik ergibt.",
+    "section1_title": "Die Stille",
+    "section1_text": "Vor dem ersten Ton herrscht eine tiefe Stille, geprägt von jahrhundertelanger Geschichte. In Villafranca del Bierzo ist Stille nicht die Abwesenheit von Klang, sondern die perfekte Leinwand, auf die sich klassische Exzellenz projiziert.",
+    "section2_title": "Die Akustik",
+    "section2_text": "Wir bauen keine Konzertsäle; wir offenbaren die bereits vorhandenen. Die gotischen Schiffe und Quadergewölbe unserer Denkmäler besitzen eine natürliche Resonanz, die kein modernes Theater nachbilden kann. Hier wird Musik genau so gehört, wie es sich die großen Meister vorgestellt haben.",
+    "section3_title": "Die Zeit",
+    "section3_text": "In einer Zeit der Unmittelbarkeit schlagen wir eine Pause vor. Das Festival ist ein spiritueller und künstlerischer Rückzugsort, an dem Interpret und Zuhörer in einem ewigen Augenblick verschmelzen, isoliert vom Lärm der Welt."
+  }
+}

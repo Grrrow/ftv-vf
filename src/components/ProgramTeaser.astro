@@ -1,0 +1,128 @@
+---
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import programacionData from '../data/programacion-2026.json';
+import { getEntry } from 'astro:content';
+import ProgramItem from './ProgramItem.astro';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+const i18nEntry = await getEntry('i18n', currentLang);
+const pageData = i18nEntry?.data?.programacion_page;
+
+const getDayMonth = (dateStr: string, locale: string) => {
+  const d = new Date(dateStr);
+  const day = d.getDate();
+  const month = d.toLocaleDateString(locale, { month: 'short' }).toUpperCase().replace('.', '');
+  if (locale === 'de') return `${day}. ${month}`;
+  return `${day} ${month}`;
+};
+
+const formatTime = (dateStr: string) => {
+  const d = new Date(dateStr);
+  const hours = String(d.getHours()).padStart(2, '0');
+  const minutes = String(d.getMinutes()).padStart(2, '0');
+  return `${hours}:${minutes}h`;
+};
+
+const events = programacionData.slice(0, 3).map(event => {
+  return {
+    event: event,
+    currentLang: currentLang,
+    ctaText: pageData?.events?.buy_tickets || 'Reserva de plaza'
+  };
+});
+---
+
+<section id="program" class="program-section" aria-labelledby="program-title">
+  <div class="program-container">
+    <div class="program-header">
+      <h2 id="program-title" class="section-title">{t('program_teaser', 'title')}</h2>
+      {t('program_teaser', 'description') && (
+        <p class="section-desc">{t('program_teaser', 'description')}</p>
+      )}
+    </div>
+
+    <div class="program-list">
+      {events.map((event) => (
+        <ProgramItem {...event} />
+      ))}
+    </div>
+
+    <div class="program-footer">
+      <a href={`/${currentLang}/programacion`} class="link-subtle" aria-label={t('program_teaser', 'cta')}>
+        {t('program_teaser', 'cta')}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .program-section {
+    background-color: var(--color-surface, #FFFFFF); /* Fondo blanco del contenedor general */
+    padding: var(--space-xxl) var(--space-md);
+  }
+
+  .program-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .program-header {
+    margin-bottom: var(--space-xl);
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-midnight);
+    margin: 0 0 var(--space-sm) 0;
+    font-weight: 400;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    opacity: 0.8;
+  }
+
+  .program-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .program-footer {
+    margin-top: var(--space-xl);
+    display: flex;
+    justify-content: center;
+  }
+
+  .link-subtle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-midnight);
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding: var(--space-xs) 0;
+  }
+
+  .link-subtle::after {
+    content: '→';
+    transition: transform 0.3s ease;
+  }
+
+  .link-subtle:hover,
+  .link-subtle:focus-visible {
+    color: var(--color-brass);
+  }
+
+  .link-subtle:hover::after,
+  .link-subtle:focus-visible::after {
+    transform: translateX(4px);
+  }
+</style>

@@ -1,0 +1,486 @@
+---
+import { languages, useTranslations, defaultLang } from '../../i18n/utils';
+import Header from '../../components/Header.astro';
+import SkipLink from '../../components/SkipLink.astro';
+import SEO from '../../components/SEO.astro';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO 
+      title={`El Festival | ${t('seo', 'title')}`}
+      description="El Origen de un Sueño Musical y Místico en Villafranca del Bierzo."
+      lang={lang as string}
+    />
+  </head>
+  <body>
+    <SkipLink />
+    <Header />
+    
+    <main id="main-content" role="main" class="festival-page">
+      
+      <!-- 1. SECCIÓN HERO / CABECERA -->
+      <section class="festival-hero" aria-labelledby="hero-title">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">EL FESTIVAL</h1>
+          <p class="hero-subtitle">El Origen de un Sueño Musical y Místico</p>
+          <p class="hero-intro">
+            Enclavada en el corazón del Camino de Santiago, Villafranca del Bierzo trasciende su condición de joya monumental para convertirse en un inmenso escenario vivo. Aquí, entre la piedra centenaria y el silencio sobrecogedor de los valles, la música clásica encuentra su resonancia más pura y transformadora.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. SECCIÓN: VIDEOS EDICIONES ANTERIORES -->
+      <section class="festival-memory" aria-labelledby="memory-title">
+        <div class="memory-container">
+          <div class="memory-header">
+            <h2 id="memory-title" class="section-title">Vídeos de Ediciones Anteriores</h2>
+            <p class="memory-intro">Revive la magia, la emoción y la atmósfera inmersiva de los conciertos celebrados en años pasados.</p>
+          </div>
+          <div class="memory-grid">
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/FNSjNbxarX4" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/1KKL87bpvuQ" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/cCAnWrmSSyY" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/dq4BFts8bvk" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/4RLE53jG_PU" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/hhtVvEj7GYM" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. BLOQUE: EL PORQUÉ DEL FESTIVAL -->
+      <section class="festival-why" aria-labelledby="why-title">
+        <div class="why-container">
+          <div class="why-left">
+            <h2 id="why-title" class="section-title">El Porqué</h2>
+            <div class="accent-line"></div>
+          </div>
+          <div class="why-right">
+            <p>
+              Existe un arraigo vital, íntimo e inquebrantable que une a la familia Halffter con la villa del Burbia. Lugar de nacimiento de la insigne pianista Marita Caro y refugio estival familiar durante décadas, Villafranca es el origen de esta pasión.
+            </p>
+            <p>
+              Bajo la dirección artística de Pedro Halffter Caro, el festival nace de una convicción absoluta: <em>"La escenografía monumental ya la pone Villafranca, nuestro cometido es llenarla de música de altísima calidad"</em>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. BLOQUE: NUESTRA MISIÓN -->
+      <section class="festival-mission" aria-labelledby="mission-title">
+        <div class="mission-container">
+          <h2 id="mission-title" class="sr-only">Nuestra Misión</h2>
+          <div class="mission-grid">
+            <article class="mission-card">
+              <h3 class="mission-card-title">Simbiosis con el Patrimonio</h3>
+              <p class="mission-card-text">
+                Fusionar la excelencia musical internacional con la acústica sacra e histórica de enclaves inigualables como la Iglesia de San Nicolás o el solemne Patio del Castillo.
+              </p>
+            </article>
+            <article class="mission-card">
+              <h3 class="mission-card-title">Vínculo con el Peregrinaje</h3>
+              <p class="mission-card-text">
+                Articular una programación artística que dialogue íntimamente con la mística, la búsqueda interior y las vivencias del caminante a su paso por la milenaria Puerta del Perdón.
+              </p>
+            </article>
+            <article class="mission-card">
+              <h3 class="mission-card-title">Cultura Sin Barreras</h3>
+              <p class="mission-card-text">
+                Romper protocolos rígidos. A través de puestas en escena circulares que abrazan al intérprete y cálidos comentarios pedagógicos, transformamos al espectador en un auténtico "caminante musical".
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SECCIÓN: HISTORIA Y LEGADO -->
+      <section class="festival-legacy" aria-labelledby="legacy-title">
+        <div class="legacy-container">
+          <div class="legacy-header">
+            <h2 id="legacy-title" class="section-title">Historia y Legado</h2>
+            <p class="legacy-intro">
+              Un festival cimentado sobre una dilatada tradición. Respaldada por el impacto histórico de las más de treinta ediciones del Curso Internacional de Composición, Villafranca respira vanguardia y memoria musical.
+            </p>
+          </div>
+          <div class="legacy-grid">
+            <div class="legacy-item">
+              <span class="legacy-name">Cristóbal Halffter</span>
+              <span class="legacy-role">Alma intelectual del festival y figura cumbre de la creación musical del siglo XX.</span>
+            </div>
+            <div class="legacy-item">
+              <span class="legacy-name">Marita Caro</span>
+              <span class="legacy-role">Pianista de prestigio internacional y corazón vital del proyecto.</span>
+            </div>
+            <div class="legacy-item">
+              <span class="legacy-name">Pedro Halffter Caro</span>
+              <span class="legacy-role">Director artístico, compositor y director de orquesta.</span>
+            </div>
+            <div class="legacy-item">
+              <span class="legacy-name">Óscar Martín</span>
+              <span class="legacy-role">Pianista concertista y catedrático del Conservatorio Superior de Sevilla.</span>
+            </div>
+            <div class="legacy-item full-width">
+              <span class="legacy-name">Grandes Maestros e Instituciones</span>
+              <span class="legacy-role">Joaquín Achúcarro, Ignacio Yepes, Luis de Pablo, Antón García Abril, Tomás Marco, la Orquesta Sinfónica de Castilla y León (OSCYL) y la Orquesta de Colonia.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+    
+    <footer role="contentinfo" style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);">
+      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">{t('footer', 'copyright')}</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  /* GLOBAL TO PAGE */
+  .festival-page {
+    background-color: var(--color-surface);
+    color: var(--color-midnight);
+    font-family: var(--font-body);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--color-midnight);
+    margin: 0 0 var(--space-md) 0;
+  }
+
+  .accent-line {
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-gold);
+    margin: var(--space-sm) 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* 1. HERO */
+  .festival-hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl) var(--space-md);
+    background-color: var(--color-offwhite);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-offwhite);
+    /* In a real scenario, use an image here */
+    opacity: 0.4;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-midnight);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--color-gold);
+    font-style: italic;
+    margin: var(--space-sm) 0 var(--space-lg) 0;
+    font-weight: 400;
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0;
+    color: var(--color-midnight);
+    opacity: 0.9;
+  }
+
+  /* 2. WHY */
+  .festival-why {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-surface);
+  }
+
+  .why-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 768px) {
+    .why-container {
+      grid-template-columns: 1fr 2fr;
+      align-items: start;
+    }
+  }
+
+  .why-right p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 0 var(--space-lg) 0;
+    color: var(--color-midnight);
+  }
+
+  .why-right p:last-child {
+    margin-bottom: 0;
+  }
+
+  .why-right em {
+    font-style: italic;
+    color: var(--color-midnight);
+    font-weight: 500;
+  }
+
+  /* 3. MISSION */
+  .festival-mission {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-offwhite);
+  }
+
+  .mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 768px) {
+    .mission-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .mission-card {
+    background-color: var(--color-surface);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-gold);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(11, 19, 43, 0.05);
+  }
+
+  .mission-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-midnight);
+    margin: 0 0 var(--space-md) 0;
+    font-weight: 400;
+  }
+
+  .mission-card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-midnight);
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  /* 4. LEGACY */
+  .festival-legacy {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-surface);
+  }
+
+  .legacy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .legacy-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .legacy-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-midnight);
+    opacity: 0.9;
+  }
+
+  .legacy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 768px) {
+    .legacy-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .legacy-item {
+    padding: var(--space-md);
+    border-left: 1px solid var(--color-gold);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .legacy-item.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .legacy-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-midnight);
+    margin-bottom: var(--space-xs);
+  }
+
+  .legacy-role {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-midnight);
+    opacity: 0.75;
+  }
+
+  /* 5. VISUAL MEMORY */
+  .festival-memory {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-offwhite);
+  }
+
+  .memory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .memory-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .memory-intro {
+    font-size: 1.1rem;
+    color: var(--color-midnight);
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .memory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 768px) {
+    .memory-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .video-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: var(--color-midnight);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .video-placeholder:hover {
+    opacity: 0.9;
+  }
+
+  .play-icon {
+    font-size: 2rem;
+    color: var(--color-surface);
+  }
+
+  .video-caption {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--color-midnight);
+    text-align: center;
+    margin: 0;
+    opacity: 0.8;
+  }
+</style>

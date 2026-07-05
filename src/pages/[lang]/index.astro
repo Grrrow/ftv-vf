@@ -1,0 +1,48 @@
+---
+import { languages, useTranslations } from '../../i18n/utils';
+import SEO from '../../components/SEO.astro';
+import SkipLink from '../../components/SkipLink.astro';
+import '../../styles/global.css';
+
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Manifesto from '../../components/Manifesto.astro';
+import ProgramTeaser from '../../components/ProgramTeaser.astro';
+import VenuesSection from '../../components/VenuesSection.astro';
+import MapSection from '../../components/MapSection.astro';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = await useTranslations(lang as keyof typeof languages);
+---
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO 
+      title={t('seo', 'title')}
+      description={t('seo', 'description')}
+      lang={lang}
+    />
+  </head>
+  <body>
+    <SkipLink />
+    <Header />
+    
+    <main id="main-content" role="main">
+      <Hero />
+      <Manifesto />
+      <ProgramTeaser />
+      <VenuesSection />
+      <MapSection />
+    </main>
+    
+    <footer role="contentinfo" style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);">
+      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">{t('footer', 'copyright')}</p>
+    </footer>
+  </body>
+</html>

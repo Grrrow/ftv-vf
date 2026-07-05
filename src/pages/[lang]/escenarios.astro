@@ -1,0 +1,435 @@
+---
+import { languages, useTranslations, defaultLang } from "../../i18n/utils";
+import { getEntry, getCollection } from "astro:content";
+import Header from "../../components/Header.astro";
+import SkipLink from "../../components/SkipLink.astro";
+import SEO from "../../components/SEO.astro";
+import "../../styles/global.css";
+import { Image } from "astro:assets";
+import venuesHeroBg from "../../assets/venues-hero-bg.jpeg";
+import MapSection from "../../components/MapSection.astro";
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const currentLang = Object.keys(languages).includes(lang as string)
+  ? lang
+  : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+const i18nEntry = await getEntry("i18n", currentLang);
+const pageData = i18nEntry?.data?.venues_page;
+
+const venuesEntries = await getCollection("venues", ({ id }) =>
+  id.startsWith(`${currentLang}-`),
+);
+const venues = venuesEntries.map((entry) => entry.data);
+
+import programacionData from "../../data/programacion-2026.json";
+
+// Vite glob for dynamic image resolution
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/events_images/*.{jpeg,jpg,png,gif,webp}",
+);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO
+      title={`${pageData?.title} | ${t("seo", "title")}`}
+      description={pageData?.subtitle || t("seo", "description")}
+      lang={lang as string}
+    />
+    <style>
+      /* Hero Section */
+      .venues-hero {
+        position: relative;
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-md);
+        background-color: var(--color-offwhite);
+        color: var(--color-midnight);
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+        filter: grayscale(30%);
+      }
+
+      .hero-gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(
+          to top,
+          var(--color-offwhite) 0%,
+          rgba(248, 249, 250, 0.8) 40%,
+          transparent 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        padding-top: var(--space-xl);
+      }
+
+      .hero-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 10vw, 4.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 0 0 var(--space-md) 0;
+        color: var(--color-midnight);
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        max-width: 600px;
+        color: var(--color-midnight);
+      }
+
+      /* Alternating Layout */
+      .monuments-list {
+        padding: var(--space-xl) var(--space-md);
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem; /* Increased spacing between venues */
+      }
+
+      .monument-row {
+        display: flex;
+        flex-direction: column-reverse; /* Pone la imagen encima en móvil */
+        gap: var(--space-lg);
+        align-items: center;
+      }
+
+      @media (min-width: 900px) {
+        .monument-row {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+        }
+
+        /* Alternancia de orden */
+        .monument-row:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+
+        .monument-content,
+        .monument-media {
+          flex: 1;
+          width: 50%;
+        }
+
+        .monument-row:nth-child(odd) .monument-content {
+          padding-right: var(--space-xl);
+        }
+
+        .monument-row:nth-child(even) .monument-content {
+          padding-left: var(--space-xl);
+        }
+      }
+
+      .monument-media {
+        width: 100%;
+      }
+
+      .monument-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 400px;
+        filter: grayscale(20%);
+        transition: filter 0.5s ease;
+      }
+
+      .monument-img:hover {
+        filter: grayscale(0%);
+      }
+
+      .monument-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .monument-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 400;
+        color: var(--color-midnight);
+        margin: 0 0 var(--space-md) 0;
+        line-height: 1.2;
+      }
+
+      .monument-desc {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--color-midnight);
+        opacity: 0.85;
+        margin-bottom: var(--space-md);
+      }
+
+      .monument-desc p {
+        margin: 0 0 var(--space-md) 0;
+      }
+
+      .monument-address {
+        margin-top: var(--space-md);
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .monument-address a {
+        color: var(--color-gold);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: opacity 0.2s ease;
+      }
+
+      .monument-address a:hover {
+        opacity: 0.8;
+      }
+
+      .monument-cta-container {
+        margin-top: var(--space-md);
+        padding-top: var(--space-md);
+        border-top: 1px solid rgba(11, 19, 43, 0.1);
+      }
+
+      .events-list-title {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-gold);
+        margin: 0 0 var(--space-sm) 0;
+      }
+
+      .events-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+
+      .event-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        padding: var(--space-sm);
+        border-radius: var(--border-radius);
+        background: rgba(255, 255, 255, 0.5);
+        border-left: 3px solid var(--color-gold);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .event-item:hover {
+        transform: translateX(4px);
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .event-datetime {
+        display: flex;
+        flex-direction: column;
+        min-width: 90px;
+        color: var(--color-midnight);
+        border-right: 1px solid rgba(11, 19, 43, 0.1);
+        padding-right: var(--space-sm);
+      }
+
+      .event-date {
+        font-weight: 700;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        color: var(--color-gold);
+      }
+
+      .event-time {
+        font-size: 0.85rem;
+        opacity: 0.8;
+      }
+
+      .event-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .event-title-link {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--color-midnight);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-bottom: 2px;
+      }
+
+      .event-title-link:hover {
+        color: var(--color-brass);
+      }
+
+      .event-performer {
+        font-size: 0.9rem;
+        color: var(--color-midnight);
+        opacity: 0.7;
+      }
+
+      .no-events-text {
+        font-size: 0.95rem;
+        font-style: italic;
+        opacity: 0.7;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <SkipLink />
+    <Header />
+
+    <main id="main-content" role="main">
+      <section class="venues-hero">
+        <div class="hero-bg-container">
+          <Image src={venuesHeroBg} alt="" class="hero-bg" format="webp" />
+        </div>
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">{pageData?.title}</h1>
+        </div>
+      </section>
+
+      <section class="monuments-list" aria-label="Lista de escenarios">
+        {
+          venues.map((venue, index) => {
+            const imagePath = `../../assets/events_images/${venue.image}`;
+            const imageSrc = images[imagePath] ? images[imagePath]() : null;
+            // Limpiar slug para los anchors en /programacion
+            const cleanSlug = venue.slug.replace(`${currentLang}-`, "");
+
+            const venueEvents = programacionData.filter((e) => {
+              if (cleanSlug === "castillo" && e.lugar.includes("Castillo")) return true;
+              if (cleanSlug === "iglesia-san-nicolas" && e.lugar.includes("Nicolás")) return true;
+              return false;
+            });
+
+            return (
+              <article class="monument-row">
+                <div class="monument-content">
+                  <h2 class="monument-title">{venue.name}</h2>
+                  <div class="monument-desc">
+                    {venue.long_description &&
+                    venue.long_description.length > 0 ? (
+                      venue.long_description.map((p) => <p>{p}</p>)
+                    ) : (
+                      <p>{venue.description}</p>
+                    )}
+                    {venue.address && venue.address_url && (
+                      <p class="monument-address">
+                        <a
+                          href={venue.address_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          📍 {venue.address}
+                        </a>
+                      </p>
+                    )}
+                  </div>
+
+                  <div class="monument-cta-container">
+                    <h3 class="events-list-title">Agenda en {venue.name}</h3>
+                    {venueEvents.length > 0 ? (
+                      <ul class="events-list">
+                        {venueEvents.map((event) => {
+                          const eventT = event.traducciones[currentLang];
+                          const dateObj = new Date(event.fecha);
+                          const dateStr = dateObj.toLocaleDateString(currentLang, { day: 'numeric', month: 'short' });
+                          const timeStr = dateObj.toLocaleTimeString(currentLang, { hour: '2-digit', minute: '2-digit' });
+                          return (
+                          <li class="event-item">
+                            <div class="event-datetime">
+                              <span class="event-date">{dateStr}</span>
+                              <span class="event-time">{timeStr}</span>
+                            </div>
+                            <div class="event-info">
+                              <a
+                                href={`/${currentLang}/programacion#${event.id}`}
+                                class="event-title-link"
+                              >
+                                {eventT.titulo}
+                              </a>
+                              <span class="event-performer" set:html={eventT.interpretes} />
+                            </div>
+                          </li>
+                        )})}
+                      </ul>
+                    ) : (
+                      <p class="no-events-text">
+                        Próximamente anunciaremos conciertos para esta sede.
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div class="monument-media">
+                  {imageSrc ? (
+                    <Image
+                      src={imageSrc}
+                      alt={venue.imageAlt}
+                      class="monument-img"
+                      format="webp"
+                    />
+                  ) : (
+                    <div style="width:100%; height:100%; background:var(--color-midnight); min-height:400px;" />
+                  )}
+                </div>
+              </article>
+            );
+          })
+        }
+      </section>
+
+      <div style="margin-top: 8rem; margin-bottom: 4rem;">
+        <MapSection />
+      </div>
+    </main>
+
+    <footer
+      role="contentinfo"
+      style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);"
+    >
+      <p style="opacity:0.6; font-size:0.9rem;">
+        {i18nEntry?.data?.footer?.copyright}
+      </p>
+    </footer>
+  </body>
+</html>

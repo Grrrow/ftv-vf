@@ -1,0 +1,16 @@
+{
+  "name": "Kirche San Nicolás",
+  "description": "Das jesuitische Herz aus dem 17. Jahrhundert. Holz und Stein umhüllen die Kammermusik.",
+  "image": "piano-church.jpg",
+  "imageAlt": "Mittelschiff der Kirche San Nicolás",
+  "slug": "de-iglesia-san-nicolas",
+  "id": "de-iglesia-san-nicolas",
+  "long_description": [
+    "Die Kirche San Nicolás de Bari ist ein monumentaler Komplex aus dem 17. Jahrhundert, der eines der beeindruckendsten Beispiele für die von Herrera beeinflusste Barockarchitektur im Bierzo darstellt. Historisch mit dem ehemaligen Jesuitenkolleg verbunden, besticht dieser emblematische Tempel durch seine schlichte Fassade und seine imposante Präsenz im Herzen der Altstadt. Er öffnet seine Türen, um einen Ort von enormem kulturellen Reichtum zu bieten, der zur Kontemplation und zum Genuss der Künste einlädt.",
+    "An diesem Ort finden die Konzerte abends um 20:30 Uhr statt und nutzen die großartigen natürlichen akustischen Bedingungen der Sakralarchitektur, wobei die Kapazität streng auf 200 Plätze begrenzt ist. Da es keine nummerierten Plätze gibt, erfolgt die Platzwahl am Veranstaltungstag streng nach der Reihenfolge des Eintreffens, wodurch die Feierlichkeit des Tempels und das musikalische Erlebnis auf unvergessliche Weise miteinander verschmelzen."
+  ],
+  "capacity": 200,
+  "acoustic_type": "Kammermusik",
+  "address": "Plaza de San Nicolás, s/n, 24500 Villafranca del Bierzo (León)",
+  "address_url": "https://www.google.com/maps/search/?api=1&query=Plaza+de+San+Nicolás,+s/n,+24500+Villafranca+del+Bierzo+(León)"
+}

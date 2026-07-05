@@ -1,0 +1,390 @@
+---
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+
+// Extraemos el idioma dinámicamente preservando la compatibilidad
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+
+const t = await useTranslations(currentLang as keyof typeof languages);
+
+// Helper para URLs del selector de idiomas
+const getPathForLang = (l: string) => {
+  let path = Astro.url.pathname;
+  path = path.replace(/^\/(es|en|de)/, '');
+  if (!path.startsWith('/')) path = '/' + path;
+  return `/${l}${path}`;
+};
+---
+
+<header class="site-header" role="banner">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href={`/${currentLang}`} class="logo-link" aria-label={t('nav', 'home')}>
+      <span class="logo-text">Música en Villafranca</span>
+    </a>
+
+    <!-- Botón Hamburguesa Mobile -->
+    <button id="mobile-menu-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Navegación Principal -->
+    <div id="main-nav" class="nav-overlay">
+      <nav class="nav-content" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href={`/${currentLang}`}>{t('nav', 'home')}</a></li>
+          <li><a href={`/${currentLang}/manifiesto`}>{t('nav', 'about')}</a></li>
+          <li><a href={`/${currentLang}/programacion`}>{t('nav', 'program')}</a></li>
+          <li><a href={`/${currentLang}/escenarios`}>{t('nav', 'venue')}</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Selector de Idioma (Dropdown) -->
+          <div class="lang-selector">
+            <button id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+              {currentLang.toUpperCase()}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
+            <ul id="lang-menu" class="lang-menu" role="menu">
+              {Object.entries(languages).map(([code, name]) => (
+                <li role="none">
+                  <a href={getPathForLang(code)} role="menuitem" class={currentLang === code ? 'active' : ''}>
+                    {name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Botón CTA Entradas -->
+          <a href={`/${currentLang}#tickets`} class="btn-tickets" aria-label={t('nav', 'tickets')}>
+            {t('nav', 'tickets')}
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-offwhite, #F8F9FA);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-midnight, #0B132B);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Desktop Default */
+  .nav-overlay {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: var(--space-lg);
+  }
+
+  .nav-list a {
+    color: var(--color-midnight, #0B132B);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus-visible {
+    color: var(--color-brass, #D4AF37);
+  }
+
+  .nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brass, #D4AF37);
+    transition: width 0.3s ease;
+  }
+
+  .nav-list a:hover::after,
+  .nav-list a:focus-visible::after {
+    width: 100%;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  /* Language Selector */
+  .lang-selector {
+    position: relative;
+  }
+
+  #lang-toggle {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--color-midnight);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    border-radius: var(--border-radius);
+  }
+
+  #lang-toggle:hover, #lang-toggle:focus-visible {
+    color: var(--color-brass);
+    outline: 2px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+
+  .lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-offwhite);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--box-shadow);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 120px;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .lang-selector.is-active .lang-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .lang-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--color-midnight);
+    font-size: 0.9rem;
+  }
+
+  .lang-menu a:hover,
+  .lang-menu a:focus-visible,
+  .lang-menu a.active {
+    background: var(--color-brass);
+    color: var(--color-offwhite);
+  }
+
+  /* Button Tickets */
+  .btn-tickets {
+    background-color: var(--color-midnight, #0B132B);
+    color: var(--color-offwhite, #F8F9FA);
+    padding: 10px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: 1px solid var(--color-gold, #C5A059);
+    transition: all 0.3s ease;
+  }
+
+  .btn-tickets:hover,
+  .btn-tickets:focus-visible {
+    background-color: var(--color-brass, #D4AF37);
+    color: var(--color-midnight, #0B132B);
+  }
+
+  /* Mobile Toggle Hidden on Desktop */
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: var(--color-midnight);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 1024px) {
+    .mobile-toggle {
+      display: block;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .hamburger-line {
+      background-color: var(--color-midnight);
+    }
+    .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--color-offwhite, #F8F9FA);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    }
+
+    .nav-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-content {
+      flex-direction: column;
+      gap: var(--space-xl);
+    }
+
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+
+    .nav-list a {
+      color: var(--color-midnight, #0B132B);
+      font-size: 1.5rem;
+      font-family: var(--font-heading);
+    }
+
+    .nav-list a::after {
+      background-color: var(--color-brass);
+    }
+
+    .nav-list a:hover,
+    .nav-list a:focus-visible {
+      color: var(--color-brass);
+    }
+
+    .nav-actions {
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    #lang-toggle {
+      color: var(--color-midnight);
+      font-size: 1.2rem;
+    }
+
+    .lang-menu {
+      top: auto;
+      bottom: 100%;
+      right: auto;
+      margin-bottom: 10px;
+      background-color: var(--color-surface);
+      border-color: var(--color-border);
+    }
+
+    .lang-menu a {
+      color: var(--color-midnight);
+    }
+
+    .lang-menu a:hover,
+    .lang-menu a.active {
+      background: var(--color-brass);
+      color: var(--color-offwhite);
+    }
+
+    .btn-tickets {
+      background-color: var(--color-midnight);
+      color: var(--color-offwhite);
+      border-color: var(--color-gold);
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const navOverlay = document.getElementById('main-nav');
+    const langSelector = document.querySelector('.lang-selector');
+    const langToggle = document.getElementById('lang-toggle');
+
+    if (toggleBtn && navOverlay) {
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+        navOverlay.classList.toggle('is-open');
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+      });
+    }
+
+    if (langToggle && langSelector) {
+      langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = langToggle.getAttribute('aria-expanded') === 'true';
+        langToggle.setAttribute('aria-expanded', String(!isExpanded));
+        langSelector.classList.toggle('is-active');
+      });
+
+      document.addEventListener('click', () => {
+        langToggle.setAttribute('aria-expanded', 'false');
+        langSelector.classList.remove('is-active');
+      });
+    }
+  });
+</script>

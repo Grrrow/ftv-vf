@@ -1,0 +1,104 @@
+---
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+---
+
+<section id="about" class="manifesto-section" aria-labelledby="manifesto-title">
+  <div class="manifesto-container">
+    
+    <!-- Columna Izquierda: Título y Línea Decorativa -->
+    <div class="manifesto-header">
+      <h2 id="manifesto-title" class="manifesto-title">{t('about', 'title')}</h2>
+    </div>
+
+    <!-- Columna Derecha: Contenidos Legibles -->
+    <div class="manifesto-content">
+      <blockquote class="manifesto-quote">
+        {t('about', 'quote')}
+      </blockquote>
+      <div class="manifesto-body">
+        <p>{t('about', 'p1')}</p>
+        <p>{t('about', 'p2')}</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  .manifesto-section {
+    background-color: var(--color-offwhite, #F8F9FA); /* Fondo Blanco Roto */
+    padding: var(--space-xxl) var(--space-md);
+    color: var(--color-midnight, #0B132B);
+  }
+
+  .manifesto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 1024px) {
+    .manifesto-container {
+      /* Asymmetric Layout (4 cols : 8 cols equivalency) */
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  .manifesto-header {
+    /* Vertical thin gold line decorative */
+    border-left: 2px solid var(--color-gold, #C5A059);
+    padding-left: var(--space-md);
+  }
+
+  .manifesto-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--color-midnight, #0B132B);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .manifesto-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .manifesto-quote {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.5vw, 1.5rem); /* ~22px-24px */
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-midnight, #0B132B);
+    line-height: 1.5;
+    margin: 0;
+    /* Strict left alignment for accessibility */
+    text-align: left;
+  }
+
+  .manifesto-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: left;
+  }
+
+  .manifesto-body p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-midnight, #0B132B);
+    opacity: 0.9;
+    margin: 0;
+    /* Optimal line length */
+    max-width: 75ch; 
+  }
+</style>

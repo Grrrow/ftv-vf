@@ -1,0 +1,127 @@
+---
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import { getEntry } from 'astro:content';
+import VenueCard from './VenueCard.astro';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+
+const entry = await getEntry('i18n', currentLang);
+const venueData = entry?.data?.venue;
+
+// Fetch locations from the new 'venues' collection
+import { getCollection } from 'astro:content';
+const venuesEntries = await getCollection('venues', ({ id }) => {
+  return id.startsWith(`${currentLang}-`);
+});
+const locations = venuesEntries.map(entry => entry.data);
+---
+
+<section id="venues" class="venues-section" aria-labelledby="venues-title">
+  <div class="venues-container">
+    <div class="venues-header">
+      <div class="accent-line"></div>
+      <h2 id="venues-title" class="section-title">{venueData?.title || 'Sedes'}</h2>
+      <p class="section-desc">{venueData?.description || ''}</p>
+    </div>
+
+    <div class="venues-grid">
+      {locations.map((loc) => (
+        <VenueCard 
+          name={loc.name}
+          description={loc.description}
+          image={loc.image}
+          imageAlt={loc.imageAlt}
+          slug={loc.slug}
+        />
+      ))}
+    </div>
+
+    <div class="venues-footer">
+      <a href={`/${currentLang}/escenarios`} class="btn-outline">
+        {venueData?.cta_section || 'Ver todos los escenarios'}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .venues-section {
+    background-color: var(--color-offwhite, #F8F9FA);
+    padding: var(--space-xxl) var(--space-md);
+  }
+
+  .venues-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .venues-header {
+    margin-bottom: var(--space-xl);
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .accent-line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-gold, #D4AF37);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-midnight, #0B132B);
+    margin: 0 0 var(--space-sm) 0;
+    font-weight: 400;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--color-midnight, #0B132B);
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  .venues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  @media (min-width: 768px) {
+    .venues-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .venues-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xl);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid var(--color-midnight, #0B132B);
+    background-color: transparent;
+    color: var(--color-midnight, #0B132B);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover,
+  .btn-outline:focus-visible {
+    background-color: var(--color-midnight, #0B132B);
+    color: var(--color-offwhite, #F8F9FA);
+  }
+</style>

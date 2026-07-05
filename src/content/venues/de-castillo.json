@@ -1,0 +1,16 @@
+{
+  "name": "Schlosshof von Villafranca",
+  "description": "Nachtkonzerte bei Kerzenschein in einem unvergleichlichen historischen Ambiente.",
+  "image": "piano-church.jpg",
+  "imageAlt": "Schlosshof bei Kerzenschein",
+  "slug": "de-castillo",
+  "id": "de-castillo",
+  "long_description": [
+    "Das Schloss-Palais der Markgrafen von Villafranca ist eine imposante Festung aus dem 16. Jahrhundert, gekrönt von den ikonischen Schieferturmspitzen, die typisch für die Architektur des Bierzo sind. Dieses lebendige Denkmal, das im Laufe der Geschichte Heimat und Inspiration des berühmten Meisters Cristóbal Halffter war, öffnet exklusiv für diesen Anlass die Tore seines herrschaftlichen Innenhofs und bietet einen Ort voller Mystik und jahrhundertelanger Geschichte, den man selten in solch intimer Atmosphäre genießen kann.",
+    "An diesem Ort finden die Konzerte abends um 21:30 Uhr statt und entfalten sich in der stimmungsvollen Atmosphäre von Kerzenschein. Das Flackern hunderter Flammen wird die Steinmauern des zentralen Innenhofs erhellen und das Publikum in ein intimes Erlebnis hüllen, dessen Kapazität streng auf 300 Plätze begrenzt ist. Da es keine nummerierten Plätze gibt, erfolgt die Platzwahl am Veranstaltungstag streng nach der Reihenfolge des Eintreffens, wodurch Akustik und historisches Umfeld auf unvergessliche Weise miteinander verschmelzen."
+  ],
+  "capacity": 300,
+  "acoustic_type": "Freiluft",
+  "address": "Calle del Castillo, s/n, 24500 Villafranca del Bierzo (León)",
+  "address_url": "https://www.google.com/maps/search/?api=1&query=Castillo-Palacio+de+los+Marqueses+de+Villafranca,+Castillo,+Pl.+Prim,+12,+24500+Villafranca+del+Bierzo,+León"
+}

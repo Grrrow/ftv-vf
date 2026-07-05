@@ -1,0 +1,63 @@
+---
+import { languages, defaultLang } from '../i18n/utils';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+
+let title = "Cómo Llegar";
+if (currentLang === 'en') title = "How to Get There";
+if (currentLang === 'de') title = "Anfahrt";
+---
+
+<section class="map-section" aria-label={title}>
+  <div class="map-header">
+    <h2 class="map-title">{title}</h2>
+    <p class="map-subtitle">Villafranca del Bierzo, León</p>
+  </div>
+  <div class="map-container">
+    <!-- Placeholder de Google Maps: Muestra Villafranca del Bierzo -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11797.43343354366!2d-6.8203022!3d42.6074251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd373d32832810cd%3A0xc665181180fb78!2s24500%20Villafranca%20del%20Bierzo%2C%20Le%C3%B3n!5e0!3m2!1sen!2ses!4v1688574000000!5m2!1sen!2ses" 
+      width="100%" 
+      height="500" 
+      style="border:0; filter: contrast(1.1) grayscale(20%);" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<style>
+  .map-section {
+    padding: var(--space-xl) 0 0 0;
+    background-color: var(--color-offwhite);
+  }
+
+  .map-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding: 0 var(--space-md);
+  }
+
+  .map-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 400;
+    color: var(--color-midnight);
+    margin: 0 0 var(--space-xs) 0;
+  }
+
+  .map-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .map-container {
+    width: 100%;
+    line-height: 0;
+  }
+</style>
