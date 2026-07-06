@@ -18,6 +18,10 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       class="hero-bg-img"
       format="webp"
       quality="80"
+      widths={[640, 1024, 1920]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
     />
     <!-- Overlay: Midnight (#0B132B) al 65% -->
     <div class="hero-overlay"></div>
@@ -101,7 +105,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   .hero-cta-btn {
     display: inline-block;
     background-color: var(--color-gold, #C5A059);
-    color: #FFFFFF;
+    color: var(--color-midnight, #0B132B);
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.1rem;
