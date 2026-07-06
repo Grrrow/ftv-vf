@@ -8,6 +8,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
 
 <footer role="contentinfo" class="site-footer">
   <div class="footer-content">
+    {/* 
     <div class="footer-contact">
       <h3>{currentLang === 'es' ? 'Contacto' : currentLang === 'en' ? 'Contact' : 'Kontakt'}</h3>
       <a href="tel:+34600000000" class="footer-phone" aria-label="Llamar al teléfono de contacto +34 600 000 000">
@@ -17,6 +18,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
         <span>+34 600 000 000</span>
       </a>
     </div>
+    */}
     <div class="footer-bottom">
       <p>{t('footer', 'copyright')}</p>
     </div>
