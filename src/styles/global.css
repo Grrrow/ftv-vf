@@ -1,5 +1,4 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Fonts are now loaded efficiently via link tags in SEO.astro */
 
 :root {
   /* Brand Colors (Herencia Nocturna) */

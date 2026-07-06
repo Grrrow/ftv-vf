@@ -19,7 +19,7 @@ const getPathForLang = (l: string) => {
 <header class="site-header" role="banner">
   <div class="header-container">
     <!-- Logo -->
-    <a href={getRelativeLocaleUrl(currentLang)} class="logo-link" aria-label={t('nav', 'home')}>
+    <a href={getRelativeLocaleUrl(currentLang)} class="logo-link" title={t('nav', 'home')}>
       <span class="logo-text">Música en Villafranca</span>
     </a>
 
@@ -61,7 +61,7 @@ const getPathForLang = (l: string) => {
           </div>
 
           <!-- Botón CTA Entradas -->
-          <a href={getRelativeLocaleUrl(currentLang, '/programacion')} class="btn-tickets" aria-label={t('nav', 'tickets')} title={t('nav', 'tickets')}>
+          <a href={getRelativeLocaleUrl(currentLang, '/programacion')} class="btn-tickets" title={t('nav', 'tickets')}>
             {t('nav', 'tickets')}
           </a>
         </div>

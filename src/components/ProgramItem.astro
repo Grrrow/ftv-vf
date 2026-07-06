@@ -164,9 +164,9 @@ const t = await useTranslations(currentLang as any);
   .date-day {
     font-family: var(--font-heading);
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
-    color: var(--color-gold);
+    color: var(--color-midnight);
     display: block;
   }
 
@@ -237,8 +237,10 @@ const t = await useTranslations(currentLang as any);
     font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--color-gold);
-    text-decoration: none;
+    color: var(--color-midnight);
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-underline-offset: 4px;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -321,7 +323,7 @@ const t = await useTranslations(currentLang as any);
   .btn-buy:not(.disabled):hover,
   .btn-buy:not(.disabled):focus-visible {
     background-color: var(--color-gold);
-    color: #ffffff;
+    color: var(--color-midnight);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
   }

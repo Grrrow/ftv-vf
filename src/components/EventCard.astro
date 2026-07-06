@@ -67,7 +67,7 @@ const timeString = formatterTime.format(dateObj) + 'h';
       {lugar}
     </div>
     <h3 class="card-title">
-      <a href={`/${Astro.currentLocale || 'es'}/evento/${slug}`} class="event-link" title={`Ver detalles de ${titulo}`} aria-label={`Ver detalles de ${titulo}`}>
+      <a href={`/${Astro.currentLocale || 'es'}/evento/${slug}`} class="event-link" title={`Ver detalles de ${titulo}`}>
         {titulo}
       </a>
     </h3>
@@ -217,7 +217,10 @@ const timeString = formatterTime.format(dateObj) + 'h';
   }
   
   .event-link:hover {
-    color: var(--color-gold);
+    color: var(--color-midnight);
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-underline-offset: 4px;
   }
 
   .card-cta {

@@ -208,11 +208,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       }
 
       .monument-address a {
-        color: var(--color-gold);
-        text-decoration: none;
+        color: var(--color-midnight);
+        text-decoration: underline;
+        text-decoration-color: var(--color-gold);
+        text-underline-offset: 4px;
         display: inline-flex;
         align-items: center;
         gap: 6px;
+        font-weight: 500;
         transition: opacity 0.2s ease;
       }
 
