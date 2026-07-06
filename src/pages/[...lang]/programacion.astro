@@ -344,12 +344,36 @@ const getVenueSlug = (lugarName: string) => {
         line-height: 1.3;
       }
 
-      .btn-buy:hover,
-      .btn-buy:focus-visible {
+      .btn-buy:not(.disabled):hover,
+      .btn-buy:not(.disabled):focus-visible {
         background-color: var(--color-gold);
         color: #ffffff;
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+      }
+
+      .btn-buy.disabled {
+        border-color: var(--color-border);
+        color: var(--color-text);
+        cursor: not-allowed;
+        background-color: var(--color-surface);
+        opacity: 0.5;
+      }
+
+      .cta-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-soon-text {
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--color-text);
+        font-style: italic;
+        margin-top: var(--space-xs);
+        margin-bottom: 0;
       }
 
       .no-events {
@@ -440,15 +464,12 @@ const getVenueSlug = (lugarName: string) => {
 
                 <!-- Columna 4: Acciones -->
                 <div class="card-actions">
-                  <a 
-                    href={event.taylorTicketsUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    class="btn-buy"
-                    aria-label={`${pageData?.events?.buy_tickets || 'Reserva de plaza'} para ${translation.titulo}`}
-                  >
-                    {pageData?.events?.buy_tickets || 'Reserva de plaza'}
-                  </a>
+                  <div class="cta-wrapper">
+                    <span class="btn-buy disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+                      {pageData?.events?.buy_tickets || 'Reserva de plaza'}
+                    </span>
+                    <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+                  </div>
                 </div>
               </article>
             );

@@ -24,22 +24,23 @@
     "cta": "Gesamtes Programm ansehen"
   },
   "venue": {
-    "title": "Historische Spielorte",
-    "description": "Monumente, in denen die Musik ihre perfekte Akustik findet.",
+    "title": "Veranstaltungsorte mit Geschichte",
+    "description": "Mehr als nur historische Stätten sind dies wahre Familiensitze. Wenn Sie im Schlosshof Platz nehmen – dem ununterbrochenen Familienerbe der Pianistin Marita Caro seit dem 15. Jahrhundert und dem heutigen Privatsitz des Regisseurs Pedro Halffter – betreten Sie die Intimität unseres eigenen Hauses und heben jede Barriere zwischen Bühne und Publikum auf.",
     "cta_section": "Alle Veranstaltungsorte"
   },
   "tickets": {
-    "title": "Ihr Platz",
-    "description": "Sichern Sie sich Ihren Platz bei einem der exklusivsten Kulturereignisse der Region. Platzreservierungen für alle Spielorte verfügbar.",
-    "cta": "Platz reservieren"
+    "title": "Ihr reservierter Platz",
+    "description": "Sichern Sie sich Ihren Platz bei einem der exklusivsten Kulturereignisse der Region. Platzreservierungen für alle Veranstaltungsorte möglich.",
+    "cta": "Platz reservieren",
+    "soon": "In den nächsten Tagen verfügbar"
   },
   "footer": {
     "copyright": "© 2026 Musik in Villafranca Festival. Alle Rechte vorbehalten.",
     "legal": "Impressum & Datenschutz"
   },
   "seo": {
-    "title": "Musik in Villafranca | Internationales Klassikfestival",
-    "description": "Entdecken Sie das prestigeträchtigste Klassikfestival in Villafranca del Bierzo. Genießen Sie einzigartige Konzerte mit internationalen Künstlern in historischem Ambiente."
+    "title": "Musik in Villafranca | Klassikfestival in El Bierzo",
+    "description": "Erleben Sie das erstklassige Klassikfestival in Villafranca del Bierzo. Intime Konzerte in Burgen und Kirchen mit international renommierten Künstlern. Tickets erhältlich."
   },
   "venues_page": {
     "title": "Monumentale Schauplätze",
@@ -60,20 +61,21 @@
     }
   },
   "manifesto": {
-    "hero_title": "DAS FESTIVAL",
-    "hero_subtitle": "Der Ursprung eines musikalischen und mystischen Traums",
-    "hero_intro": "Eingebettet im Herzen des Jakobswegs, überschreitet Villafranca del Bierzo seinen Status als monumentales Juwel, um zu einer riesigen lebendigen Bühne zu werden. Hier, inmitten jahrhundertealter Steine und der überwältigenden Stille der Täler, findet die klassische Musik ihre reinste und transformierendste Resonanz.",
+    "hero_pretitle": "DER URSPRUNG UND DAS ERBE",
+    "hero_title": "Ein lebendiges Denkmal.<br>Ein angestammtes Zuhause.",
+    "hero_intro": "Musik in Villafranca ist nicht nur eine sommerliche Konzertreihe. Es ist die außergewöhnliche Öffnung der Türen unseres Hauses, um das Genie einer universellen Pianistin für die Ewigkeit zu bewahren.",
+    "why_title": "Unser Grund für das Sein",
+    "why_p1": "Jeder Ton, der zwischen den Steinmauern dieses Tals erklingt, ist eine Hommage an Marita Caro. Als international renommierte Pianistin und Maßstab ihrer Generation fand ihre musikalische Virtuosität in Villafranca del Bierzo nicht nur eine Zuflucht, sondern eine ewige Bühne. Dieses Festival entstand mit der unerschütterlichen Absicht, ihr Andenken zu ehren und ihre Persönlichkeit zu feiern, um sicherzustellen, dass ihr künstlerisches Erbe an dem Ort weiterlebt, den sie am meisten liebte.",
+    "why_p2": "Wir mieten keinen Raum und entwerfen keine künstlichen Bühnenbilder; wir öffnen die Türen unseres Zuhauses. Der Palast-Burg der Marqueses de Villafranca ist seit dem 15. Jahrhundert das Erbe und der Wohnsitz der Familie Caro. Heute verwandelt sich dieses lebendige Denkmal als Privatresidenz des künstlerischen Leiters Pedro Halffter Caro. Diejenigen, die uns begleiten, sind keine bloßen Zuschauer, sie sind Gäste im Haus der Familie, die Kammermusik in ihrer reinsten Form und in absoluter Intimität teilen.",
     "memory_title": "Videos vergangener Ausgaben",
     "memory_intro": "Erleben Sie die Magie, Emotion und die immersive Atmosphäre der Konzerte vergangener Jahre wieder.",
-    "why_title": "Das Warum",
-    "why_p1": "Es gibt eine vitale, intime und unzerbrechliche Verbindung, die die Familie Halffter mit der Stadt am Fluss Burbia vereint. Als Geburtsort der angesehenen Pianistin Marita Caro und jahrzehntelanger sommerlicher Zufluchtsort der Familie ist Villafranca der Ursprung dieser Leidenschaft.",
-    "why_p2": "Unter der künstlerischen Leitung von Pedro Halffter Caro entsteht das Festival aus einer absoluten Überzeugung: <em>\"Villafranca bietet bereits die monumentale Szenerie; unsere Aufgabe ist es, sie mit Musik von höchster Qualität zu füllen\"</em>.",
     "mission_title": "Unsere Mission",
     "mission_1_title": "Symbiose mit dem Erbe",
-    "mission_1_text": "Internationale musikalische Exzellenz mit der sakralen und historischen Akustik unvergleichlicher Orte wie der Kirche San Nicolás oder dem feierlichen Schlosshof zu verschmelzen.",
+    "mission_1_text": "Internationale musikalische Exzellenz mit der Seele unserer Veranstaltungsorte zu verschmelzen. Der Schlosshof ist keine passive Kulisse, sondern ein aktiver Teil unseres emotionalen Diskurses: der historische Wohnsitz der Pianistin Marita Caro, der seit dem 15. Jahrhundert weitergegeben wird, und das heutige Zuhause des Regisseurs Pedro Halffter Caro.",
     "mission_2_title": "Verbindung mit der Pilgerreise",
     "mission_2_text": "Ein künstlerisches Programm zu artikulieren, das in einem intimen Dialog mit der Mystik, der inneren Suche und den Erfahrungen des Pilgers steht, der das alte Tor der Vergebung passiert.",
     "mission_3_title": "Kultur ohne Barrieren",
-    "mission_3_text": "Starre Protokolle zu durchbrechen. Durch eine kreisförmige Inszenierung, die den Interpreten umarmt, und warme pädagogische Kommentare, verwandeln wir den Zuschauer in einen echten \"musikalischen Pilger\"."
+    "mission_3_text": "Starre Protokolle zu durchbrechen. Durch eine kreisförmige Inszenierung, die den Interpreten umarmt, und warme pädagogische Kommentare, verwandeln wir den Zuschauer in einen echten \"musikalischen Pilger\".",
+    "callout": "Die Teilnahme an Musik in Villafranca bedeutet, Teil der Geschichte einer Familie zu werden, die seit über fünf Jahrhunderten mit der Musik verflochten ist."
   }
 }

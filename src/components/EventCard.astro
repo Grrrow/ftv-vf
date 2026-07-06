@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { useTranslations, languages, defaultLang } from '../i18n/utils';
 
 export interface Props {
   id: string;
@@ -15,6 +16,10 @@ export interface Props {
 }
 
 const { id, fecha, slug, lugar, imagenUrl, taylorTicketsUrl, titulo, interpretes, sinopsisCorta, ctaText } = Astro.props;
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLocale = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLocale as keyof typeof languages);
 
 // Vite glob for dynamic image resolution
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
@@ -68,9 +73,12 @@ const timeString = formatterTime.format(dateObj) + 'h';
   </div>
   
   <div class="card-footer">
-    <a href={taylorTicketsUrl} class="card-cta" target="_blank" rel="noopener noreferrer" title={`Reservar plaza para ${titulo}`} aria-label={`Reservar plaza para ${titulo}`}>
-      {ctaText}
-    </a>
+    <div class="cta-wrapper">
+      <span class="card-cta disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+        {ctaText}
+      </span>
+      <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+    </div>
   </div>
 </article>
 
@@ -232,9 +240,26 @@ const timeString = formatterTime.format(dateObj) + 'h';
     line-height: 1.3;
   }
 
-  .card-cta:hover,
-  .card-cta:focus-visible {
+  .card-cta:not(.disabled):hover,
+  .card-cta:not(.disabled):focus-visible {
     background-color: transparent;
     color: var(--color-midnight, #0B132B);
+  }
+
+  .card-cta.disabled {
+    background-color: var(--color-border);
+    color: var(--color-midnight);
+    border-color: var(--color-border);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .cta-soon-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-text);
+    font-style: italic;
+    margin-top: var(--space-xs);
+    margin-bottom: 0;
   }
 </style>

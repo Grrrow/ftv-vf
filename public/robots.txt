@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://musicaenvillafranca.com/sitemap-index.xml

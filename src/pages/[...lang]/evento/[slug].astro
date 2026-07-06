@@ -51,52 +51,313 @@ const plainDescription = translation.sinopsisCorta.replace(/<[^>]*>?/gm, ' ').re
       image={resolvedImage}
       type="article"
     />
-    <style>
-      .event-page-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: var(--space-xl) var(--space-md);
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MusicEvent",
+      "name": translation.titulo,
+      "startDate": event.fecha,
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": event.lugar,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Villafranca del Bierzo",
+          "addressRegion": "León",
+          "addressCountry": "ES"
+        }
+      },
+      "image": [
+        new URL(resolvedImage, Astro.site ? Astro.site.href : 'https://musicaenvillafranca.com').href
+      ],
+      "description": plainDescription,
+      "offers": {
+        "@type": "Offer",
+        "url": event.taylorTicketsUrl || "https://www.taylortickets.com",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": translation.interpretes
       }
+    })} />
+    <style>
+      .event-page {
+        padding-bottom: var(--space-xxl);
+      }
+
+      /* Hero Header */
+      .event-hero {
+        width: 100%;
+        background-color: var(--color-midnight);
+        padding: calc(var(--space-xxl) * 1.5) 0 var(--space-xxl);
+      }
+
+      .event-hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 900px) {
+        .event-hero-content {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+      }
+
+      .event-hero-text {
+        flex: 1;
+        color: var(--color-offwhite);
+      }
+
+      .event-hero-image-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .event-hero-img {
+        max-width: 100%;
+        max-height: 500px;
+        width: auto;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      }
+
       .back-link {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
         margin-bottom: var(--space-lg);
         font-family: var(--font-heading);
+        font-size: 0.9rem;
         font-weight: 600;
         text-decoration: none;
-        color: var(--color-midnight);
-        border-bottom: 2px solid var(--color-gold);
-        padding-bottom: 4px;
-        transition: color 0.3s ease;
-      }
-      .back-link:hover {
         color: var(--color-gold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: var(--color-offwhite);
+        transform: translateX(-4px);
+      }
+
+      .event-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        line-height: 1.1;
+        margin: 0 0 var(--space-sm) 0;
+        color: var(--color-offwhite);
+        text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      }
+
+      .event-performer {
+        font-family: var(--font-body);
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: rgba(248, 249, 250, 0.9); /* Offwhite but slightly transparent */
+        margin: 0;
+      }
+
+      /* Content Area */
+      .event-details-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-xl) var(--space-md);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 900px) {
+        .event-details-container {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+
+      .event-main-info {
+        background-color: var(--color-surface);
+        padding: var(--space-xl);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+
+      .event-meta-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .meta-box {
+        background-color: var(--color-surface);
+        padding: var(--space-lg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        border-top: 4px solid var(--color-gold);
+      }
+
+      .meta-label {
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        color: var(--color-gold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--space-xs);
+        display: block;
+      }
+
+      .meta-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-midnight);
+        margin: 0;
+      }
+
+      /* Synopsis HTML content */
+      .synopsis-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--color-text);
+      }
+
+      .synopsis-content :global(strong) {
+        color: var(--color-midnight);
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: var(--space-sm);
+      }
+
+      .synopsis-content :global(.repertoire-list) {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .synopsis-content :global(.repertoire-list li) {
+        padding: var(--space-sm) 0;
+        border-bottom: 1px solid var(--color-border);
+        position: relative;
+        padding-left: var(--space-lg);
+      }
+
+      .synopsis-content :global(.repertoire-list li::before) {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--color-gold);
+      }
+
+      .synopsis-content :global(.repertoire-list li:last-child) {
+        border-bottom: none;
+      }
+
+      .cta-large {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-gold);
+        color: var(--color-offwhite);
+        padding: 18px 32px;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        margin-top: var(--space-md);
+        box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+      }
+
+      .cta-large:not(.disabled):hover {
+        background-color: var(--color-midnight);
+        color: var(--color-gold);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(11, 19, 43, 0.2);
+      }
+
+      .cta-large.disabled {
+        background-color: var(--color-border);
+        color: var(--color-text);
+        box-shadow: none;
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .cta-soon-text {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--color-text);
+        font-style: italic;
+        margin-top: var(--space-sm);
       }
     </style>
   </head>
-  <body>
+  <body class="event-page">
     <SkipLink />
     <Header />
     
     <main id="main-content" role="main">
-      <div class="event-page-container">
-        <a href={getRelativeLocaleUrl(currentLang as string, '/programacion')} class="back-link" title="Volver a la agenda completa" aria-label="Volver a la agenda">
-          &larr; Volver a la Agenda
-        </a>
-        <div style="height: 600px;">
-          <EventCard 
-            id={event.id}
-            fecha={event.fecha}
-            slug={event.slug}
-            lugar={event.lugar}
-            imagenUrl={event.imagenUrl}
-            taylorTicketsUrl={event.taylorTicketsUrl}
-            titulo={translation.titulo}
-            interpretes={translation.interpretes}
-            sinopsisCorta={translation.sinopsisCorta}
-            ctaText="Reservar plaza"
-          />
+      <!-- Premium Hero Area -->
+      <section class="event-hero">
+        <div class="event-hero-content">
+          <div class="event-hero-text">
+            <a href={getRelativeLocaleUrl(currentLang as string, '/programacion')} class="back-link" title="Volver a la agenda completa" aria-label="Volver a la agenda">
+              &larr; {t('nav', 'program')}
+            </a>
+            <h1 class="event-title">{translation.titulo}</h1>
+            <p class="event-performer">{translation.interpretes}</p>
+          </div>
+          <div class="event-hero-image-wrapper">
+            <img src={resolvedImage} alt={translation.titulo} class="event-hero-img" />
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Details Content -->
+      <section class="event-details-container">
+        <!-- Repertoire & Synopsis -->
+        <div class="event-main-info">
+          <div class="synopsis-content" set:html={translation.sinopsisCorta}></div>
+        </div>
+
+        <!-- Meta Sidebar -->
+        <aside class="event-meta-sidebar">
+          <div class="meta-box">
+            <span class="meta-label">Fecha y Hora</span>
+            <p class="meta-value">
+              {new Intl.DateTimeFormat(lang as string, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(event.fecha))}
+              <br/>
+              {new Intl.DateTimeFormat(lang as string, { hour: '2-digit', minute: '2-digit' }).format(new Date(event.fecha))}h
+            </p>
+          </div>
+          
+          <div class="meta-box">
+            <span class="meta-label">Ubicación</span>
+            <p class="meta-value">{event.lugar}</p>
+          </div>
+
+          <div class="cta-wrapper">
+            <span class="cta-large disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+              {t('tickets', 'cta')}
+            </span>
+            <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+          </div>
+        </aside>
+      </section>
     </main>
   </body>
 </html>

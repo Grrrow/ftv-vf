@@ -8,18 +8,18 @@
     "taylorTicketsUrl": "https://www.taylortickets.com/events/pablo-sainz-villegas-2026",
     "traducciones": {
       "es": {
-        "titulo": "PABLO SAINZ-VILLEGAS - Concierto a la Luz de las Velas",
+        "titulo": "PABLO SAINZ-VILLEGAS - Concierto Íntimo a la luz de las velas",
         "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>A. Vivaldi: Concerto para Guitarra (Arreglo para cuarteto de cuerda)</li><li>L. Boccherini: Quinteto para Guitarra</li><li>Anónimo: Romance Anónimo para cuarteto y guitarra</li><li>W.A. Mozart: Obras seleccionadas</li></ul>"
       },
       "en": {
-        "titulo": "PABLO SAINZ-VILLEGAS - Candlelight Concert",
-        "interpretes": "String Quartet",
+        "titulo": "PABLO SAINZ-VILLEGAS - Concert Illuminated by Candles",
+        "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Guitar Concerto (Arrangement for string quartet)</li><li>L. Boccherini: Guitar Quintet</li><li>Anonymous: Romance Anónimo for quartet and guitar</li><li>W.A. Mozart: Selected works</li></ul>"
       },
       "de": {
-        "titulo": "PABLO SAINZ-VILLEGAS - Kerzenscheinkonzert",
-        "interpretes": "Streichquartett",
+        "titulo": "PABLO SAINZ-VILLEGAS - Konzert bei Kerzenschein",
+        "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Gitarrenkonzert (Bearbeitung für Streichquartett)</li><li>L. Boccherini: Gitarrenquintett</li><li>Anonymus: Romance Anónimo für Quartett und Gitarre</li><li>W.A. Mozart: Ausgewählte Werke</li></ul>"
       }
     }
@@ -33,18 +33,18 @@
     "taylorTicketsUrl": "https://www.taylortickets.com/events/niklas-liepe-2026",
     "traducciones": {
       "es": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn bajo la Luz de las Velas",
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Íntimo a la luz de las velas",
         "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul>"
       },
       "en": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Candlelight Concert",
-        "interpretes": "String Quartet",
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Concert Illuminated by Candles",
+        "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul>"
       },
       "de": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Kerzenscheinkonzert",
-        "interpretes": "Streichquartett",
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Konzert bei Kerzenschein",
+        "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul>"
       }
     }
@@ -89,12 +89,12 @@
       },
       "en": {
         "titulo": "Oboe and Strings",
-        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - oboe / Daniel Bombín - violin / Iván Braña - viola / Laura Núñez - cello)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Works by W.A. Mozart, J.C. Bach, F. Schubert, and G. Druschetzky"
       },
       "de": {
         "titulo": "Oboe und Streicher",
-        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - Oboe / Daniel Bombín - Violine / Iván Braña - Bratsche / Laura Núñez - Cello)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von W.A. Mozart, J.C. Bach, F. Schubert und G. Druschetzky"
       }
     }
@@ -114,12 +114,12 @@
       },
       "en": {
         "titulo": "Chamber Concert",
-        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Artistic Director: Daniel Bombín Val / Solo Violin: Manuel Pérez Morodo)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Works by G.P. Telemann and F. Mendelssohn"
       },
       "de": {
         "titulo": "Kammerkonzert",
-        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b>",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Künstlerische Leitung: Daniel Bombín Val / Solovioline: Manuel Pérez Morodo)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von G.P. Telemann und F. Mendelssohn"
       }
     }

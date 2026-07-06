@@ -37,6 +37,7 @@ const i18nCollection = defineCollection({
       title: z.string(),
       description: z.string(),
       cta: z.string(),
+      soon: z.string().optional(),
     }),
     footer: z.object({
       copyright: z.string(),
@@ -65,8 +66,9 @@ const i18nCollection = defineCollection({
       }).optional(),
     }).optional(),
     manifesto: z.object({
+      hero_pretitle: z.string().optional(),
       hero_title: z.string(),
-      hero_subtitle: z.string(),
+      hero_subtitle: z.string().optional(),
       hero_intro: z.string(),
       memory_title: z.string(),
       memory_intro: z.string(),
@@ -80,6 +82,7 @@ const i18nCollection = defineCollection({
       mission_2_text: z.string(),
       mission_3_title: z.string(),
       mission_3_text: z.string(),
+      callout: z.string().optional(),
     }).optional(),
     manifesto_page: z.object({
       title: z.string(),

@@ -1,13 +1,13 @@
 {
   "name": "Patio del Castillo de Villafranca",
-  "description": "Conciertos nocturnos celebrados a la luz de las velas en un entorno histórico inigualable.",
+  "description": "Una invitación exclusiva al hogar ancestral de la familia Caro. Conciertos nocturnos bajo una iluminación tenue en la residencia privada del director.",
   "image": "castillo.jpg",
-  "imageAlt": "Patio del Castillo a la luz de las velas",
+  "imageAlt": "Patio del Castillo",
   "slug": "es-castillo",
   "id": "es-castillo",
   "long_description": [
-    "El Castillo-Palacio de los Marqueses de Villafranca es una imponente fortaleza del siglo XVI coronada por los icónicos chapiteles de pizarra típicos de la arquitectura berciana. Este monumento vivo, que a lo largo de la historia fue hogar e inspiración del célebre maestro Cristóbal Halffter, abre las puertas de su patio señorial de forma exclusiva para esta ocasión, ofreciendo un rincón cargado de misticismo y siglos de historia que rara vez se puede disfrutar en la intimidad.",
-    "Para este espacio, los conciertos tendrán un carácter nocturno a las 21:30 h y se desarrollarán bajo la sugerente atmósfera de la luz de las velas. El parpadeo de cientos de llamas iluminará los muros de piedra del patio central, envolviendo al público en una experiencia íntima con un aforo limitado estrictamente a 300 plazas. Al no ser asientos numerados, estos se ocuparán por estricto orden de llegada el día del evento, haciendo que la acústica y el entorno histórico se fusionen de manera inolvidable."
+    "El Castillo-Palacio de los Marqueses de Villafranca no es una mera localización monumental o un espacio de alquiler; representa un legado incalculable. Transmitido en herencia familiar ininterrumpida desde el siglo XV, fue el lugar de residencia de la genial pianista Marita Caro, madre de Pedro Halffter, y en la actualidad constituye la residencia privada del propio director y compositor. Al cruzar sus puertas, el espectador entra en la intimidad de nuestra casa, transformando la fortaleza en un participante emocional activo.",
+    "Bajo una cautivadora y tenue iluminación crepuscular, el patio de armas acoge conciertos nocturnos a las 21:30 h. Los asistentes, lejos de ser meros espectadores, se convierten en invitados privilegiados en el seno familiar, eliminando la distancia tradicional entre el escenario y la audiencia. Con un aforo limitado estrictamente a 300 plazas, los asientos se ocuparán por estricto orden de llegada, permitiendo que la acústica y el peso de siglos de herencia familiar se fusionen en una experiencia musical irrepetible."
   ],
   "capacity": 300,
   "acoustic_type": "Al aire libre",

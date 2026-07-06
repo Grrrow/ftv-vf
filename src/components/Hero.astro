@@ -26,7 +26,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   <div class="hero-content">
     <h1 class="hero-title">{t('hero', 'title')}</h1>
     <span class="hero-date">{t('hero', 'date')}</span>
-    <a href={`${getRelativeLocaleUrl(currentLang)}#tickets`} class="hero-cta-btn">{t('hero', 'cta')}</a>
+    <a href={getRelativeLocaleUrl(currentLang, '/programacion')} class="hero-cta-btn">{t('hero', 'cta')}</a>
   </div>
 </section>
 

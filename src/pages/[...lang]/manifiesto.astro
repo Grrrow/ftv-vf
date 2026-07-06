@@ -37,47 +37,11 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <section class="festival-hero" aria-labelledby="hero-title">
         <div class="hero-bg"></div>
         <div class="hero-content">
-          <h1 id="hero-title" class="hero-title">{t('manifesto', 'hero_title')}</h1>
-          <p class="hero-subtitle">{t('manifesto', 'hero_subtitle')}</p>
+          <p class="hero-pretitle">{t('manifesto', 'hero_pretitle')}</p>
+          <h1 id="hero-title" class="hero-title" set:html={t('manifesto', 'hero_title')} />
           <p class="hero-intro">
             {t('manifesto', 'hero_intro')}
           </p>
-        </div>
-      </section>
-
-      <!-- 5. SECCIÓN: VIDEOS EDICIONES ANTERIORES -->
-      <section class="festival-memory" aria-labelledby="memory-title">
-        <div class="memory-container">
-          <div class="memory-header">
-            <h2 id="memory-title" class="section-title">{t('manifesto', 'memory_title')}</h2>
-            <p class="memory-intro">{t('manifesto', 'memory_intro')}</p>
-          </div>
-          <div class="memory-grid">
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/FNSjNbxarX4" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/1KKL87bpvuQ" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/cCAnWrmSSyY" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/dq4BFts8bvk" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/4RLE53jG_PU" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/hhtVvEj7GYM" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/LrrQgQpVCLo" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-card">
-              <iframe width="100%" height="100%" style="aspect-ratio: 16/9; border-radius: var(--border-radius);" src="https://www.youtube.com/embed/Osp_un1xQco" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -89,13 +53,27 @@ const t = await useTranslations(currentLang as keyof typeof languages);
             <div class="accent-line"></div>
           </div>
           <div class="why-right">
-            <p>{t('manifesto', 'why_p1')}</p>
-            <p set:html={t('manifesto', 'why_p2')} />
+            <div class="why-block">
+              <p>{t('manifesto', 'why_p1')}</p>
+            </div>
+            <div class="why-block why-block-offset">
+              <p set:html={t('manifesto', 'why_p2')} />
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 3. BLOQUE: NUESTRA MISIÓN -->
+      <!-- 3. BLOQUE: CALLOUT / VISION -->
+      <section class="festival-callout">
+        <div class="callout-container">
+          <div class="accent-line-vertical"></div>
+          <blockquote class="callout-text">
+            "{t('manifesto', 'callout')}"
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- 4. BLOQUE: NUESTRA MISIÓN -->
       <section class="festival-mission" aria-labelledby="mission-title">
         <div class="mission-container">
           <h2 id="mission-title" class="sr-only">{t('manifesto', 'mission_title')}</h2>
@@ -116,13 +94,46 @@ const t = await useTranslations(currentLang as keyof typeof languages);
         </div>
       </section>
 
-
-
+      <!-- 5. SECCIÓN: VIDEOS EDICIONES ANTERIORES -->
+      <section class="festival-memory" aria-labelledby="memory-title">
+        <div class="memory-container">
+          <div class="memory-header">
+            <h2 id="memory-title" class="section-title">{t('manifesto', 'memory_title')}</h2>
+            <p class="memory-intro">{t('manifesto', 'memory_intro')}</p>
+          </div>
+          <div class="memory-grid">
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/FNSjNbxarX4" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/1KKL87bpvuQ" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/cCAnWrmSSyY" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/dq4BFts8bvk" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/4RLE53jG_PU" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/hhtVvEj7GYM" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/LrrQgQpVCLo" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-card">
+              <iframe width="100%" style="aspect-ratio: 16/9; border-radius: 4px;" src="https://www.youtube.com/embed/Osp_un1xQco" title="Video edición anterior" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
     
-    <footer role="contentinfo" style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);">
-      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">{t('footer', 'copyright')}</p>
+    <footer role="contentinfo" style="padding: var(--space-lg); text-align: center; border-top: 1px solid rgba(11, 19, 43, 0.1); margin-top: var(--space-xxl); background-color: #FDFBF7;">
+      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7; color: #2A2C30;">{t('footer', 'copyright')}</p>
     </footer>
   </body>
 </html>
@@ -130,23 +141,23 @@ const t = await useTranslations(currentLang as keyof typeof languages);
 <style>
   /* GLOBAL TO PAGE */
   .festival-page {
-    background-color: var(--color-surface);
-    color: var(--color-midnight);
+    background-color: #FDFBF7;
+    color: #2A2C30;
     font-family: var(--font-body);
   }
 
   .section-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 400;
-    color: var(--color-midnight);
+    color: #2A2C30;
     margin: 0 0 var(--space-md) 0;
   }
 
   .accent-line {
     width: 60px;
     height: 1px;
-    background-color: var(--color-gold);
+    background-color: #C5A059;
     margin: var(--space-sm) 0;
   }
 
@@ -165,13 +176,19 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   /* 1. HERO */
   .festival-hero {
     position: relative;
-    min-height: 75vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-xl) var(--space-md);
-    background-color: var(--color-offwhite);
+    padding: var(--space-xxl) var(--space-md);
+    background-color: #FDFBF7;
     overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .festival-hero {
+      padding: 120px var(--space-md);
+    }
   }
 
   .hero-bg {
@@ -180,90 +197,171 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--color-offwhite);
-    /* In a real scenario, use an image here */
-    opacity: 0.4;
+    background-color: #FDFBF7;
+    z-index: 0;
   }
 
   .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-lg);
+  }
+
+  .hero-pretitle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #C5A059;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 500;
   }
 
   .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
-    color: var(--color-midnight);
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: #2A2C30;
     margin: 0;
     font-weight: 400;
-    letter-spacing: 0.05em;
-  }
-
-  .hero-subtitle {
-    font-family: var(--font-heading);
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--color-gold);
-    font-style: italic;
-    margin: var(--space-sm) 0 var(--space-lg) 0;
-    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
   .hero-intro {
-    font-size: 1.15rem;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
     line-height: 1.8;
     max-width: 700px;
     margin: 0;
-    color: var(--color-midnight);
-    opacity: 0.9;
+    color: #2A2C30;
+    font-weight: 300;
   }
 
   /* 2. WHY */
   .festival-why {
     padding: var(--space-xxl) var(--space-md);
-    background-color: var(--color-surface);
+    background-color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    .festival-why {
+      padding: 120px var(--space-md);
+    }
   }
 
   .why-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .why-container {
       grid-template-columns: 1fr 2fr;
       align-items: start;
     }
   }
 
-  .why-right p {
-    font-size: 1.1rem;
+  .why-left {
+    position: relative;
+    padding-right: var(--space-lg);
+  }
+
+  @media (min-width: 900px) {
+    .why-left {
+      border-right: 1px solid #C5A059;
+      padding-bottom: 200px;
+    }
+  }
+
+  .why-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  @media (min-width: 900px) {
+    .why-right {
+      gap: 120px;
+    }
+  }
+
+  .why-block p {
+    font-size: 1.15rem;
     line-height: 1.8;
-    margin: 0 0 var(--space-lg) 0;
-    color: var(--color-midnight);
+    margin: 0;
+    color: #2A2C30;
+    font-weight: 300;
   }
 
-  .why-right p:last-child {
-    margin-bottom: 0;
+  @media (min-width: 900px) {
+    .why-block-offset {
+      padding-left: 100px;
+    }
   }
 
-  .why-right em {
+  /* 3. CALLOUT */
+  .festival-callout {
+    padding: 0 var(--space-md) var(--space-xxl);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .festival-callout {
+      padding: 0 var(--space-md) 120px;
+    }
+  }
+
+  .callout-container {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .accent-line-vertical {
+    width: 1px;
+    height: 40px;
+    background-color: #C5A059;
+  }
+
+  @media (min-width: 768px) {
+    .accent-line-vertical {
+      height: 80px;
+    }
+  }
+
+  .callout-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: #2A2C30;
+    margin: 0;
     font-style: italic;
-    color: var(--color-midnight);
-    font-weight: 500;
+    line-height: 1.4;
+    font-weight: 400;
   }
 
-  /* 3. MISSION */
+  /* 4. MISSION */
   .festival-mission {
     padding: var(--space-xxl) var(--space-md);
-    background-color: var(--color-offwhite);
+    background-color: #f7f4ee;
+  }
+
+  @media (min-width: 768px) {
+    .festival-mission {
+      padding: 120px var(--space-md);
+    }
   }
 
   .mission-container {
@@ -284,26 +382,24 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   }
 
   .mission-card {
-    background-color: var(--color-surface);
+    background-color: #FDFBF7;
     padding: var(--space-xl);
-    border: 1px solid var(--color-gold);
-    border-radius: var(--border-radius);
+    border: 1px solid #C5A059;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
   }
 
   .mission-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(11, 19, 43, 0.05);
   }
 
   .mission-card-title {
     font-family: var(--font-heading);
     font-size: 1.4rem;
-    color: var(--color-midnight);
+    color: #2A2C30;
     margin: 0 0 var(--space-md) 0;
     font-weight: 400;
   }
@@ -311,17 +407,22 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   .mission-card-text {
     font-size: 1rem;
     line-height: 1.7;
-    color: var(--color-midnight);
+    color: #2A2C30;
     opacity: 0.85;
     margin: 0;
+    font-weight: 300;
   }
-
-
 
   /* 5. VISUAL MEMORY */
   .festival-memory {
     padding: var(--space-xxl) var(--space-md);
-    background-color: var(--color-offwhite);
+    background-color: #FDFBF7;
+  }
+
+  @media (min-width: 768px) {
+    .festival-memory {
+      padding: 120px var(--space-md);
+    }
   }
 
   .memory-container {
@@ -336,7 +437,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
 
   .memory-intro {
     font-size: 1.1rem;
-    color: var(--color-midnight);
+    color: #2A2C30;
     font-style: italic;
     opacity: 0.8;
     margin: 0;
@@ -360,35 +461,5 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     .video-card {
       width: calc(33.333% - (var(--space-lg) * 2 / 3));
     }
-  }
-
-  .video-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-color: var(--color-midnight);
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-
-  .video-placeholder:hover {
-    opacity: 0.9;
-  }
-
-  .play-icon {
-    font-size: 2rem;
-    color: var(--color-surface);
-  }
-
-  .video-caption {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--color-midnight);
-    text-align: center;
-    margin: 0;
-    opacity: 0.8;
   }
 </style>

@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { useTranslations, getRelativeLocaleUrl } from '../i18n/utils';
 
 export interface Props {
   event: any;
@@ -40,7 +41,7 @@ const venueSlug = getVenueSlug(event.lugar);
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
 const imagePath = `../assets/events_images/${event.imagenUrl}`;
 const imageSrc = images[imagePath] ? images[imagePath]() : null;
-import { getRelativeLocaleUrl } from '../i18n/utils';
+const t = await useTranslations(currentLang as any);
 ---
 
 <article class="event-card-horizontal" id={event.id}>
@@ -93,15 +94,12 @@ import { getRelativeLocaleUrl } from '../i18n/utils';
 
   <!-- Columna 4: Acciones -->
   <div class="card-actions">
-    <a 
-      href={event.taylorTicketsUrl} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="btn-buy"
-      aria-label={`${ctaText} para ${translation.titulo}`}
-    >
-      {ctaText}
-    </a>
+    <div class="cta-wrapper">
+      <span class="btn-buy disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+        {ctaText}
+      </span>
+      <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+    </div>
   </div>
 </article>
 
@@ -316,11 +314,35 @@ import { getRelativeLocaleUrl } from '../i18n/utils';
     width: 100%;
   }
 
-  .btn-buy:hover,
-  .btn-buy:focus-visible {
+  .btn-buy:not(.disabled):hover,
+  .btn-buy:not(.disabled):focus-visible {
     background-color: var(--color-gold);
     color: #ffffff;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+  }
+
+  .btn-buy.disabled {
+    border-color: var(--color-border);
+    color: var(--color-text);
+    cursor: not-allowed;
+    background-color: var(--color-surface);
+    opacity: 0.5;
+  }
+
+  .cta-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-soon-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-text);
+    font-style: italic;
+    margin-top: var(--space-xs);
+    margin-bottom: 0;
   }
 </style>
