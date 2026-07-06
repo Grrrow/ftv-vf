@@ -13,7 +13,7 @@ const {
   title, 
   description, 
   lang,
-  image = '/favicon.png',
+  image = '/og-artists.jpg',
   type = 'website'
 } = Astro.props;
 
@@ -63,7 +63,11 @@ const getAltUrl = (targetLang: string) => {
   "@context": "https://schema.org",
   "@type": "Festival",
   "name": "Música en Villafranca",
+  "description": description,
   "url": siteUrl,
+  "image": imageUrl,
+  "startDate": "2026-07-01",
+  "endDate": "2026-08-31",
   "location": {
     "@type": "Place",
     "name": "Villafranca del Bierzo",
