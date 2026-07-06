@@ -1,4 +1,6 @@
-/* Fonts are now loaded efficiently via link tags in SEO.astro */
+/* Self-hosted Fonts via Fontsource */
+@import '@fontsource-variable/cinzel';
+@import '@fontsource-variable/montserrat';
 
 :root {
   /* Brand Colors (Herencia Nocturna) */
@@ -17,8 +19,8 @@
   --color-surface: #ffffff;
   
   /* Typography */
-  --font-heading: 'Cinzel', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Cinzel Variable', 'Cinzel', serif;
+  --font-body: 'Montserrat Variable', 'Montserrat', sans-serif;
   
   /* Spacing (8px scale) */
   --space-xs: 0.5rem;   /* 8px */
