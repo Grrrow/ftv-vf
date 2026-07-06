@@ -2,6 +2,7 @@
 import { languages, useTranslations, defaultLang } from '../../i18n/utils';
 import SEO from '../../components/SEO.astro';
 import SkipLink from '../../components/SkipLink.astro';
+import Footer from '../../components/Footer.astro';
 import '../../styles/global.css';
 
 import Header from '../../components/Header.astro';
@@ -58,9 +59,7 @@ const events = allEvents
       </section>
     </main>
     
-    <footer role="contentinfo" style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);">
-      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">{t('footer', 'copyright')}</p>
-    </footer>
+    <Footer />
   </body>
 </html>
 

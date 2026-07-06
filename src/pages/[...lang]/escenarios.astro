@@ -4,6 +4,7 @@ import { getEntry, getCollection } from "astro:content";
 import Header from "../../components/Header.astro";
 import SkipLink from "../../components/SkipLink.astro";
 import SEO from "../../components/SEO.astro";
+import Footer from "../../components/Footer.astro";
 import "../../styles/global.css";
 import { Image } from "astro:assets";
 import venuesHeroBg from "../../assets/venues-hero-bg.jpeg";
@@ -447,13 +448,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       </div>
     </main>
 
-    <footer
-      role="contentinfo"
-      style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);"
-    >
-      <p style="opacity:0.6; font-size:0.9rem;">
-        {i18nEntry?.data?.footer?.copyright}
-      </p>
-    </footer>
+    <Footer />
   </body>
 </html>

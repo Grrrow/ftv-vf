@@ -1,0 +1,271 @@
+---
+import { languages, useTranslations, defaultLang } from '../i18n/utils';
+
+const [, langParam] = Astro.url.pathname.split('/');
+const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+
+// Videos from manifiesto.astro
+const videos = [
+  { id: "FNSjNbxarX4", titleKey: "video_1_title" },
+  { id: "1KKL87bpvuQ", titleKey: "video_2_title" },
+  { id: "cCAnWrmSSyY", titleKey: "video_3_title" },
+  { id: "dq4BFts8bvk", titleKey: "video_4_title" },
+  { id: "4RLE53jG_PU", titleKey: "video_5_title" },
+  { id: "hhtVvEj7GYM", titleKey: "video_6_title" },
+  { id: "LrrQgQpVCLo", titleKey: "video_7_title" },
+  { id: "Osp_un1xQco", titleKey: "video_8_title" }
+];
+---
+
+<section class="video-carousel-section" aria-labelledby="carousel-title">
+  <div class="carousel-container">
+    <div class="carousel-header">
+      <h2 id="carousel-title" class="section-title">{t('manifesto', 'memory_title')}</h2>
+      <p class="section-desc">{t('manifesto', 'memory_intro')}</p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-control prev" aria-label="Anterior video" id="carousel-prev">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="carousel-track" id="carousel-track">
+        {videos.map((vid, idx) => (
+          <div class="carousel-item">
+            <div class="video-card">
+              <iframe 
+                width="100%" 
+                style="aspect-ratio: 16/9; border-radius: 6px 6px 0 0; border: 1px solid rgba(197, 160, 89, 0.2); border-bottom: none; display: block;" 
+                src={`https://www.youtube.com/embed/${vid.id}`} 
+                srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#C5A059;text-shadow:0 0 0.5em #0B132B, 0 0 0.2em #0B132B;transition:transform 0.2s ease;}a:hover span{transform:scale(1.1);}</style><a href=https://www.youtube.com/embed/${vid.id}?autoplay=1><img src=https://img.youtube.com/vi/${vid.id}/hqdefault.jpg alt='Reproducir video' /><span>▶</span></a>`}
+                title={`Video edición anterior ${idx + 1}`} 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                loading="lazy"
+              ></iframe>
+              <div class="video-card-content">
+                <h3 class="video-card-title">{t('manifesto', vid.titleKey as any)}</h3>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <button class="carousel-control next" aria-label="Siguiente video" id="carousel-next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initCarousel() {
+    const track = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const scrollAmount = 350; // Approximated card width + gap
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Optional: Hide/show controls depending on scroll position
+    const toggleButtons = () => {
+      const isAtStart = track.scrollLeft <= 5;
+      const isAtEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+      
+      prevBtn.style.opacity = isAtStart ? '0.3' : '1';
+      prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+      
+      nextBtn.style.opacity = isAtEnd ? '0.3' : '1';
+      nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+    };
+
+    track.addEventListener('scroll', toggleButtons);
+    // Trigger initially
+    toggleButtons();
+    // Wait for resize
+    window.addEventListener('resize', toggleButtons);
+  }
+
+  // Support Astro View Transitions / ClientRouter
+  document.addEventListener('astro:page-load', initCarousel);
+  // Fallback initial
+  initCarousel();
+</script>
+
+<style>
+  .video-carousel-section {
+    padding: var(--space-xxl) 0;
+    background-color: var(--color-surface);
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  .carousel-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    padding: 0 var(--space-md);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-midnight);
+    margin: 0 0 var(--space-xs) 0;
+    font-weight: 400;
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--color-midnight);
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold) transparent;
+    padding: var(--space-sm) 0 var(--space-md) 0;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+
+  /* Custom styling for webkit scrollbars */
+  .carousel-track::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .carousel-track::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .carousel-track::-webkit-scrollbar-thumb {
+    background-color: var(--color-gold);
+    border-radius: 10px;
+  }
+
+  .carousel-item {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 600px) {
+    .carousel-item {
+      flex: 0 0 48%;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .carousel-item {
+      flex: 0 0 31%;
+    }
+  }
+
+  .video-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(11, 19, 43, 0.08);
+    border-radius: 6px;
+    background-color: var(--color-midnight);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(197, 160, 89, 0.15);
+  }
+
+  .video-card-content {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-midnight);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .video-card-title {
+    font-family: 'Cinzel Variable', serif;
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-midnight);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    transition: all 0.3s ease;
+  }
+
+  .carousel-control:hover {
+    background-color: var(--color-midnight);
+    color: var(--color-surface);
+    border-color: var(--color-midnight);
+  }
+
+  .carousel-control.prev {
+    left: -22px;
+  }
+
+  .carousel-control.next {
+    right: -22px;
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-control {
+      display: flex;
+    }
+  }
+</style>

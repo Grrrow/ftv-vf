@@ -10,6 +10,8 @@ import Manifesto from "../../components/Manifesto.astro";
 import ProgramTeaser from "../../components/ProgramTeaser.astro";
 import VenuesSection from "../../components/VenuesSection.astro";
 import MapSection from "../../components/MapSection.astro";
+import Footer from "../../components/Footer.astro";
+import VideoCarousel from "../../components/VideoCarousel.astro";
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -44,16 +46,10 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <Manifesto />
       <ProgramTeaser />
       <VenuesSection />
+      <VideoCarousel />
       <MapSection />
     </main>
 
-    <footer
-      role="contentinfo"
-      style="padding: var(--space-lg); text-align: center; border-top: 1px solid var(--color-border); margin-top: var(--space-xxl); background-color: var(--color-surface);"
-    >
-      <p style="margin: 0; font-size: 0.9rem; opacity: 0.7;">
-        {t("footer", "copyright")}
-      </p>
-    </footer>
+    <Footer />
   </body>
 </html>
