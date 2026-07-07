@@ -7,6 +7,9 @@ const getSiteURL = () => {
   const branch = process.env.VERCEL_GIT_COMMIT_REF;
   
   if (!branch) {
+    if (process.env.NODE_ENV === 'production' || process.env.VERCEL_URL) {
+      return 'https://musicaenvillafranca.com';
+    }
     return 'http://localhost:4321'; // Desarrollo local
   }
   

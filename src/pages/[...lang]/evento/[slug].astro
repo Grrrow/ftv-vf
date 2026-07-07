@@ -37,6 +37,24 @@ const resolvedImage = images[imagePath] ? images[imagePath].default.src : '/favi
 
 // Clean HTML tags from sinopsisCorta to use in meta description
 const plainDescription = translation.sinopsisCorta.replace(/<[^>]*>?/gm, ' ').replace(/\s+/g, ' ').trim();
+
+// Clean HTML tags from interpretes
+const plainInterpretes = translation.interpretes.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+
+// Generate structured array of performers
+const performerNames = plainInterpretes.split(/\s+y\s+|\s+and\s+|\s+und\s+|\s+\/\s+/i).map(n => n.trim()).filter(Boolean);
+const performers = performerNames.map(name => {
+  const isGroup = name.toLowerCase().includes('orquesta') || 
+                  name.toLowerCase().includes('camerata') || 
+                  name.toLowerCase().includes('cuarteto') || 
+                  name.toLowerCase().includes('ensemble') ||
+                  name.toLowerCase().includes('trío') ||
+                  name.toLowerCase().includes('trio');
+  return {
+    "@type": isGroup ? "PerformingGroup" : "Person",
+    "name": name
+  };
+});
 ---
 
 <!DOCTYPE html>
@@ -45,8 +63,8 @@ const plainDescription = translation.sinopsisCorta.replace(/<[^>]*>?/gm, ' ').re
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SEO 
-      title={`${translation.titulo} | ${event.lugar} | ${t('seo', 'title')}`}
-      description={`${event.lugar} - ${translation.interpretes}. ${plainDescription.substring(0, 150)}...`}
+      title={`${translation.titulo} - ${plainInterpretes} | ${event.lugar}`}
+      description={`${event.lugar} - ${plainInterpretes}. ${plainDescription.substring(0, 150)}...`}
       lang={lang as string}
       image={resolvedImage}
       type="article"
@@ -72,16 +90,19 @@ const plainDescription = translation.sinopsisCorta.replace(/<[^>]*>?/gm, ' ').re
         new URL(resolvedImage, Astro.site ? Astro.site.href : 'https://musicaenvillafranca.com').href
       ],
       "description": plainDescription,
+      "organizer": {
+        "@type": "Organization",
+        "name": "Asociación Cultural Marita Caro Carvajal"
+      },
       "offers": {
         "@type": "Offer",
         "url": event.taylorTicketsUrl || "https://www.taylortickets.com",
         "availability": "https://schema.org/InStock",
-        "validFrom": "2025-01-01"
+        "validFrom": "2025-01-01",
+        "price": "15.00",
+        "priceCurrency": "EUR"
       },
-      "performer": {
-        "@type": "PerformingGroup",
-        "name": translation.interpretes
-      }
+      "performer": performers
     })} />
     <style>
       .event-page {
