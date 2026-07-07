@@ -6,6 +6,10 @@
     "venue": "Escenarios",
     "tickets": "Reservas"
   },
+  "sponsors": {
+    "title": "Patrocina",
+    "organizer_title": "Organiza"
+  },
   "hero": {
     "title": "Música en Villafranca",
     "subtitle": "Un encuentro con la excelencia clásica en el corazón de El Bierzo histórico.",
@@ -66,7 +70,11 @@
     "hero_intro": "Música en Villafranca no es solo un ciclo de conciertos estivales. Es la apertura excepcional de las puertas de nuestra casa, para mantener eterna la genialidad de una pianista universal.",
     "why_title": "Nuestra Razón de Ser",
     "why_p1": "Cada nota que resuena entre los muros de piedra de este valle es un tributo a Marita Caro. Pianista de prestigio internacional y referente de su generación, su virtuosismo musical encontró en Villafranca del Bierzo no solo un refugio, sino un escenario eterno. Este festival nace con el propósito inquebrantable de honrar su memoria y celebrar su figura, asegurando que su linaje artístico siga vibrando en el lugar que más amó.",
-    "why_p2": "No alquilamos un espacio ni diseñamos escenografías artificiales; abrimos las puertas de nuestro hogar. El Castillo-Palacio de los Marqueses de Villafranca ha sido la herencia y residencia de la familia Caro desde el siglo XV. Hoy, como residencia privada del director artístico Pedro Halffter Caro, este monumento vivo se transforma. Quienes nos acompañan no son meros espectadores, son invitados en la casa familiar, compartiendo la música de cámara en su concepción más pura y en la intimidad más absoluta.",
+    "why_p2": "Música en Villafranca es, ante todo, una invitación a cruzar el umbral de nuestro propio hogar. El Castillo-Palacio de los Marqueses de Villafranca, herencia y residencia de la familia Caro desde el siglo XV, abre sus puertas para transformarse en un escenario vivo. Hoy, como residencia privada de nuestro director artístico Pedro Halffter Caro, este monumento histórico nos permite ofrecer una experiencia única: quienes nos acompañan dejan de ser espectadores para convertirse en invitados de la familia, compartiendo la música de cámara en su concepción más pura y en la intimidad más absoluta.",
+    "tribute_title": "En Memoria de Marita Caro y Cristóbal Halffter",
+    "tribute_text": "Este festival nace como un profundo homenaje a la gran pianista villafranquina Marita Caro y al insigne compositor y director de orquesta Cristóbal Halffter. Su inmenso legado musical y su inquebrantable amor por Villafranca del Bierzo son la semilla que da vida a cada una de las notas que resuenan hoy en nuestro castillo y en nuestras iglesias. Una herencia de excelencia y pasión que perdura.",
+    "director_title": "Dirección Artística: Pedro Halffter Caro",
+    "director_text": "Compositor y director de orquesta de prestigio internacional, Pedro Halffter Caro es el alma y motor de este festival. Heredero de una extraordinaria tradición musical familiar, asume la dirección artística con el firme propósito de convertir Villafranca del Bierzo en un epicentro cultural, transformando cada verano el patrimonio arquitectónico en un escenario único donde la excelencia musical se abraza con la historia.<br><br>Reconocido como una de las figuras más versátiles de la música actual, ha desarrollado una trayectoria internacional marcada por el diálogo entre el gran repertorio sinfónico, la ópera y la creación contemporánea. Como director artístico y titular, ha estado al frente de importantes instituciones y orquestas, entre ellas el Teatro de la Maestranza de Sevilla, la Real Orquesta Sinfónica de Sevilla y la Orquesta Filarmónica de Gran Canaria, consolidándose como un intérprete de amplia visión artística.<br><br>En su faceta como compositor, sus obras han sido estrenadas en salas como el Carnegie Hall de Nueva York o el Konzerthaus de Dortmund. Además, como conferenciante, acerca la música al público desde una perspectiva viva, revelando las claves expresivas de grandes compositores desde el piano.<br><br>Director, creador y divulgador, Pedro Halffter construye puentes entre pensamiento, emoción y sonido; una manera integral de entender la música que impregna cada velada de Música en Villafranca.",
     "memory_title": "El Eco de Otras Ediciones",
     "memory_intro": "Instantes donde la música, la luz de las velas y el patrimonio histórico se hicieron uno. Revive la atmósfera íntima de veladas pasadas.",
     "video_1_title": "Schubert: Impromptu (Pedro Halffter)",
@@ -80,8 +88,8 @@
     "mission_title": "Nuestra Misión",
     "mission_1_title": "Simbiosis con el Patrimonio",
     "mission_1_text": "Fusionar la excelencia musical internacional con el alma de nuestros enclaves. El Patio del Castillo no es un fondo pasivo, sino un miembro activo del discurso emocional: residencia histórica de la pianista Marita Caro transmitida desde el siglo XV, y actual hogar del director Pedro Halffter Caro.",
-    "mission_2_title": "Vínculo con el Peregrinaje",
-    "mission_2_text": "Articular una programación artística que dialogue íntimamente con la mística, la búsqueda interior y las vivencias del caminante a su paso por la milenaria Puerta del Perdón.",
+    "mission_2_title": "Monumentos Hechos Música",
+    "mission_2_text": "Nuestra visión no es simplemente tocar música dentro de un espacio antiguo, sino interpretar el entorno mismo. Los monumentos, la piedra y nuestra tradición histórica dejan de ser meros decorados para convertirse en música como concepto artístico integral.",
     "mission_3_title": "Cultura Sin Barreras",
     "mission_3_text": "Romper protocolos rígidos. A través de puestas en escena circulares que abrazan al intérprete y cálidos comentarios pedagógicos, transformamos al espectador en un auténtico \"caminante musical\".",
     "callout": "Asistir a Música en Villafranca es ser parte de la historia de una familia entrelazada con la música durante más de cinco siglos."

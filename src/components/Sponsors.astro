@@ -1,0 +1,120 @@
+---
+import { useTranslations, defaultLang } from '../i18n/utils';
+import { languages } from '../i18n/utils';
+import { Image } from 'astro:assets';
+import logoAyto from '../assets/logo_ayto_villafranca.png';
+
+const { lang } = Astro.params || 'es';
+const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
+const t = await useTranslations(currentLang as keyof typeof languages);
+---
+
+<section class="sponsors-section" aria-labelledby="sponsors-title">
+  <div class="sponsors-container">
+    <div class="sponsors-grid">
+      
+      <!-- Organiza -->
+      <div class="sponsor-block">
+        <h2 class="sponsors-title">{t('sponsors', 'organizer_title')}</h2>
+        <div class="sponsors-list">
+          <div class="sponsor-item">
+            <span class="organizer-name">Asociación Cultural<br>Marita Caro Carvajal</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patrocina -->
+      <div class="sponsor-block">
+        <h2 id="sponsors-title" class="sponsors-title">{t('sponsors', 'title')}</h2>
+        <div class="sponsors-list">
+          <div class="sponsor-item">
+            <Image src={logoAyto} alt="Ayuntamiento de Villafranca del Bierzo" class="sponsor-logo" width={220} />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .sponsors-section {
+    padding: 60px var(--space-md);
+    background-color: var(--color-bg);
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .sponsors-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .sponsors-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sponsor-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sponsors-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text);
+    opacity: 0.6;
+    margin-bottom: var(--space-xl);
+  }
+
+  .sponsors-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+  }
+
+  .sponsor-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .organizer-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 1.3;
+    opacity: 0.9;
+  }
+
+  .sponsor-logo {
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .sponsor-item:hover .sponsor-logo {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  @media (min-width: 768px) {
+    .sponsors-section {
+      padding: 80px var(--space-md);
+    }
+    .sponsors-grid {
+      flex-direction: row;
+      gap: 120px;
+    }
+  }
+</style>

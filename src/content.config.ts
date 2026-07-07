@@ -11,6 +11,10 @@ const i18nCollection = defineCollection({
       venue: z.string(),
       tickets: z.string(),
     }),
+    sponsors: z.object({
+      title: z.string(),
+      organizer_title: z.string()
+    }),
     hero: z.object({
       title: z.string(),
       subtitle: z.string(),
@@ -75,6 +79,10 @@ const i18nCollection = defineCollection({
       why_title: z.string(),
       why_p1: z.string(),
       why_p2: z.string(),
+      tribute_title: z.string().optional(),
+      tribute_text: z.string().optional(),
+      director_title: z.string().optional(),
+      director_text: z.string().optional(),
       mission_title: z.string(),
       mission_1_title: z.string(),
       mission_1_text: z.string(),

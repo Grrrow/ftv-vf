@@ -1,10 +1,14 @@
 ---
 import { languages, useTranslations, defaultLang } from '../../i18n/utils';
+import { Image } from 'astro:assets';
 import Header from '../../components/Header.astro';
 import SkipLink from '../../components/SkipLink.astro';
 import SEO from '../../components/SEO.astro';
 import Footer from '../../components/Footer.astro';
 import '../../styles/global.css';
+
+import maritaImage from '../../assets/marita&cristobal.jpg';
+import pedroImage from '../../assets/pedrohalffter.jpg';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -71,6 +75,32 @@ const videos = [
             <div class="why-block why-block-offset">
               <p set:html={t('manifesto', 'why_p2')} />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.5. BLOQUE: HOMENAJE -->
+      <section class="festival-tribute">
+        <div class="tribute-container">
+          <div class="tribute-image-wrapper">
+            <Image src={maritaImage} alt="Marita Caro y Cristóbal Halffter" class="tribute-image" width={800} />
+          </div>
+          <div class="tribute-content">
+            <h2 class="tribute-title">{t('manifesto', 'tribute_title')}</h2>
+            <p class="tribute-text">{t('manifesto', 'tribute_text')}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.6. BLOQUE: DIRECTOR ARTÍSTICO -->
+      <section class="festival-tribute festival-director">
+        <div class="tribute-container tribute-container--reverse">
+          <div class="tribute-image-wrapper">
+            <Image src={pedroImage} alt="Pedro Halffter Caro" class="tribute-image" width={800} />
+          </div>
+          <div class="tribute-content">
+            <h2 class="tribute-title">{t('manifesto', 'director_title')}</h2>
+            <p class="tribute-text tribute-text--long" set:html={t('manifesto', 'director_text')} />
           </div>
         </div>
       </section>
@@ -293,6 +323,91 @@ const videos = [
     margin: 0;
     color: #2A2C30;
     font-weight: 300;
+  }
+
+  /* 2.5. HOMENAJE */
+  .festival-tribute {
+    padding: var(--space-xl) var(--space-md);
+    background-color: #FDFBF7;
+  }
+
+  .tribute-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  /* Para el director, fondo diferente para separar las secciones sutilmente */
+  .festival-director {
+    background-color: #f7f5f0;
+  }
+
+  @media (min-width: 768px) {
+    .festival-tribute {
+      padding: 100px var(--space-md);
+    }
+    .tribute-container {
+      flex-direction: row;
+      gap: 80px;
+    }
+    .tribute-container--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .tribute-image-wrapper {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .tribute-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+  .tribute-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .tribute-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tribute-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #2A2C30;
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .tribute-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #2A2C30;
+    opacity: 0.85;
+  }
+
+  /* Reducimos un poco la fuente si el texto es largo como en la bio */
+  .tribute-text--long {
+    font-size: 1.05rem;
   }
 
   @media (min-width: 900px) {

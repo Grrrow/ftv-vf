@@ -6,6 +6,10 @@
     "venue": "Schauplätze",
     "tickets": "Reservierungen"
   },
+  "sponsors": {
+    "title": "Gesponsert von",
+    "organizer_title": "Organisiert von"
+  },
   "hero": {
     "title": "Musik in Villafranca",
     "subtitle": "Eine Begegnung mit klassischer Exzellenz im historischen Herzen von El Bierzo.",
@@ -66,7 +70,11 @@
     "hero_intro": "Musik in Villafranca ist nicht nur eine sommerliche Konzertreihe. Es ist die außergewöhnliche Öffnung der Türen unseres Hauses, um das Genie einer universellen Pianistin für die Ewigkeit zu bewahren.",
     "why_title": "Unser Grund für das Sein",
     "why_p1": "Jeder Ton, der zwischen den Steinmauern dieses Tals erklingt, ist eine Hommage an Marita Caro. Als international renommierte Pianistin und Maßstab ihrer Generation fand ihre musikalische Virtuosität in Villafranca del Bierzo nicht nur eine Zuflucht, sondern eine ewige Bühne. Dieses Festival entstand mit der unerschütterlichen Absicht, ihr Andenken zu ehren und ihre Persönlichkeit zu feiern, um sicherzustellen, dass ihr künstlerisches Erbe an dem Ort weiterlebt, den sie am meisten liebte.",
-    "why_p2": "Wir mieten keinen Raum und entwerfen keine künstlichen Bühnenbilder; wir öffnen die Türen unseres Zuhauses. Der Palast-Burg der Marqueses de Villafranca ist seit dem 15. Jahrhundert das Erbe und der Wohnsitz der Familie Caro. Heute verwandelt sich dieses lebendige Denkmal als Privatresidenz des künstlerischen Leiters Pedro Halffter Caro. Diejenigen, die uns begleiten, sind keine bloßen Zuschauer, sie sind Gäste im Haus der Familie, die Kammermusik in ihrer reinsten Form und in absoluter Intimität teilen.",
+    "why_p2": "Musik in Villafranca ist vor allem eine Einladung, die Schwelle unseres eigenen Zuhauses zu überschreiten. Der Palast-Burg der Markgrafen von Villafranca, seit dem 15. Jahrhundert Erbe und Wohnsitz der Familie Caro, öffnet seine Türen, um sich in eine lebendige Bühne zu verwandeln. Heute, als Privatresidenz unseres künstlerischen Leiters Pedro Halffter Caro, ermöglicht uns dieses historische Denkmal, ein einzigartiges Erlebnis zu bieten: Diejenigen, die uns begleiten, sind nicht länger bloße Zuschauer, sondern werden zu Gästen der Familie, die Kammermusik in ihrer reinsten Form und in absoluter Intimität teilen.",
+    "tribute_title": "In Gedenken an Marita Caro und Cristóbal Halffter",
+    "tribute_text": "Dieses Festival ist eine tiefe Hommage an die große Pianistin aus Villafranca, Marita Caro, und den berühmten Komponisten und Dirigenten Cristóbal Halffter. Ihr unermessliches musikalisches Erbe und ihre unerschütterliche Liebe zu Villafranca del Bierzo sind der Same, der jeder einzelnen Note Leben einhaucht, die heute in unserem Schloss und in unseren Kirchen erklingt. Ein Erbe der Exzellenz und Leidenschaft, das fortbesteht.",
+    "director_title": "Künstlerische Leitung: Pedro Halffter Caro",
+    "director_text": "Der international anerkannte Komponist und Dirigent Pedro Halffter Caro ist die Seele und treibende Kraft dieses Festivals. Als Erbe einer außergewöhnlichen Musiktradition übernimmt er die künstlerische Leitung mit dem festen Ziel, Villafranca del Bierzo in ein kulturelles Epizentrum zu verwandeln und das architektonische Erbe jeden Sommer in eine einzigartige Bühne zu verwandeln, auf der musikalische Exzellenz auf Geschichte trifft.<br><br>Anerkannt als eine der vielseitigsten Persönlichkeiten der heutigen Musik, hat er eine internationale Karriere entwickelt, die vom Dialog zwischen dem großen symphonischen Repertoire, der Oper und dem zeitgenössischen Schaffen geprägt ist. Als künstlerischer und musikalischer Leiter leitete er bedeutende Institutionen und Orchester, darunter das Teatro de la Maestranza in Sevilla, das Königliche Symphonieorchester Sevilla und das Philharmonische Orchester Gran Canaria, und festigte sich als Interpret mit einer breiten künstlerischen Vision.<br><br>Als Komponist wurden seine Werke an Orten wie der Carnegie Hall in New York und dem Konzerthaus in Dortmund uraufgeführt. Darüber hinaus bringt er dem Publikum als Dozent die Musik aus einer lebendigen Perspektive näher und offenbart die expressiven Schlüssel großer Komponisten am Klavier.<br><br>Als Dirigent, Schöpfer und Vermittler baut Pedro Halffter Brücken zwischen Denken, Emotion und Klang; eine ganzheitliche Art, Musik zu verstehen, die jedes Detail von Musik in Villafranca durchdringt.",
     "memory_title": "Das Echo vergangener Ausgaben",
     "memory_intro": "Momente, in denen Musik, Kerzenschein und historisches Erbe eins wurden. Erleben Sie die intime Atmosphäre vergangener Abende wieder.",
     "video_1_title": "Schubert: Impromptu (Pedro Halffter)",
@@ -80,8 +88,8 @@
     "mission_title": "Unsere Mission",
     "mission_1_title": "Symbiose mit dem Erbe",
     "mission_1_text": "Internationale musikalische Exzellenz mit der Seele unserer Veranstaltungsorte zu verschmelzen. Der Schlosshof ist keine passive Kulisse, sondern ein aktiver Teil unseres emotionalen Diskurses: der historische Wohnsitz der Pianistin Marita Caro, der seit dem 15. Jahrhundert weitergegeben wird, und das heutige Zuhause des Regisseurs Pedro Halffter Caro.",
-    "mission_2_title": "Verbindung mit der Pilgerreise",
-    "mission_2_text": "Ein künstlerisches Programm zu artikulieren, das in einem intimen Dialog mit der Mystik, der inneren Suche und den Erfahrungen des Pilgers steht, der das alte Tor der Vergebung passiert.",
+    "mission_2_title": "Denkmäler werden zu Musik",
+    "mission_2_text": "Unsere Vision ist es nicht nur, Musik in einem alten Raum zu spielen, sondern die Umgebung selbst zu interpretieren. Die Denkmäler, der Stein und unsere historische Tradition sind nicht länger nur Kulisse, sondern werden als ganzheitliches künstlerisches Konzept zu Musik.",
     "mission_3_title": "Kultur ohne Barrieren",
     "mission_3_text": "Starre Protokolle zu durchbrechen. Durch eine kreisförmige Inszenierung, die den Interpreten umarmt, und warme pädagogische Kommentare, verwandeln wir den Zuschauer in einen echten \"musikalischen Pilger\".",
     "callout": "Die Teilnahme an Musik in Villafranca bedeutet, Teil der Geschichte einer Familie zu werden, die seit über fünf Jahrhunderten mit der Musik verflochten ist."

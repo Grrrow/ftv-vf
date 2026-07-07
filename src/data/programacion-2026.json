@@ -50,6 +50,31 @@
     }
   },
   {
+    "id": "son-de-mencia-2026",
+    "fecha": "2026-07-31T20:30:00",
+    "slug": "son-de-mencia",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/son-de-mencia-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Ensemble Sinfónico del Festival «Son de Mencía»",
+        "interpretes": "<b>Orquesta:</b> Ensemble Sinfónico del Festival «Son de Mencía»<br><b>Dirección:</b> Maestro Alberto Aneiros",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>J. Brahms: Variaciones sobre un tema de Haydn</li><li>L. van Beethoven: Sinfonía n.º 7</li></ul>"
+      },
+      "en": {
+        "titulo": "Symphonic Ensemble of the «Son de Mencía» Festival",
+        "interpretes": "<b>Orchestra:</b> Symphonic Ensemble of the «Son de Mencía» Festival<br><b>Direction:</b> Maestro Alberto Aneiros",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Variations on a Theme by Haydn</li><li>L. van Beethoven: Symphony No. 7</li></ul>"
+      },
+      "de": {
+        "titulo": "Symphonisches Ensemble des Festivals «Son de Mencía»",
+        "interpretes": "<b>Orchester:</b> Symphonisches Ensemble des Festivals «Son de Mencía»<br><b>Leitung:</b> Maestro Alberto Aneiros",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Variationen über ein Thema von Haydn</li><li>L. van Beethoven: Sinfonie Nr. 7</li></ul>"
+      }
+    }
+  },
+  {
     "id": "mirei-suji-2026",
     "fecha": "2026-08-01T20:30:00",
     "slug": "mirei-suji",
@@ -60,7 +85,7 @@
       "es": {
         "titulo": "Recital de Piano",
         "interpretes": "<b>MIREI SUJI (Piano Solo)</b>",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata no.30 op.109</li><li>F. Chopin: Nocturne en si bemol mayor, op. 9 no. 2</li><li>F. Chopin: Nocturne en si mayor, op. 62 no. 1</li><li>F. Chopin: Waltz en do sostenido menor, op. 64 no. 2</li><li>F. Chopin: Ballad No. 1 en sol menor, op. 23</li><li>F. Chopin: Barcarolle en fa sostenido mayor, op. 60</li></ul>"
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata n.º 30 op. 109</li><li>F. Chopin: Nocturno en si bemol mayor, op. 9 n.º 2</li><li>F. Chopin: Nocturno en si mayor, op. 62 n.º 1</li><li>F. Chopin: Vals en do sostenido menor, op. 64 n.º 2</li><li>F. Chopin: Balada n.º 1 en sol menor, op. 23</li><li>F. Chopin: Barcarola en fa sostenido mayor, op. 60</li></ul>"
       },
       "en": {
         "titulo": "Piano Recital",
@@ -79,23 +104,73 @@
     "fecha": "2026-08-02T20:30:00",
     "slug": "camerata-oboe",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "piano-church.jpg",
+    "imagenUrl": "camertaclasica.jpeg",
     "taylorTicketsUrl": "https://www.taylortickets.com/events/camerata-oboe-2026",
     "traducciones": {
       "es": {
-        "titulo": "Oboe y Cuerdas",
+        "titulo": "Oboe y Terceto de Cuerdas",
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - oboe / Daniel Bombín - violín / Iván Braña - viola / Laura Núñez - cello)",
         "sinopsisCorta": "<strong>Repertorio:</strong> Obras de W.A. Mozart, J.C. Bach, F. Schubert y G. Druschetzky"
       },
       "en": {
-        "titulo": "Oboe and Strings",
+        "titulo": "Oboe and String Trio",
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - oboe / Daniel Bombín - violin / Iván Braña - viola / Laura Núñez - cello)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Works by W.A. Mozart, J.C. Bach, F. Schubert, and G. Druschetzky"
       },
       "de": {
-        "titulo": "Oboe und Streicher",
+        "titulo": "Oboe und Streichtrio",
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - Oboe / Daniel Bombín - Violine / Iván Braña - Bratsche / Laura Núñez - Cello)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von W.A. Mozart, J.C. Bach, F. Schubert und G. Druschetzky"
+      }
+    }
+  },
+  {
+    "id": "pedro-halffter-2026",
+    "fecha": "2026-08-07T20:30:00",
+    "slug": "pedro-halffter",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "pedrohalffter.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/pedro-halffter-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Recital de Piano",
+        "interpretes": "<b>PEDRO HALFFTER CARO (Piano)</b>",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata op. 2 n.º 1 en fa menor</li><li>L. van Beethoven: Sonata op. 49 n.º 2 en sol mayor</li><li>L. van Beethoven: Sonata op. 90 en mi menor</li><li>P. Halffter Caro: Meditaciones</li></ul>"
+      },
+      "en": {
+        "titulo": "Piano Recital",
+        "interpretes": "<b>PEDRO HALFFTER CARO (Piano)</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonata op. 2 no. 1 in F minor</li><li>L. van Beethoven: Sonata op. 49 no. 2 in G major</li><li>L. van Beethoven: Sonata op. 90 in E minor</li><li>P. Halffter Caro: Meditations</li></ul>"
+      },
+      "de": {
+        "titulo": "Klavierabend",
+        "interpretes": "<b>PEDRO HALFFTER CARO (Klavier)</b>",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonate op. 2 Nr. 1 in f-Moll</li><li>L. van Beethoven: Sonate op. 49 Nr. 2 in G-Dur</li><li>L. van Beethoven: Sonate op. 90 in e-Moll</li><li>P. Halffter Caro: Meditationen</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "brahms-sonatas-2026",
+    "fecha": "2026-08-08T21:30:00",
+    "slug": "brahms-sonatas",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "garvayotrematore.png",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/brahms-sonatas-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "La Integral de Sonatas de Brahms",
+        "interpretes": "<b>Juan Carlos Garvayo</b> (Piano) y <b>Ferdinando Trematore</b> (Violín)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>J. Brahms: Integral de las sonatas para violín y piano</li></ul>"
+      },
+      "en": {
+        "titulo": "Brahms Complete Sonatas",
+        "interpretes": "<b>Juan Carlos Garvayo</b> (Piano) and <b>Ferdinando Trematore</b> (Violin)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Complete sonatas for violin and piano</li></ul>"
+      },
+      "de": {
+        "titulo": "Brahms Gesamte Sonaten",
+        "interpretes": "<b>Juan Carlos Garvayo</b> (Klavier) und <b>Ferdinando Trematore</b> (Violine)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Sämtliche Sonaten für Violine und Klavier</li></ul>"
       }
     }
   },
@@ -104,12 +179,12 @@
     "fecha": "2026-08-14T20:30:00",
     "slug": "camerata-camara",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "piano-church.jpg",
+    "imagenUrl": "camertaclasica.jpeg",
     "taylorTicketsUrl": "https://www.taylortickets.com/events/camerata-camara-2026",
     "traducciones": {
       "es": {
         "titulo": "Concierto de Cámara",
-        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Director Artístico: Daniel Bombín Val / Violín solista: Manuel Pérez Morodo)",
+        "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Dirección Artística: Daniel Bombín Val / Violín solista: Manuel Pérez Morodo)",
         "sinopsisCorta": "<strong>Repertorio:</strong> Obras de G.P. Telemann y F. Mendelssohn"
       },
       "en": {
@@ -121,6 +196,106 @@
         "titulo": "Kammerkonzert",
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Künstlerische Leitung: Daniel Bombín Val / Solovioline: Manuel Pérez Morodo)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von G.P. Telemann und F. Mendelssohn"
+      }
+    }
+  },
+  {
+    "id": "canto-del-cisne-2026",
+    "fecha": "2026-08-15T21:30:00",
+    "slug": "canto-del-cisne",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/canto-del-cisne-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Schubert: El canto del Cisne",
+        "interpretes": "<b>José Manuel Montero</b> (Tenor) y <b>Pedro Halffter Caro</b> (Piano)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Schubert: Schwanengesang (El canto del cisne)</li></ul>"
+      },
+      "en": {
+        "titulo": "Schubert: Swan Song",
+        "interpretes": "<b>José Manuel Montero</b> (Tenor) and <b>Pedro Halffter Caro</b> (Piano)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Schwanengesang (Swan Song)</li></ul>"
+      },
+      "de": {
+        "titulo": "Schubert: Schwanengesang",
+        "interpretes": "<b>José Manuel Montero</b> (Tenor) und <b>Pedro Halffter Caro</b> (Klavier)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Schwanengesang</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "gala-zarzuela-2026",
+    "fecha": "2026-08-21T21:30:00",
+    "slug": "gala-zarzuela",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/gala-zarzuela-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Gran Gala de Canción Española y Zarzuela",
+        "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Belén Castillo</b> (Piano)",
+        "sinopsisCorta": "<strong>1ª Parte: Homenaje a Manuel de Falla (150 Aniversario)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2ª Parte: Antología Lírica</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Bis: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+      },
+      "en": {
+        "titulo": "Grand Gala of Spanish Song and Zarzuela",
+        "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Belén Castillo</b> (Piano)",
+        "sinopsisCorta": "<strong>Part 1: Tribute to Manuel de Falla (150th Anniversary)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>Part 2: Lyrical Anthology</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Encore: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+      },
+      "de": {
+        "titulo": "Große Gala des spanischen Liedes und Zarzuela",
+        "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Belén Castillo</b> (Klavier)",
+        "sinopsisCorta": "<strong>1. Teil: Hommage an Manuel de Falla (150. Jubiläum)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Zugabe: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "bella-molinera-2026",
+    "fecha": "2026-08-22T21:30:00",
+    "slug": "bella-molinera",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/bella-molinera-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "La Bella Molinera en Cámara",
+        "interpretes": "<b>Trío del Festival</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) y <b>Miguel Ángel Muñoz</b> (Recitador)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Schubert: La bella molinera (Versión para trío y narrador de Pedro Halffter)</li></ul>"
+      },
+      "en": {
+        "titulo": "Die schöne Müllerin in Chamber",
+        "interpretes": "<b>Festival Trio</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) and <b>Miguel Ángel Muñoz</b> (Narrator)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Die schöne Müllerin (Version for trio and narrator by Pedro Halffter)</li></ul>"
+      },
+      "de": {
+        "titulo": "Die schöne Müllerin als Kammermusik",
+        "interpretes": "<b>Festival-Trio</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) und <b>Miguel Ángel Muñoz</b> (Sprecher)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Die schöne Müllerin (Fassung für Trio und Sprecher von Pedro Halffter)</li></ul>"
+      }
+    }
+  },
+  {
+    "id": "recital-clausura-2026",
+    "fecha": "2026-08-23T21:30:00",
+    "slug": "recital-clausura",
+    "lugar": "Iglesia de San Nicolás",
+    "imagenUrl": "piano-church.jpg",
+    "taylorTicketsUrl": "https://www.taylortickets.com/events/recital-clausura-2026",
+    "traducciones": {
+      "es": {
+        "titulo": "Recital de Clausura: Lied y Ópera",
+        "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Pedro Halffter</b> (Piano)",
+        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2ª Parte:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Bis: G. Puccini: O mio babbino caro</li></ul>"
+      },
+      "en": {
+        "titulo": "Closing Recital: Lied and Opera",
+        "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Pedro Halffter</b> (Piano)",
+        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>Part 2:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Encore: G. Puccini: O mio babbino caro</li></ul>"
+      },
+      "de": {
+        "titulo": "Abschlusskonzert: Lied und Oper",
+        "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
+        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Zugabe: G. Puccini: O mio babbino caro</li></ul>"
       }
     }
   }

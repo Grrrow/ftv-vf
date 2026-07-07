@@ -6,6 +6,10 @@
     "venue": "Venues",
     "tickets": "Reservations"
   },
+  "sponsors": {
+    "title": "Sponsored by",
+    "organizer_title": "Organized by"
+  },
   "hero": {
     "title": "Music in Villafranca",
     "subtitle": "An encounter with classical excellence in the historic heart of El Bierzo.",
@@ -66,7 +70,11 @@
     "hero_intro": "Music in Villafranca is not just a summer concert cycle. It is the exceptional opening of the doors of our home, to keep eternal the genius of a universal pianist.",
     "why_title": "Our Reason Why",
     "why_p1": "Every note that resonates between the stone walls of this valley is a tribute to Marita Caro. An internationally renowned pianist and a reference of her generation, her musical virtuosity found in Villafranca del Bierzo not only a refuge, but an eternal stage. This festival is born with the unwavering purpose of honoring her memory and celebrating her figure, ensuring that her artistic lineage continues to vibrate in the place she loved most.",
-    "why_p2": "We do not rent a space or design artificial scenographies; we open the doors of our home. The Castle-Palace of the Marquises of Villafranca has been the heritage and residence of the Caro family since the 15th century. Today, as the private residence of artistic director Pedro Halffter Caro, this living monument is transformed. Those who join us are not mere spectators, they are guests in the family home, sharing chamber music in its purest conception and absolute intimacy.",
+    "why_p2": "Music in Villafranca is, above all, an invitation to cross the threshold of our own home. The Castle-Palace of the Marquises of Villafranca, heritage and residence of the Caro family since the 15th century, opens its doors to transform into a living stage. Today, as the private residence of our artistic director Pedro Halffter Caro, this historical monument allows us to offer a unique experience: those who join us cease to be spectators to become guests of the family, sharing chamber music in its purest conception and absolute intimacy.",
+    "tribute_title": "In Memory of Marita Caro and Cristóbal Halffter",
+    "tribute_text": "This festival is born as a profound tribute to the great pianist from Villafranca, Marita Caro, and the illustrious composer and conductor Cristóbal Halffter. Their immense musical legacy and their unwavering love for Villafranca del Bierzo are the seed that gives life to each of the notes that resonate today in our castle and in our churches. A heritage of excellence and passion that endures.",
+    "director_title": "Artistic Direction: Pedro Halffter Caro",
+    "director_text": "Internationally renowned composer and conductor, Pedro Halffter Caro is the soul and driving force of this festival. Heir to an extraordinary musical tradition, he assumes the artistic direction with the firm purpose of turning Villafranca del Bierzo into a cultural epicenter, transforming the architectural heritage every summer into a unique stage where musical excellence embraces history.<br><br>Recognized as one of the most versatile figures in music today, he has developed an international career marked by the dialogue between the great symphonic repertoire, opera, and contemporary creation. As artistic and musical director, he has led important institutions and orchestras, including the Teatro de la Maestranza in Seville, the Royal Symphony Orchestra of Seville, and the Philharmonic Orchestra of Gran Canaria, consolidating himself as an interpreter with a broad artistic vision.<br><br>As a composer, his works have been premiered in venues such as Carnegie Hall in New York and the Konzerthaus in Dortmund. Furthermore, as a lecturer, he brings music closer to the public from a lively perspective, revealing the expressive keys of great composers at the piano.<br><br>Director, creator, and communicator, Pedro Halffter builds bridges between thought, emotion, and sound; an integral way of understanding music that permeates every detail of Music in Villafranca.",
     "memory_title": "The Echo of Past Editions",
     "memory_intro": "Moments where music, candlelight, and historic heritage became one. Relive the intimate atmosphere of past evenings.",
     "video_1_title": "Schubert: Impromptu (Pedro Halffter)",
@@ -80,8 +88,8 @@
     "mission_title": "Our Mission",
     "mission_1_title": "Symbiosis with Heritage",
     "mission_1_text": "To fuse international musical excellence with the soul of our venues. The Castle Courtyard is not a passive backdrop, but an active member of our emotional discourse: the historic residence of pianist Marita Caro transmitted since the 15th century, and the current home of director Pedro Halffter Caro.",
-    "mission_2_title": "Link with the Pilgrimage",
-    "mission_2_text": "To articulate an artistic program that dialogues intimately with the mysticism, inner search, and experiences of the pilgrim passing through the ancient Door of Forgiveness.",
+    "mission_2_title": "Monuments Turned into Music",
+    "mission_2_text": "Our vision is not simply to play music inside an ancient space, but to interpret the environment itself. The monuments, the stone, and our historical tradition cease to be mere scenery to become music as an integral artistic concept.",
     "mission_3_title": "Culture Without Barriers",
     "mission_3_text": "To break rigid protocols. Through circular staging that embraces the performer and warm pedagogical commentary, we transform the spectator into an authentic \"musical pilgrim\".",
     "callout": "Attending Music in Villafranca means becoming part of a family's history intertwined with music for over five centuries."

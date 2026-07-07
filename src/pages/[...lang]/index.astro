@@ -12,6 +12,7 @@ import VenuesSection from "../../components/VenuesSection.astro";
 import MapSection from "../../components/MapSection.astro";
 import Footer from "../../components/Footer.astro";
 import VideoCarousel from "../../components/VideoCarousel.astro";
+import Sponsors from "../../components/Sponsors.astro";
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -48,6 +49,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       <VenuesSection />
       <VideoCarousel />
       <MapSection />
+      <Sponsors />
     </main>
 
     <Footer />
