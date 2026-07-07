@@ -373,10 +373,18 @@ const performers = performerNames.map(name => {
           </div>
 
           <div class="cta-wrapper">
-            <span class="cta-large disabled" aria-disabled="true" title={t('tickets', 'soon')}>
-              {t('tickets', 'cta')}
-            </span>
-            <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+            {!event.taylorTicketsUrl.includes('taylortickets.com') ? (
+              <a href={event.taylorTicketsUrl} class="cta-large" target="_blank" rel="noopener noreferrer">
+                {t('tickets', 'cta')}
+              </a>
+            ) : (
+              <>
+                <span class="cta-large disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+                  {t('tickets', 'cta')}
+                </span>
+                <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+              </>
+            )}
           </div>
         </aside>
       </section>

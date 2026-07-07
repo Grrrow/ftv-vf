@@ -25,7 +25,11 @@ const formatTime = (dateStr: string) => {
   return `${hours}:${minutes}h`;
 };
 
-const events = programacionData.slice(0, 3).map(event => {
+const eventsWithLinks = programacionData
+  .filter(event => !event.taylorTicketsUrl.includes('taylortickets.com'))
+  .sort((a, b) => new Date(a.fecha).getTime() - new Date(b.fecha).getTime());
+
+const events = eventsWithLinks.slice(0, 3).map(event => {
   return {
     event: event,
     currentLang: currentLang,

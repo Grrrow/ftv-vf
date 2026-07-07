@@ -99,10 +99,18 @@ const t = await useTranslations(currentLang as any);
   <!-- Columna 4: Acciones -->
   <div class="card-actions">
     <div class="cta-wrapper">
-      <span class="btn-buy disabled" aria-disabled="true" title={t('tickets', 'soon')}>
-        {ctaText}
-      </span>
-      <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+      {!event.taylorTicketsUrl.includes('taylortickets.com') ? (
+        <a href={event.taylorTicketsUrl} class="btn-buy" target="_blank" rel="noopener noreferrer">
+          {ctaText}
+        </a>
+      ) : (
+        <>
+          <span class="btn-buy disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+            {ctaText}
+          </span>
+          <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+        </>
+      )}
     </div>
   </div>
 </article>
