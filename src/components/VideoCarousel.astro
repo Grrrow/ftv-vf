@@ -39,8 +39,8 @@ const videos = [
               <iframe 
                 width="100%" 
                 style="aspect-ratio: 16/9; border-radius: 6px 6px 0 0; border: 1px solid rgba(197, 160, 89, 0.2); border-bottom: none; display: block;" 
-                src={`https://www.youtube.com/embed/${vid.id}`} 
-                srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#C5A059;text-shadow:0 0 0.5em #0B132B, 0 0 0.2em #0B132B;transition:transform 0.2s ease;}a:hover span{transform:scale(1.1);}</style><a href=https://www.youtube.com/embed/${vid.id}?autoplay=1><img src=https://img.youtube.com/vi/${vid.id}/hqdefault.jpg alt='Reproducir video' /><span>▶</span></a>`}
+                src={`https://www.youtube-nocookie.com/embed/${vid.id}`} 
+                srcdoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:#C5A059;text-shadow:0 0 0.5em #0B132B, 0 0 0.2em #0B132B;transition:transform 0.2s ease;}a:hover span{transform:scale(1.1);}</style><a href=https://www.youtube-nocookie.com/embed/${vid.id}?autoplay=1><img src=https://img.youtube.com/vi/${vid.id}/hqdefault.jpg alt='Reproducir video' /><span>▶</span></a>`}
                 title={`Video edición anterior ${idx + 1}`} 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
