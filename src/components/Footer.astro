@@ -1,5 +1,6 @@
 ---
 import { languages, useTranslations, defaultLang } from '../i18n/utils';
+import Analytics from '@vercel/analytics/astro';
 
 const [, langParam] = Astro.url.pathname.split('/');
 const currentLang = Object.keys(languages).includes(langParam) ? langParam : defaultLang;
@@ -10,19 +11,31 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   <div class="footer-content">
     <div class="footer-contact">
       <h3>{currentLang === 'es' ? 'Contacto' : currentLang === 'en' ? 'Contact' : 'Kontakt'}</h3>
-      <a href="mailto:info@musicaenvillafranca.com" class="footer-email" aria-label="Enviar un correo electrónico a info@musicaenvillafranca.com">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="email-icon" aria-hidden="true">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        <span>info@musicaenvillafranca.com</span>
-      </a>
+      <div class="contact-links">
+        <a href="mailto:info@musicaenvillafranca.com" class="footer-link" aria-label="Enviar un correo electrónico a info@musicaenvillafranca.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>info@musicaenvillafranca.com</span>
+        </a>
+        <a href="https://instagram.com/festivalmusicaenvillafranca" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@festivalmusicaenvillafranca</span>
+        </a>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>{t('footer', 'copyright')}</p>
     </div>
   </div>
 </footer>
+
+<Analytics />
 
 <style>
   .site-footer {
@@ -60,7 +73,14 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     color: var(--color-midnight);
   }
 
-  .footer-email {
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -69,14 +89,15 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     font-family: var(--font-body);
     font-size: 1.15rem;
     font-weight: 500;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, color 0.2s ease;
   }
 
-  .footer-email:hover {
+  .footer-link:hover {
     opacity: 0.8;
+    color: var(--color-gold);
   }
 
-  .email-icon {
+  .contact-icon {
     color: var(--color-gold);
   }
 
