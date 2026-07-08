@@ -234,17 +234,17 @@
     "traducciones": {
       "es": {
         "titulo": "Gran Gala de Canción Española y Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Belén Castillo</b> (Piano)",
+        "interpretes": "<b>Mar Morán</b> (Soprano)",
         "sinopsisCorta": "<strong>1ª Parte: Homenaje a Manuel de Falla (150 Aniversario)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2ª Parte: Antología Lírica</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Bis: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       },
       "en": {
         "titulo": "Grand Gala of Spanish Song and Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Belén Castillo</b> (Piano)",
+        "interpretes": "<b>Mar Morán</b> (Soprano)",
         "sinopsisCorta": "<strong>Part 1: Tribute to Manuel de Falla (150th Anniversary)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>Part 2: Lyrical Anthology</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Encore: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       },
       "de": {
         "titulo": "Große Gala des spanischen Liedes und Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Belén Castillo</b> (Klavier)",
+        "interpretes": "<b>Mar Morán</b> (Sopran)",
         "sinopsisCorta": "<strong>1. Teil: Hommage an Manuel de Falla (150. Jubiläum)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Zugabe: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       }
     }
@@ -254,7 +254,7 @@
     "fecha": "2026-08-22T21:30:00",
     "slug": "bella-molinera",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "piano-church.jpg",
+    "imagenUrl": "foto22Ago.png",
     "taylorTicketsUrl": "https://www.taylortickets.com/events/bella-molinera-2026",
     "traducciones": {
       "es": {
@@ -279,23 +279,23 @@
     "fecha": "2026-08-23T21:30:00",
     "slug": "recital-clausura",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "piano-church.jpg",
+    "imagenUrl": "MarMoran.jpeg",
     "taylorTicketsUrl": "https://www.taylortickets.com/events/recital-clausura-2026",
     "traducciones": {
       "es": {
         "titulo": "Recital de Clausura: Lied y Ópera",
         "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Pedro Halffter</b> (Piano)",
-        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2ª Parte:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Bis: G. Puccini: O mio babbino caro</li></ul>"
+        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>P. Halffter: Ciclo de canciones el poeta en Nueva York (4 canciones)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2ª Parte:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       },
       "en": {
         "titulo": "Closing Recital: Lied and Opera",
         "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Pedro Halffter</b> (Piano)",
-        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>Part 2:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Encore: G. Puccini: O mio babbino caro</li></ul>"
+        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York song cycle (4 songs)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>Part 2:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       },
       "de": {
         "titulo": "Abschlusskonzert: Lied und Oper",
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
-        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York</li><li>G. Fauré: Après un rêve</li><li>C. Debussy: Clair de lune</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Charpentier: Depuis le jour</li><li>G. Puccini: Quando m' en vo</li><li>C. Gounod: Je veux vivre</li><li>Zugabe: G. Puccini: O mio babbino caro</li></ul>"
+        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>P. Halffter: Liederzyklus El poeta en Nueva York (4 Lieder)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       }
     }
   }
