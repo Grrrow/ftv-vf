@@ -22,6 +22,7 @@ const t = await useTranslations(currentLang as keyof typeof languages);
       sizes="100vw"
       loading="eager"
       fetchpriority="high"
+      decoding="sync"
     />
     <!-- Overlay: Midnight (#0B132B) al 65% -->
     <div class="hero-overlay"></div>
@@ -60,7 +61,6 @@ const t = await useTranslations(currentLang as keyof typeof languages);
     object-position: center;
     display: block;
     opacity: 0.4;
-    filter: grayscale(30%);
   }
 
   .hero-overlay {
