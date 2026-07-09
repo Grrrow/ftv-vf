@@ -107,16 +107,14 @@ const getAltUrl = (targetLang: string) => {
       rootMargin: "0px 0px -50px 0px"
     });
 
-    // Select elements that should animate on scroll
+    // Select elements that should animate on scroll (excluding Above The Fold content)
     const hiddenElements = document.querySelectorAll(`
       .animate-on-scroll, 
       section h2.section-title, 
       .event-card-horizontal, 
       .venue-card, 
       .manifesto-text p,
-      .program-header,
-      .hero-content,
-      .program-hero-container
+      .program-header
     `);
     
     hiddenElements.forEach((el) => {

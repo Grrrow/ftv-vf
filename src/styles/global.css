@@ -103,8 +103,20 @@ a:hover {
   transform: translateY(0);
 }
 
-/* Specific delays or transition adjustments */
-.hero-content.reveal-hidden,
-.program-hero-container.reveal-hidden {
-  transform: translateY(30px);
+/* Pure CSS entrance animations for Above-The-Fold content (LCP optimization) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.program-hero-container {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  will-change: opacity, transform;
 }
