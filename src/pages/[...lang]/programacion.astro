@@ -19,8 +19,12 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
 const t = await useTranslations(currentLang as keyof typeof languages);
-const i18nEntry = await getEntry('i18n', currentLang);
-const pageData = i18nEntry?.data?.programacion_page;
+import esI18n from '../../content/i18n/es.json';
+import enI18n from '../../content/i18n/en.json';
+import deI18n from '../../content/i18n/de.json';
+
+const i18nData = { es: esI18n, en: enI18n, de: deI18n };
+const pageData = (i18nData as any)[currentLang]?.programacion_page;
 
 // Vite glob for dynamic image resolution
 const images = import.meta.glob<{ default: ImageMetadata }>('../../assets/events_images/*.{jpeg,jpg,png,gif,webp}');
@@ -496,6 +500,12 @@ const getVenueSlug = (lugarName: string) => {
           })
         ) : (
           <p class="no-events">{pageData?.events?.no_events || 'No se encontraron conciertos programados.'}</p>
+        )}
+        
+        {pageData?.events?.more_events_soon && (
+          <p class="more-events-soon" style="text-align: center; margin-top: var(--space-xxl); padding: var(--space-md); border-radius: 12px; background: rgba(11, 19, 43, 0.03); font-size: 1.15rem; color: var(--color-primary); font-family: var(--font-heading); max-width: 800px; margin-left: auto; margin-right: auto;">
+            {pageData.events.more_events_soon}
+          </p>
         )}
       </section>
     </main>

@@ -60,9 +60,10 @@
     "subtitle": "A sensory journey through music in the millennial stages of El Bierzo.",
     "events": {
       "view_program": "View Full Program",
-      "buy_tickets": "Seat Reservation",
+      "buy_tickets": "Book your place",
       "no_events": "No scheduled concerts found.",
-      "view_venue": "View Venue"
+      "view_venue": "View Venue",
+      "more_events_soon": "The rest of the concerts will be published next Tuesday, July 14th."
     }
   },
   "manifesto": {
