@@ -14,16 +14,25 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
+import es from '../content/i18n/es.json';
+import en from '../content/i18n/en.json';
+import de from '../content/i18n/de.json';
+
+const translations = { es, en, de };
+
 export async function useTranslations(lang: keyof typeof languages) {
-  const entry = await getEntry('i18n', lang);
-  if (!entry) {
+  const data = translations[lang];
+  if (!data) {
     throw new Error(`Translations not found for language: ${lang}`);
   }
-  return function t(key: keyof typeof entry.data, nestedKey: string) {
+  return function t(key: keyof typeof data, nestedKey?: string) {
     // Helper to get nested values
-    const obj = entry.data[key];
-    if (typeof obj === 'object' && obj !== null && nestedKey in obj) {
-      return (obj as any)[nestedKey] as string;
+    const obj = (data as any)[key];
+    if (typeof obj === 'object' && obj !== null && nestedKey) {
+      if (nestedKey in obj) {
+        return (obj as any)[nestedKey] as string;
+      }
+      return nestedKey; // fallback to the key itself rather than [object Object]
     }
     return String(obj);
   }
