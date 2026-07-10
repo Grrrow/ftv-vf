@@ -25,8 +25,9 @@ const formatTime = (dateStr: string) => {
   return `${hours}:${minutes}h`;
 };
 
-const eventsWithLinks = programacionData
-  .filter(event => !event.taylorTicketsUrl.includes('taylortickets.com'))
+const visibleEvents = programacionData.filter((e: any) => !e.hidden);
+const eventsWithLinks = visibleEvents
+  .filter(event => (event.id === 'pablo-sainz-villegas-2026' || event.id === 'niklas-liepe-2026'))
   .sort((a, b) => new Date(a.fecha).getTime() - new Date(b.fecha).getTime());
 
 const events = eventsWithLinks.slice(0, 3).map(event => {

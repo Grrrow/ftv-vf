@@ -355,7 +355,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             // Limpiar slug para los anchors en /programacion
             const cleanSlug = venue.slug.replace(`${currentLang}-`, "");
 
-            const venueEvents = programacionData.filter((e) => {
+            const venueEvents = programacionData.filter((e: any) => {
+              if (e.hidden) return false;
               if (cleanSlug === "castillo" && e.lugar.includes("Castillo")) return true;
               if (cleanSlug === "iglesia-san-nicolas" && e.lugar.includes("Nicolás")) return true;
               return false;

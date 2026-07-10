@@ -410,8 +410,9 @@ const getVenueSlug = (lugarName: string) => {
       </section>
 
       <section class="program-timeline" aria-label="Lista de conciertos">
-        {programacionData && programacionData.length > 0 ? (
-          programacionData.map((event) => {
+        
+        {programacionData && programacionData.filter((e: any) => !e.hidden).length > 0 ? (
+          programacionData.filter((e: any) => !e.hidden).map((event) => {
             const translation = event.traducciones[currentLang as keyof typeof event.traducciones] || event.traducciones['es'];
             const { day, month } = formatDate(event.fecha, currentLang);
             const time = formatTime(event.fecha);

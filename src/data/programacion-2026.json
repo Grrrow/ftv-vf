@@ -72,7 +72,8 @@
         "interpretes": "<b>Orchester:</b> Symphonisches Ensemble des Festivals «Son de Mencía»<br><b>Leitung:</b> Maestro Alberto Aneiros",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Variationen über ein Thema von Haydn</li><li>L. van Beethoven: Sinfonie Nr. 7</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "mirei-suji-2026",
@@ -97,7 +98,8 @@
         "interpretes": "<b>MIREI SUJI (Klaviersolo)</b>",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonate Nr.30 op.109</li><li>F. Chopin: Nocturne in B-Dur, op. 9 Nr. 2</li><li>F. Chopin: Nocturne in H-Dur, op. 62 Nr. 1</li><li>F. Chopin: Walzer in cis-Moll, op. 64 Nr. 2</li><li>F. Chopin: Ballade Nr. 1 in g-Moll, op. 23</li><li>F. Chopin: Barcarolle in Fis-Dur, op. 60</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "camerata-oboe-2026",
@@ -122,7 +124,8 @@
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Salvador Ferrer - Oboe / Daniel Bombín - Violine / Iván Braña - Bratsche / Laura Núñez - Cello)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von W.A. Mozart, J.C. Bach, F. Schubert und G. Druschetzky"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "pedro-halffter-2026",
@@ -147,7 +150,8 @@
         "interpretes": "<b>PEDRO HALFFTER CARO (Klavier)</b>",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>L. van Beethoven: Sonate op. 2 Nr. 1 in f-Moll</li><li>L. van Beethoven: Sonate op. 49 Nr. 2 in G-Dur</li><li>L. van Beethoven: Sonate op. 90 in e-Moll</li><li>P. Halffter Caro: Meditationen</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "brahms-sonatas-2026",
@@ -172,7 +176,8 @@
         "interpretes": "<b>Juan Carlos Garvayo</b> (Klavier) und <b>Ferdinando Trematore</b> (Violine)",
         "sinopsisCorta": "<strong>Sonaten für Violine und Klavier von Johannes Brahms (1833-1897)</strong><br><br><strong>Sonate Nr. 1 in G-Dur, op. 78 (1878-79)</strong><ul class='repertoire-list'><li>Vivace ma non troppo</li><li>Adagio</li><li>Allegro molto moderato</li></ul><br><strong>Sonate Nr. 2 in A-Dur, op. 100 (1886)</strong><ul class='repertoire-list'><li>Allegro amabile</li><li>Andante tranquillo</li><li>Allegretto grazioso (quasi andante)</li></ul><br><strong>Sonate Nr. 3 in d-Moll, op. 108 (1886-88)</strong><ul class='repertoire-list'><li>Allegro</li><li>Adagio</li><li>Un poco presto e con sentimento</li><li>Presto agitato</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "camerata-camara-2026",
@@ -197,7 +202,8 @@
         "interpretes": "<b>CAMERATA CLÁSICA DE PONFERRADA</b> (Künstlerische Leitung: Daniel Bombín Val / Solovioline: Manuel Pérez Morodo)",
         "sinopsisCorta": "<strong>Repertoire:</strong> Werke von G.P. Telemann und F. Mendelssohn"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "canto-del-cisne-2026",
@@ -222,7 +228,8 @@
         "interpretes": "<b>José Manuel Montero</b> (Tenor) und <b>Pedro Halffter Caro</b> (Klavier)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Schwanengesang</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "gala-zarzuela-2026",
@@ -247,7 +254,8 @@
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Belén Castillo</b> (Klavier)",
         "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Zugabe: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "homenaje-falla-2026",
@@ -272,7 +280,8 @@
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>P. Halffter: Liederzyklus El poeta en Nueva York (4 Lieder)</li></ul>"
       }
-    }
+    },
+    "hidden": true
   },
   {
     "id": "recital-clausura-2026",
@@ -297,6 +306,7 @@
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
         "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       }
-    }
+    },
+    "hidden": true
   }
 ]

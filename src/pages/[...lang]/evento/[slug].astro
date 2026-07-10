@@ -10,7 +10,7 @@ import EventCard from '../../../components/EventCard.astro';
 export function getStaticPaths() {
   const paths: any[] = [];
   Object.keys(languages).forEach((lang) => {
-    programacionData.forEach((event) => {
+    programacionData.filter((event: any) => !event.hidden).forEach((event) => {
       paths.push({
         params: { 
           lang: lang === defaultLang ? undefined : lang,
