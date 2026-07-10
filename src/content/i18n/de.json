@@ -8,7 +8,8 @@
   },
   "sponsors": {
     "title": "Gesponsert von",
-    "organizer_title": "Organisiert von"
+    "organizer_title": "Organisiert von",
+    "collaborators_title": "In Zusammenarbeit mit"
   },
   "hero": {
     "title": "Musik in Villafranca",
@@ -36,7 +37,7 @@
     "title": "Ihr reservierter Platz",
     "description": "Sichern Sie sich Ihren Platz bei einem der exklusivsten Kulturereignisse der Region. Platzreservierungen für alle Veranstaltungsorte möglich.",
     "cta": "Platz reservieren",
-    "soon": "In den nächsten Tagen verfügbar"
+    "soon": "Platzreservierungen ab 14. Juli"
   },
   "footer": {
     "copyright": "© 2026 Musik in Villafranca Festival. Alle Rechte vorbehalten.",

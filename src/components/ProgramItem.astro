@@ -61,7 +61,7 @@ const t = await useTranslations(currentLang as any);
         src={imageSrc} 
         alt={translation.titulo} 
         class="event-img"
-        format="webp"
+        format="avif"
         widths={[400, 600, 700, 800]}
         sizes="(max-width: 768px) 100vw, 400px"
         loading="lazy"
@@ -99,7 +99,7 @@ const t = await useTranslations(currentLang as any);
   <!-- Columna 4: Acciones -->
   <div class="card-actions">
     <div class="cta-wrapper">
-      {!event.taylorTicketsUrl.includes('taylortickets.com') ? (
+      {(event.id === 'pablo-sainz-villegas-2026' || event.id === 'niklas-liepe-2026') ? (
         <a href={event.taylorTicketsUrl} class="btn-buy" target="_blank" rel="noopener noreferrer">
           {ctaText}
         </a>

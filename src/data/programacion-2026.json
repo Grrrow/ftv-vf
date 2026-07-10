@@ -10,17 +10,17 @@
       "es": {
         "titulo": "PABLO SAINZ-VILLEGAS - Concierto Íntimo a la luz de las velas",
         "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>A. Vivaldi: Concerto para Guitarra (Arreglo para cuarteto de cuerda)</li><li>L. Boccherini: Quinteto para Guitarra</li><li>Anónimo: Romance Anónimo para cuarteto y guitarra</li><li>W.A. Mozart: Obras seleccionadas</li></ul>"
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>A. Vivaldi: Concerto para Guitarra (Arreglo para cuarteto de cuerda)</li><li>L. Boccherini: Quinteto para Guitarra</li><li>Anónimo: Romance Anónimo para cuarteto y guitarra</li><li>W.A. Mozart: Cuarteto Nº4 KV 157 en DoM</li></ul><br><small><i>* P.D.: En caso de inclemencia meteorológica, el concierto tendrá lugar en la Iglesia de San Nicolás.</i></small>"
       },
       "en": {
         "titulo": "PABLO SAINZ-VILLEGAS - Concert Illuminated by Candles",
         "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Guitar Concerto (Arrangement for string quartet)</li><li>L. Boccherini: Guitar Quintet</li><li>Anonymous: Romance Anónimo for quartet and guitar</li><li>W.A. Mozart: Selected works</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Guitar Concerto (Arrangement for string quartet)</li><li>L. Boccherini: Guitar Quintet</li><li>Anonymous: Romance Anónimo for quartet and guitar</li><li>W.A. Mozart: Quartet No. 4 KV 157 in C Major</li></ul><br><small><i>* P.S.: In case of bad weather, the concert will take place at the Church of San Nicolás.</i></small>"
       },
       "de": {
         "titulo": "PABLO SAINZ-VILLEGAS - Konzert bei Kerzenschein",
         "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Gitarrenkonzert (Bearbeitung für Streichquartett)</li><li>L. Boccherini: Gitarrenquintett</li><li>Anonymus: Romance Anónimo für Quartett und Gitarre</li><li>W.A. Mozart: Ausgewählte Werke</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Gitarrenkonzert (Bearbeitung für Streichquartett)</li><li>L. Boccherini: Gitarrenquintett</li><li>Anonymus: Romance Anónimo für Quartett und Gitarre</li><li>W.A. Mozart: Quartett Nr. 4 KV 157 in C-Dur</li></ul><br><small><i>* P.S.: Bei schlechtem Wetter findet das Konzert in der Kirche San Nicolás statt.</i></small>"
       }
     }
   },
@@ -35,17 +35,17 @@
       "es": {
         "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Íntimo a la luz de las velas",
         "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul>"
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul><br><small><i>* P.D.: En caso de inclemencia meteorológica, el concierto tendrá lugar en la Iglesia de San Nicolás.</i></small>"
       },
       "en": {
         "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Concert Illuminated by Candles",
         "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul><br><small><i>* P.S.: In case of bad weather, the concert will take place at the Church of San Nicolás.</i></small>"
       },
       "de": {
         "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Konzert bei Kerzenschein",
         "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul><br><small><i>* P.S.: Bei schlechtem Wetter findet das Konzert in der Kirche San Nicolás statt.</i></small>"
       }
     }
   },
@@ -151,7 +151,7 @@
   },
   {
     "id": "brahms-sonatas-2026",
-    "fecha": "2026-08-08T21:30:00",
+    "fecha": "2026-08-08T20:30:00",
     "slug": "brahms-sonatas",
     "lugar": "Iglesia de San Nicolás",
     "imagenUrl": "garvayotrematore.png",
@@ -160,17 +160,17 @@
       "es": {
         "titulo": "La Integral de Sonatas de Brahms",
         "interpretes": "<b>Juan Carlos Garvayo</b> (Piano) y <b>Ferdinando Trematore</b> (Violín)",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>J. Brahms: Integral de las sonatas para violín y piano</li></ul>"
+        "sinopsisCorta": "<strong>Sonatas para violín y piano de Johannes Brahms (1833-1897)</strong><br><br><strong>Sonata nº 1 en sol mayor, op. 78 (1878-79)</strong><ul class='repertoire-list'><li>Vivace ma non troppo</li><li>Adagio</li><li>Allegro molto moderato</li></ul><br><strong>Sonata nº 2 en la mayor, op. 100 (1886)</strong><ul class='repertoire-list'><li>Allegro amabile</li><li>Andante tranquillo</li><li>Allegretto grazioso (quasi andante)</li></ul><br><strong>Sonata nº 3 en re menor, op. 108 (1886-88)</strong><ul class='repertoire-list'><li>Allegro</li><li>Adagio</li><li>Un poco presto e con sentimento</li><li>Presto agitato</li></ul>"
       },
       "en": {
         "titulo": "Brahms Complete Sonatas",
         "interpretes": "<b>Juan Carlos Garvayo</b> (Piano) and <b>Ferdinando Trematore</b> (Violin)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Complete sonatas for violin and piano</li></ul>"
+        "sinopsisCorta": "<strong>Sonatas for violin and piano by Johannes Brahms (1833-1897)</strong><br><br><strong>Sonata No. 1 in G major, op. 78 (1878-79)</strong><ul class='repertoire-list'><li>Vivace ma non troppo</li><li>Adagio</li><li>Allegro molto moderato</li></ul><br><strong>Sonata No. 2 in A major, op. 100 (1886)</strong><ul class='repertoire-list'><li>Allegro amabile</li><li>Andante tranquillo</li><li>Allegretto grazioso (quasi andante)</li></ul><br><strong>Sonata No. 3 in D minor, op. 108 (1886-88)</strong><ul class='repertoire-list'><li>Allegro</li><li>Adagio</li><li>Un poco presto e con sentimento</li><li>Presto agitato</li></ul>"
       },
       "de": {
         "titulo": "Brahms Gesamte Sonaten",
         "interpretes": "<b>Juan Carlos Garvayo</b> (Klavier) und <b>Ferdinando Trematore</b> (Violine)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J. Brahms: Sämtliche Sonaten für Violine und Klavier</li></ul>"
+        "sinopsisCorta": "<strong>Sonaten für Violine und Klavier von Johannes Brahms (1833-1897)</strong><br><br><strong>Sonate Nr. 1 in G-Dur, op. 78 (1878-79)</strong><ul class='repertoire-list'><li>Vivace ma non troppo</li><li>Adagio</li><li>Allegro molto moderato</li></ul><br><strong>Sonate Nr. 2 in A-Dur, op. 100 (1886)</strong><ul class='repertoire-list'><li>Allegro amabile</li><li>Andante tranquillo</li><li>Allegretto grazioso (quasi andante)</li></ul><br><strong>Sonate Nr. 3 in d-Moll, op. 108 (1886-88)</strong><ul class='repertoire-list'><li>Allegro</li><li>Adagio</li><li>Un poco presto e con sentimento</li><li>Presto agitato</li></ul>"
       }
     }
   },
@@ -201,7 +201,7 @@
   },
   {
     "id": "canto-del-cisne-2026",
-    "fecha": "2026-08-15T21:30:00",
+    "fecha": "2026-08-15T20:30:00",
     "slug": "canto-del-cisne",
     "lugar": "Iglesia de San Nicolás",
     "imagenUrl": "manuel-montero-tenor-bahrein.jpg",
@@ -226,7 +226,7 @@
   },
   {
     "id": "gala-zarzuela-2026",
-    "fecha": "2026-08-21T21:30:00",
+    "fecha": "2026-08-21T20:30:00",
     "slug": "gala-zarzuela",
     "lugar": "Iglesia de San Nicolás",
     "imagenUrl": "MarMoran.jpeg",
@@ -234,49 +234,49 @@
     "traducciones": {
       "es": {
         "titulo": "Gran Gala de Canción Española y Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Soprano)",
-        "sinopsisCorta": "<strong>1ª Parte: Homenaje a Manuel de Falla (150 Aniversario)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2ª Parte: Antología Lírica</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Bis: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+        "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Belén Castillo</b> (Piano)",
+        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2ª Parte: Antología Lírica</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Bis: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       },
       "en": {
         "titulo": "Grand Gala of Spanish Song and Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Soprano)",
-        "sinopsisCorta": "<strong>Part 1: Tribute to Manuel de Falla (150th Anniversary)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>Part 2: Lyrical Anthology</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Encore: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+        "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Belén Castillo</b> (Piano)",
+        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>Part 2: Lyrical Anthology</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Encore: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       },
       "de": {
         "titulo": "Große Gala des spanischen Liedes und Zarzuela",
-        "interpretes": "<b>Mar Morán</b> (Sopran)",
-        "sinopsisCorta": "<strong>1. Teil: Hommage an Manuel de Falla (150. Jubiläum)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Zugabe: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
+        "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Belén Castillo</b> (Klavier)",
+        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>A. García Abril: Tres canciones sobre textos de Antonio Machado</li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li><li>Zugabe: F. Asenjo Barbieri: Un tiempo fue (Jugar con fuego)</li></ul>"
       }
     }
   },
   {
-    "id": "bella-molinera-2026",
-    "fecha": "2026-08-22T21:30:00",
-    "slug": "bella-molinera",
+    "id": "homenaje-falla-2026",
+    "fecha": "2026-08-22T20:30:00",
+    "slug": "homenaje-falla",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "foto22Ago.png",
+    "imagenUrl": "MarMoran.jpeg",
     "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2302304",
     "traducciones": {
       "es": {
-        "titulo": "La Bella Molinera en Cámara",
-        "interpretes": "<b>Trío del Festival</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) y <b>Miguel Ángel Muñoz</b> (Recitador)",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Schubert: La bella molinera (Versión para trío y narrador de Pedro Halffter)</li></ul>"
+        "titulo": "Homenaje a Manuel de Falla",
+        "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Pedro Halffter</b> (Piano)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>P. Halffter: Ciclo de canciones el poeta en Nueva York (4 canciones)</li></ul>"
       },
       "en": {
-        "titulo": "Die schöne Müllerin in Chamber",
-        "interpretes": "<b>Festival Trio</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) and <b>Miguel Ángel Muñoz</b> (Narrator)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Die schöne Müllerin (Version for trio and narrator by Pedro Halffter)</li></ul>"
+        "titulo": "Tribute to Manuel de Falla",
+        "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Pedro Halffter</b> (Piano)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>P. Halffter: El poeta en Nueva York song cycle (4 songs)</li></ul>"
       },
       "de": {
-        "titulo": "Die schöne Müllerin als Kammermusik",
-        "interpretes": "<b>Festival-Trio</b> (Pedro Halffter, Daniel Bombín, Laura Núñez) und <b>Miguel Ángel Muñoz</b> (Sprecher)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Schubert: Die schöne Müllerin (Fassung für Trio und Sprecher von Pedro Halffter)</li></ul>"
+        "titulo": "Hommage an Manuel de Falla",
+        "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas</li><li>P. Halffter: Liederzyklus El poeta en Nueva York (4 Lieder)</li></ul>"
       }
     }
   },
   {
     "id": "recital-clausura-2026",
-    "fecha": "2026-08-23T21:30:00",
+    "fecha": "2026-08-23T20:30:00",
     "slug": "recital-clausura",
     "lugar": "Iglesia de San Nicolás",
     "imagenUrl": "MarMoran.jpeg",
@@ -285,17 +285,17 @@
       "es": {
         "titulo": "Recital de Clausura: Lied y Ópera",
         "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Pedro Halffter</b> (Piano)",
-        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>P. Halffter: Ciclo de canciones el poeta en Nueva York (4 canciones)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2ª Parte:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
+        "sinopsisCorta": "<strong>1ª Parte:</strong><ul class='repertoire-list'><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2ª Parte:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       },
       "en": {
         "titulo": "Closing Recital: Lied and Opera",
         "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Pedro Halffter</b> (Piano)",
-        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>P. Halffter: El poeta en Nueva York song cycle (4 songs)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>Part 2:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
+        "sinopsisCorta": "<strong>Part 1:</strong><ul class='repertoire-list'><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>Part 2:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       },
       "de": {
         "titulo": "Abschlusskonzert: Lied und Oper",
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Pedro Halffter</b> (Klavier)",
-        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>P. Halffter: Liederzyklus El poeta en Nueva York (4 Lieder)</li><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
+        "sinopsisCorta": "<strong>1. Teil:</strong><ul class='repertoire-list'><li>G. Fauré: Après un rêve</li><li>J. Massenet: Élégie</li><li>H. Duparc: Chanson triste</li><li>L. Delibes: Les filles de cadix</li></ul><br><strong>2. Teil:</strong><ul class='repertoire-list'><li>G. Puccini: Quando m’ en vo (La Boheme)</li><li>G. Verdi: Addio del passato (La Traviata)</li><li>G. Verdi: É strano…sempre libera (La Traviata)</li></ul>"
       }
     }
   }

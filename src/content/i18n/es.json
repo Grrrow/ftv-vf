@@ -8,7 +8,8 @@
   },
   "sponsors": {
     "title": "Patrocina",
-    "organizer_title": "Organiza"
+    "organizer_title": "Organiza",
+    "collaborators_title": "Colaboran"
   },
   "hero": {
     "title": "Música en Villafranca",
@@ -36,7 +37,7 @@
     "title": "Tu Asiento Reservado",
     "description": "Asegura tu lugar en uno de los eventos culturales más exclusivos de la región. Reservas de plaza disponibles para todos los escenarios.",
     "cta": "Reservar Plaza",
-    "soon": "Disponible en los próximos días"
+    "soon": "Reserva tu plaza a partir del 14 de Julio"
   },
   "footer": {
     "copyright": "© 2026 Festival Música en Villafranca. Todos los derechos reservados.",

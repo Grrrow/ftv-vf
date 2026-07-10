@@ -373,7 +373,7 @@ const performers = performerNames.map(name => {
           </div>
 
           <div class="cta-wrapper">
-            {!event.taylorTicketsUrl.includes('taylortickets.com') ? (
+            {(event.id === 'pablo-sainz-villegas-2026' || event.id === 'niklas-liepe-2026') ? (
               <a href={event.taylorTicketsUrl} class="cta-large" target="_blank" rel="noopener noreferrer">
                 {t('tickets', 'cta')}
               </a>

@@ -24,4 +24,7 @@ const getSiteURL = () => {
 export default defineConfig({
   site: getSiteURL(),
   integrations: [sitemap()],
+  build: {
+    inlineStylesheets: 'always'
+  }
 });

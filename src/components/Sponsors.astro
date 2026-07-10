@@ -2,8 +2,13 @@
 import { useTranslations, defaultLang } from '../i18n/utils';
 import { languages } from '../i18n/utils';
 import { Image } from 'astro:assets';
-import logoAyto from '../assets/logo_ayto_villafranca.png';
-
+import logoAyto from '../assets/logos/logo_ayto_villafranca.png';
+import logoEnoturismo from '../assets/logos/bierzo enoturismo.jpeg';
+import logoCamerata from '../assets/logos/camerataclasicadeponferrada.jpeg';
+import logoFestival from '../assets/logos/festivalliricolucreciaarana.jpeg';
+import logoIEB from '../assets/logos/institutodeestudiosbercianos.jpeg';
+import logoSergej from '../assets/logos/sergejproduciones.png';
+import logoSondemencia from '../assets/logos/sondemencialogo.jpeg';
 const { lang } = Astro.params || 'es';
 const currentLang = Object.keys(languages).includes(lang as string) ? lang : defaultLang;
 const t = await useTranslations(currentLang as keyof typeof languages);
@@ -23,13 +28,17 @@ const t = await useTranslations(currentLang as keyof typeof languages);
         </div>
       </div>
 
-      <!-- Patrocina -->
+      <!-- Colabora -->
       <div class="sponsor-block">
-        <h2 id="sponsors-title" class="sponsors-title">{t('sponsors', 'title')}</h2>
-        <div class="sponsors-list">
-          <div class="sponsor-item">
-            <Image src={logoAyto} alt="Ayuntamiento de Villafranca del Bierzo" class="sponsor-logo" width={220} />
-          </div>
+        <h2 id="sponsors-title" class="sponsors-title">{t('sponsors', 'collaborators_title')}</h2>
+        <div class="sponsors-list collaborators-list">
+          <div class="sponsor-item"><Image src={logoAyto} alt="Ayuntamiento de Villafranca del Bierzo" class="sponsor-logo collab-logo" width={180} /></div>
+          <div class="sponsor-item"><Image src={logoEnoturismo} alt="Bierzo Enoturismo" class="sponsor-logo collab-logo" width={140} /></div>
+          <div class="sponsor-item"><Image src={logoCamerata} alt="Camerata Clásica de Ponferrada" class="sponsor-logo collab-logo" width={140} /></div>
+          <div class="sponsor-item"><Image src={logoFestival} alt="Festival Lírico Lucrecia Arana" class="sponsor-logo collab-logo" width={140} /></div>
+          <div class="sponsor-item"><Image src={logoIEB} alt="Instituto de Estudios Bercianos" class="sponsor-logo collab-logo" width={140} /></div>
+          <div class="sponsor-item"><Image src={logoSergej} alt="Sergej Producciones" class="sponsor-logo collab-logo" width={140} /></div>
+          <div class="sponsor-item"><Image src={logoSondemencia} alt="Sondemencia" class="sponsor-logo collab-logo" width={140} /></div>
         </div>
       </div>
 
@@ -106,6 +115,16 @@ const t = await useTranslations(currentLang as keyof typeof languages);
   .sponsor-item:hover .sponsor-logo {
     opacity: 1;
     transform: scale(1.02);
+  }
+
+  .collaborators-list {
+    gap: var(--space-lg);
+    max-width: 800px;
+  }
+
+  .collab-logo {
+    max-height: 80px;
+    width: auto;
   }
 
   @media (min-width: 768px) {

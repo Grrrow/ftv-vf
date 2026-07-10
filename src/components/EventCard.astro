@@ -42,7 +42,7 @@ const timeString = formatterTime.format(dateObj) + 'h';
         src={imageSrc} 
         alt={titulo} 
         class="card-img"
-        format="webp"
+        format="avif"
         quality="85"
         widths={[400, 600, 700, 800]}
         sizes="(max-width: 768px) 100vw, 400px"
@@ -78,10 +78,18 @@ const timeString = formatterTime.format(dateObj) + 'h';
   
   <div class="card-footer">
     <div class="cta-wrapper">
-      <span class="card-cta disabled" aria-disabled="true" title={t('tickets', 'soon')}>
-        {ctaText}
-      </span>
-      <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+      {(id === 'pablo-sainz-villegas-2026' || id === 'niklas-liepe-2026') ? (
+        <a href={taylorTicketsUrl} class="card-cta" target="_blank" rel="noopener noreferrer">
+          {ctaText}
+        </a>
+      ) : (
+        <>
+          <span class="card-cta disabled" aria-disabled="true" title={t('tickets', 'soon')}>
+            {ctaText}
+          </span>
+          <p class="cta-soon-text">{t('tickets', 'soon')}</p>
+        </>
+      )}
     </div>
   </div>
 </article>
