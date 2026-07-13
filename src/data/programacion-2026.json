@@ -1,5 +1,30 @@
 [
   {
+    "id": "niklas-liepe-2026",
+    "fecha": "2026-07-24T20:30:00",
+    "slug": "niklas-liepe",
+    "lugar": "Patio del Castillo de Villafranca",
+    "imagenUrl": "niklas liepe.webp",
+    "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2298180",
+    "traducciones": {
+      "es": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Íntimo a la luz de las velas",
+        "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul><br><small><i>* P.D.: En caso de inclemencia meteorológica, el concierto tendrá lugar en la Iglesia de San Nicolás.</i></small>"
+      },
+      "en": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Concert Illuminated by Candles",
+        "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul><br><small><i>* P.S.: In case of bad weather, the concert will take place at the Church of San Nicolás.</i></small>"
+      },
+      "de": {
+        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Konzert bei Kerzenschein",
+        "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul><br><small><i>* P.S.: Bei schlechtem Wetter findet das Konzert in der Kirche San Nicolás statt.</i></small>"
+      }
+    }
+  },
+  {
     "id": "pablo-sainz-villegas-2026",
     "fecha": "2026-07-25T20:30:00",
     "slug": "pablo-sainz-villegas",
@@ -21,31 +46,6 @@
         "titulo": "PABLO SAINZ-VILLEGAS - Konzert bei Kerzenschein",
         "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
         "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>A. Vivaldi: Gitarrenkonzert (Bearbeitung für Streichquartett)</li><li>L. Boccherini: Gitarrenquintett</li><li>Anonymus: Romance Anónimo für Quartett und Gitarre</li><li>W.A. Mozart: Quartett Nr. 4 KV 157 in C-Dur</li></ul><br><small><i>* P.S.: Bei schlechtem Wetter findet das Konzert in der Kirche San Nicolás statt.</i></small>"
-      }
-    }
-  },
-  {
-    "id": "niklas-liepe-2026",
-    "fecha": "2026-07-26T20:30:00",
-    "slug": "niklas-liepe",
-    "lugar": "Patio del Castillo de Villafranca",
-    "imagenUrl": "niklas liepe.webp",
-    "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2298180",
-    "traducciones": {
-      "es": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Íntimo a la luz de las velas",
-        "interpretes": "Cuarteto de Cuerda (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Concierto para violín en mi menor</li><li>J.S. Bach: Variaciones Goldberg (Arreglo para cuarteto de cuerda y violín solista)</li></ul><br><small><i>* P.D.: En caso de inclemencia meteorológica, el concierto tendrá lugar en la Iglesia de San Nicolás.</i></small>"
-      },
-      "en": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Concert Illuminated by Candles",
-        "interpretes": "String Quartet (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violin Concerto in E minor</li><li>J.S. Bach: Goldberg Variations (Arrangement for string quartet and solo violin)</li></ul><br><small><i>* P.S.: In case of bad weather, the concert will take place at the Church of San Nicolás.</i></small>"
-      },
-      "de": {
-        "titulo": "NIKLAS LIEPE - Bach & Mendelssohn Konzert bei Kerzenschein",
-        "interpretes": "Streichquartett (Daniel Bombín, Alba Álvarez, Karine Vardanian, Laura Núñez)",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>F. Mendelssohn: Violinkonzert e-Moll</li><li>J.S. Bach: Goldberg-Variationen (Bearbeitung für Streichquartett und Solovioline)</li></ul><br><small><i>* P.S.: Bei schlechtem Wetter findet das Konzert in der Kirche San Nicolás statt.</i></small>"
       }
     }
   },
