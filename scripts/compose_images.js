@@ -2,9 +2,9 @@ import sharp from 'sharp';
 import path from 'path';
 
 async function main() {
-  const img1Path = path.resolve('src/assets/events_images/Juan Carlos Garvayo.jpg');
-  const img2Path = path.resolve('src/assets/events_images/Ferdinando Trematore.jpg');
-  const outPath = path.resolve('src/assets/events_images/garvayotrematore.png');
+  const img1Path = path.resolve('src/assets/events_images/manuel-montero-tenor-bahrein.jpg');
+  const img2Path = path.resolve('src/assets/events_images/pedrohalffter.jpg');
+  const outPath = path.resolve('src/assets/events_images/montero-halffter.png');
 
   // We know the container is very tall and thin (e.g., 250x600).
   // We'll crop both images to a tall rectangle (e.g., 400x600) focusing on their faces.
