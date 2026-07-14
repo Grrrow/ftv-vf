@@ -233,19 +233,19 @@
     "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2311468",
     "traducciones": {
       "es": {
-        "titulo": "Recital de Piano (Concierto a beneficio de la Parroquia de Villafranca)",
+        "titulo": "Recital de Piano (Concierto Benéfico)",
         "interpretes": "<b>PEDRO HALFFTER CARO (Piano)</b>",
-        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>J.S. Bach: Variaciones Goldberg</li></ul>"
+        "sinopsisCorta": "<strong>Repertorio:</strong><ul class='repertoire-list'><li>J.S. Bach: Variaciones Goldberg</li></ul><br><em>La recaudación de este concierto irá destinada a beneficio de la Parroquia de Villafranca del Bierzo.</em>"
       },
       "en": {
-        "titulo": "Piano Recital (Benefit Concert for the Parish of Villafranca)",
+        "titulo": "Piano Recital (Benefit Concert)",
         "interpretes": "<b>PEDRO HALFFTER CARO (Piano)</b>",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J.S. Bach: Goldberg Variations</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J.S. Bach: Goldberg Variations</li></ul><br><em>The proceeds from this concert will go to the Parish of Villafranca del Bierzo.</em>"
       },
       "de": {
-        "titulo": "Klavierabend (Benefizkonzert für die Pfarrei von Villafranca)",
+        "titulo": "Klavierabend (Benefizkonzert)",
         "interpretes": "<b>PEDRO HALFFTER CARO (Klavier)</b>",
-        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J.S. Bach: Goldberg-Variationen</li></ul>"
+        "sinopsisCorta": "<strong>Repertoire:</strong><ul class='repertoire-list'><li>J.S. Bach: Goldberg-Variationen</li></ul><br><em>Der Erlös dieses Konzerts kommt der Pfarrei von Villafranca del Bierzo zugute.</em>"
       }
     }
   },
