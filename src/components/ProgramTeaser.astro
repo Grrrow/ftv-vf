@@ -27,7 +27,7 @@ const formatTime = (dateStr: string) => {
 
 const visibleEvents = programacionData.filter((e: any) => !e.hidden);
 const eventsWithLinks = visibleEvents
-  .filter(event => (event.id === 'pablo-sainz-villegas-2026' || event.id === 'niklas-liepe-2026'))
+  .filter(event => event.taylorTicketsUrl && event.taylorTicketsUrl.trim() !== '')
   .sort((a, b) => new Date(a.fecha).getTime() - new Date(b.fecha).getTime());
 
 const events = eventsWithLinks.slice(0, 3).map(event => {

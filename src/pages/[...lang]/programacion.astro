@@ -481,7 +481,7 @@ const getVenueSlug = (lugarName: string) => {
                 <!-- Columna 4: Acciones -->
                 <div class="card-actions">
                   <div class="cta-wrapper">
-                    {(event.id === 'pablo-sainz-villegas-2026' || event.id === 'niklas-liepe-2026') ? (
+                    {event.taylorTicketsUrl ? (
                       <a href={event.taylorTicketsUrl} class="btn-buy" target="_blank" rel="noopener noreferrer">
                         {pageData?.events?.buy_tickets || 'Reserva de plaza'}
                       </a>
