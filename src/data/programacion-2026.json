@@ -254,21 +254,21 @@
     "fecha": "2026-08-21T20:30:00",
     "slug": "gala-zarzuela",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "MarMoran.jpeg",
+    "imagenUrl": "moran-castillo.png",
     "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2302303",
     "traducciones": {
       "es": {
-        "titulo": "Gran Gala de Canción Española y Zarzuela",
+        "titulo": "Gala de Canción Española y Zarzuela",
         "interpretes": "<b>Mar Morán</b> (Soprano) y <b>Belén Castillo</b> (Piano)",
         "sinopsisCorta": "<strong>1ª Parte: Homenaje a Manuel de Falla (150 Aniversario)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas<br><small>1. El paño moruno - 2. Seguidilla murciana - 3. Asturiana - 4. Jota - 5. Nana - 6. Canción - 7. Polo</small></li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado<br><small>1. Una tarde disecada - 2. La plaza tiene una torre - 3. Un ramo de rosas me dio la mañana</small></li></ul><br><strong>2ª Parte: Antología Lírica</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li></ul>"
       },
       "en": {
-        "titulo": "Grand Gala of Spanish Song and Zarzuela",
+        "titulo": "Gala of Spanish Song and Zarzuela",
         "interpretes": "<b>Mar Morán</b> (Soprano) and <b>Belén Castillo</b> (Piano)",
         "sinopsisCorta": "<strong>Part 1: Tribute to Manuel de Falla (150th Anniversary)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas<br><small>1. El paño moruno - 2. Seguidilla murciana - 3. Asturiana - 4. Jota - 5. Nana - 6. Canción - 7. Polo</small></li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado<br><small>1. Una tarde disecada - 2. La plaza tiene una torre - 3. Un ramo de rosas me dio la mañana</small></li></ul><br><strong>Part 2: Lyrical Anthology</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li></ul>"
       },
       "de": {
-        "titulo": "Große Gala des spanischen Liedes und Zarzuela",
+        "titulo": "Gala des spanischen Liedes und Zarzuela",
         "interpretes": "<b>Mar Morán</b> (Sopran) und <b>Belén Castillo</b> (Klavier)",
         "sinopsisCorta": "<strong>1. Teil: Hommage an Manuel de Falla (150. Jahrestag)</strong><ul class='repertoire-list'><li>M. de Falla: Siete canciones populares españolas<br><small>1. El paño moruno - 2. Seguidilla murciana - 3. Asturiana - 4. Jota - 5. Nana - 6. Canción - 7. Polo</small></li><li>A. García Abril: Tres canciones sobre textos de Antonio Machado<br><small>1. Una tarde disecada - 2. La plaza tiene eine torre - 3. Un ramo de rosas me dio la mañana</small></li></ul><br><strong>2. Teil: Lyrische Anthologie</strong><ul class='repertoire-list'><li>P. Sorozábal: En un país de fábula (La tabernera del puerto)</li><li>F. Moreno Torroba: Madre de mis amores (Monte Carmelo)</li><li>A. Vives: Canción del ruiseñor (Doña Francisquita)</li></ul>"
       }
@@ -279,7 +279,7 @@
     "fecha": "2026-08-22T20:30:00",
     "slug": "recital-clausura",
     "lugar": "Iglesia de San Nicolás",
-    "imagenUrl": "MarMoran.jpeg",
+    "imagenUrl": "marmoran2-halffter-final.png",
     "taylorTicketsUrl": "https://www.tickettailor.com/events/musicaenvillafranca/2302308",
     "traducciones": {
       "es": {
